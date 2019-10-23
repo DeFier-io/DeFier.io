@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+.appBar {
+    background-color: orangered !important;
+}
+
+.appText {
+    font-family: 'Permanent Marker', cursive !important;
+}
