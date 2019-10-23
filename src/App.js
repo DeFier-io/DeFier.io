@@ -10,7 +10,8 @@ function App() {
 
       <div className="container">
         <h1>DeFi the Odds</h1>
-        <h4>Coming soon</h4>
+        <h4>Crypto Decentralised ETFs</h4>
+        <h6>coming soon</h6>
       </div>
       
     
