@@ -1,7 +1,7 @@
 {
   "name": "defier",
   "version": "0.1.0",
-  "homepage": "http://caa1982.github.io/defier",
+  "homepage": "https://caa1982.github.io/defier",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.5.1",
