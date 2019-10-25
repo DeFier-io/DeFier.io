@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 
 .App{
   background-color: #080808;
@@ -16,17 +15,16 @@
 }
 
 h1{
-  color: orangered;
+  color: #576E9A;
   padding: 0px;
   margin: 0px;
-  font-family: 'Permanent Marker', cursive;
 }
 
 h4 {
   color: #fff;
   padding: 0px;
   margin: 0px;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Bangers', cursive;
 }
 
 h6 {
