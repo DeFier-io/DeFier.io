@@ -14,7 +14,6 @@ function App() {
         <h6>coming soon</h6>
       </div>
       
-    
     </div>
   );
 }
