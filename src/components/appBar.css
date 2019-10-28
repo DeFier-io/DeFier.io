@@ -8,3 +8,9 @@
     font-family: 'Dancing Script', cursive !important;
     color: black;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .appText {
+      font-size: 5vw !important;
+    }
+  }
