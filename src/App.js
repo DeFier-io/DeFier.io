@@ -6,11 +6,11 @@ import './App.css';
 
 function App() {
   const [state, setState] = React.useState({
-    theme: true,
+    theme: false,
   });
 
   const theme = (el) => {
-    setState({theme: el})
+    setState({theme: !el})
   }
 
   return (
