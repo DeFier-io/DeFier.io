@@ -1,4 +1,3 @@
-@import url(//db.onlinewebfonts.com/c/58448bc8344e86403c7ad25b3509965f?family=Microsoft+New+Tai+Lue);
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .appBarContainer{
@@ -13,7 +12,7 @@
 }
 
 .appLogo{
-  font-family: "Microsoft New Tai Lue" !important;
+  font-family: 'Lato', sans-serif;
   color: #faf0e6;
   display: inline ;
   margin-left: 1vw !important; 
