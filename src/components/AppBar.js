@@ -23,7 +23,7 @@ export default function ButtonAppBar() {
             <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
                 <Toolbar className="appBarContainer">
                     <section>
-                        <Typography variant="h5" className="appLogo">
+                        <Typography variant="h6" className="appLogo">
                             <b>DeFi</b>er
                         </Typography>
                     </section>
