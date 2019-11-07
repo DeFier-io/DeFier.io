@@ -37,10 +37,10 @@ function App() {
           </div>
         </div>
         <div className="footer">
-          <a href="https://twitter.com/defier" target="_blank"><FaTwitter className="icon" color="primary" /></a>
-          <a href=""><FaDiscord className="icon" color="primary" /></a>
-          <a href="https://www.linkedin.com/company/defier" target="_blank" ><FaLinkedin className="icon" color="primary" /></a>
-          <a href=""><FaGithub className="icon" color="primary" /></a>
+          <a href="https://twitter.com/defier" target="_blank" rel="noopener noreferrer"><FaTwitter className="icon" color="primary" /></a>
+          <a href="https://discordapp.com/" rel="noopener noreferrer"><FaDiscord className="icon" color="primary" /></a>
+          <a href="https://linkedin.com/company/defier" target="_blank" rel="noopener noreferrer" ><FaLinkedin className="icon" color="primary" /></a>
+          <a href="https://github.com/" rel="noopener noreferrer"><FaGithub className="icon" color="primary" /></a>
         </div>
       </MuiThemeProvider>
     </div>
