@@ -47,8 +47,7 @@ button:hover{
   background-color: #f6abb6 !important;
 }
 
-
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   .container {
     font-size: 5vw;
   }

@@ -1,11 +1,22 @@
 @import url(//db.onlinewebfonts.com/c/58448bc8344e86403c7ad25b3509965f?family=Microsoft+New+Tai+Lue);
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+.appBarContainer{
+  display: inline;
+}
 .appText {
-    font-family: "Microsoft New Tai Lue" !important;
-    color: #faf0e6;
-    display: inline;
+    text-decoration: none;
+    color:#faf0e6;
+    font-family: 'Lato', sans-serif;
     margin-right: 1vw !important; 
+    display: inline;
+}
+
+.appLogo{
+  font-family: "Microsoft New Tai Lue" !important;
+  color: #faf0e6;
+  display: inline ;
+  margin-left: 1vw !important; 
 }
 
 a{
@@ -19,9 +30,14 @@ a:hover{
   color: #f6abb6;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 1024px) {
     .appText {
       font-size: 3vw !important;
+      margin-right: 2vw !important; 
+    }
+
+    .appLogo {
+      font-size: 4vw !important;
       margin-right: 2vw !important; 
     }
   }

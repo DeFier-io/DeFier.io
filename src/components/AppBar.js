@@ -21,10 +21,12 @@ export default function ButtonAppBar() {
     return (
         <div className={classes.root}>
             <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
-                <Toolbar width="1">
-                    <Typography edge="start" variant="h5" className="appText">
-                        <b>DeFi</b>er
-                    </Typography>
+                <Toolbar className="appBarContainer">
+                    <section>
+                        <Typography variant="h5" className="appLogo">
+                            <b>DeFi</b>er
+                        </Typography>
+                    </section>
 
                     <section className={classes.rightToolbar}>
                         <Typography variant="h6" className="appText">
