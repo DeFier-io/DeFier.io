@@ -1,14 +1,12 @@
-.App{
-  background-color: #080808;
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.app{
+  background-color: #576E9A !important;
   min-height: 100vh;
+  font-family: 'Lato', sans-serif;
 }
 
-.App_Light{
-  background-color: #fff !important;
-  min-height: 100vh;
-}
-
-.container, .container_ligth{
+.container{
   min-height: 85vh;
   display: flex;
   align-items: center;
@@ -17,28 +15,45 @@
   font-size: 3vw;
 }
 
-.container_ligth > h5, .container_ligth > h6{
-  color: #080808;
+.container > h5, .container > h6 {
+  color: #faf0e6;
   padding: 0px;
   margin: 0px;
 }
 
-.container > h5, .container > h6 {
-  color: #fff;
-  padding: 0px;
-  margin: 0px;
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1vw !important;
+}
+
+.icon{
+  margin-right: 1vw !important;
+  font-size: 2vw !important;
+}
+
+.icon:hover{
+  color: #f6abb6;
 }
 
 h1{
-  color: #576E9A;
+  color: #f6abb6;
   padding: 0px;
   margin: 0px;
 }
 
+button:hover{
+  color: #35212A;
+  background-color: #f6abb6 !important;
+}
 
 
 @media (min-width: 320px) and (max-width: 768px) {
-  .container, .ontainer_ligth {
+  .container {
     font-size: 5vw;
+  }
+  .icon {
+    margin-right: 2vw !important;
+    font-size: 5vw !important;
   }
 }

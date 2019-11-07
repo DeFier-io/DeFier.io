@@ -1,16 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
-
-.appBar {
-    background-color: #576E9A !important;
-}
+@import url(//db.onlinewebfonts.com/c/58448bc8344e86403c7ad25b3509965f?family=Microsoft+New+Tai+Lue);
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .appText {
-    font-family: 'Dancing Script', cursive !important;
-    color: black;
+    font-family: "Microsoft New Tai Lue" !important;
+    color: #faf0e6;
+    display: inline;
+    margin-right: 1vw !important; 
+}
+
+a{
+  text-decoration: none;
+  color:#faf0e6;
+  font-family: 'Lato', sans-serif;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #f6abb6;
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
     .appText {
-      font-size: 5vw !important;
+      font-size: 3vw !important;
+      margin-right: 2vw !important; 
     }
   }

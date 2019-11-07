@@ -10,8 +10,8 @@ const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
+    rightToolbar: {
+        marginLeft: 'auto',
     }
 }));
 
@@ -20,11 +20,27 @@ export default function ButtonAppBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="sticky" className="appBar">
-                <Toolbar>
-                    <Typography variant="h4" className="appText">
-                        DeFier
+            <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
+                <Toolbar width="1">
+                    <Typography edge="start" variant="h5" className="appText">
+                        <b>DeFi</b>er
                     </Typography>
+
+                    <section className={classes.rightToolbar}>
+                        <Typography variant="h6" className="appText">
+                            <a href="">DETFs</a>
+                        </Typography>
+                        <Typography variant="h6" className="appText">
+                            <a href="">Documents</a>
+                        </Typography>
+                        <Typography variant="h6" className="appText">
+                            <a href="">Company</a>
+                        </Typography>
+                        <Typography variant="h6" className="appText">
+                            <a href="">Dapp</a>
+                        </Typography>
+                    </section>
+
                 </Toolbar>
             </AppBar>
         </div>
