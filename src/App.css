@@ -46,7 +46,7 @@ h1{
 
 button:hover{
   color: #35212A;
-  background-color: #f6abb6 !important;
+  background: linear-gradient(to bottom right, #f6abb6 , #faf0e6);
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
