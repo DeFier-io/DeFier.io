@@ -26,9 +26,8 @@ a{
   font-family: 'Lato', sans-serif;
 }
 
-a:hover{
-  text-decoration: none;
-  color: #f6abb6;
+a:hover, .appText:hover{
+  color: #f6abb6 !important;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
@@ -37,7 +36,7 @@ a:hover{
       margin-right: 2vw !important; 
     }
 
-    .appLogo {
+    .appLogo, .appText:hover {
       font-size: 4vw !important;
       margin-right: 2vw !important; 
     }
