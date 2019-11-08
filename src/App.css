@@ -59,14 +59,6 @@ button:hover{
        box-shadow: 0 6px 6px -6px black;
 }
 
-.MuiMenu-paper{
-  background-image:  linear-gradient(to bottom right, #f6abb6 , #faf0e6) !important;
-  color: #35212A !important;
-}
-
-.list:hover{
-  color: #576E9A !important;
-}
 
 @media (min-width: 320px) and (max-width: 1024px) {
   .container {

@@ -1,8 +1,8 @@
 import React from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import AppBar from './components/AppBar';
-import Button from '@material-ui/core/Button';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { FaGithub, FaDiscord, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import AppBar from './components/AppBar/AppBar';
+import Button from '@material-ui/core/Button';
 
 import './App.css';
 
@@ -17,16 +17,14 @@ const ButtonTheme = createMuiTheme({
   }
 })
 
-
 function App() {
-
   return (
     <div className="app">
       <AppBar />
       <MuiThemeProvider theme={ButtonTheme}>
         <div className="container">
           <h1>DeFi the Odds</h1>
-          <h5>Tokenized Decentralised ETFs</h5>
+          <h5>Decentralized ETFs</h5>
           <div>
             <Button size="large" variant="outlined" color="primary">
               WhitePaper

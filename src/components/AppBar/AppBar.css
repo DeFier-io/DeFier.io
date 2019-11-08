@@ -35,14 +35,23 @@ a:hover, .appText:hover{
   font-size: 2vh;
 }
 
+.list:hover{
+  color: #576E9A !important;
+}
+
+.MuiMenu-paper{
+  background-image:  linear-gradient(to bottom right, #f6abb6 , #faf0e6) !important;
+  color: #35212A !important;
+}
+
 @media (min-width: 320px) and (max-width: 1024px) {
     .appText {
-      font-size: 3vw !important;
+      font-size: 2.7vw !important;
       margin-right: 2vw !important; 
     }
 
     .appLogo {
-      font-size: 4vw !important;
-      margin-right: 2vw !important; 
+      font-size: 2.7vw !important;
+      margin-left: 2vw !important; 
     }
   }

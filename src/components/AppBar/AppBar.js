@@ -7,8 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { FaFilePdf, FaEthereum } from 'react-icons/fa';
 
-
-import './appBar.css';
+import './AppBar.css';
 
 const useStyles = makeStyles(theme => ({
     root: {
