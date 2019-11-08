@@ -30,6 +30,11 @@ a:hover, .appText:hover{
   color: #f6abb6 !important;
 }
 
+.iconList{
+  margin-right: 5%;
+  font-size: 2vh;
+}
+
 @media (min-width: 320px) and (max-width: 1024px) {
     .appText {
       font-size: 3vw !important;

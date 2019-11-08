@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import { FaFilePdf, FaEthereum } from 'react-icons/fa';
+
 
 import './appBar.css';
 
@@ -66,8 +68,8 @@ export default function ButtonAppBar() {
                                 onClose={handleClose}
                                 MenuListProps={{ onMouseLeave: handleClose }}
                             >
-                                <MenuItem className="list" onClick={handleClose}>WhitePaper</MenuItem>
-                                <MenuItem className="list" onClick={handleClose}>Smart Contracts</MenuItem>
+                                <MenuItem className="list" onClick={handleClose}><FaFilePdf className="iconList"/> WhitePaper</MenuItem>
+                                <MenuItem className="list" onClick={handleClose}><FaEthereum className="iconList"/> Smart Contracts</MenuItem>
                             </Menu>
                         <Typography variant="h6" className="appText">
                             <a href="">Dapp</a>
