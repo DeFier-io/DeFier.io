@@ -3,12 +3,14 @@
 .appBarContainer{
   display: inline;
 }
+
 .appText {
     text-decoration: none;
     color:#faf0e6;
     font-family: 'Lato', sans-serif;
     margin-right: 1vw !important; 
     display: inline;
+    cursor: pointer;
 }
 
 .appLogo{

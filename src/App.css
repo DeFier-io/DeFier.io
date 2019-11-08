@@ -44,9 +44,28 @@ h1{
   margin: 0px;
 }
 
+button{
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
 button:hover{
   color: #35212A;
   background: linear-gradient(to bottom right, #f6abb6 , #faf0e6);
+  transition: all 0.4s ease 0s;
+  -webkit-box-shadow: 0 6px 6px -6px black;
+  -moz-box-shadow: 0 6px 6px -6px black;
+       box-shadow: 0 6px 6px -6px black;
+}
+
+.MuiMenu-paper{
+  background-image:  linear-gradient(to bottom right, #f6abb6 , #faf0e6) !important;
+  color: #35212A !important;
+}
+
+.list:hover{
+  color: #576E9A !important;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
