@@ -43,10 +43,10 @@ export default function ButtonAppBar() {
 
                     <section className={classes.rightToolbar}>
                         <Typography variant="h6" className="appText">
-                            <a href="">DETFs</a>
+                            DETFs
                         </Typography>
                         <Typography variant="h6" className="appText">
-                            <a href="">Company</a>
+                            Company
                         </Typography>
                         <Typography
                             onClick={handleMenu}  
@@ -71,7 +71,7 @@ export default function ButtonAppBar() {
                                 <MenuItem className="list" onClick={handleClose}><FaEthereum className="iconList"/> Smart Contracts</MenuItem>
                             </Menu>
                         <Typography variant="h6" className="appText">
-                            <a href="">Dapp</a>
+                            Dapp
                         </Typography>
                     </section>
 

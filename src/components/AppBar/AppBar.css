@@ -11,6 +11,7 @@
     margin-right: 1vw !important; 
     display: inline;
     cursor: pointer;
+    color: #faf0e6 !important;
 }
 
 .appLogo{
@@ -26,8 +27,8 @@ a{
   font-family: 'Lato', sans-serif;
 }
 
-a:hover, .appText:hover{
-  color: #f6abb6 !important;
+.appText:hover{
+  color: #576E9A !important;
 }
 
 .iconList{
@@ -36,12 +37,16 @@ a:hover, .appText:hover{
 }
 
 .list:hover{
-  color: #576E9A !important;
+  color: #ef4a4e !important;
 }
 
 .MuiMenu-paper{
-  background-image:  linear-gradient(to bottom right, #f6abb6 , #faf0e6) !important;
-  color: #35212A !important;
+  background-color: #576E9A !important;
+  color: #faf0e6 !important;
+  margin-top: 1vh;
+}
+.MuiPopover-root{
+  z-index:-10000;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {

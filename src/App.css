@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .app{
-  background-color: #576E9A !important;
+  background-image: linear-gradient(180deg, #ef4a4e , #576E9A 40%) !important;
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
 }
@@ -35,11 +35,11 @@
 }
 
 .icon:hover{
-  color: #f6abb6;
+  color: #ef4a4e;
 }
 
 h1{
-  color: #f6abb6;
+  color: #ef4a4e;
   padding: 0px;
   margin: 0px;
 }
@@ -52,7 +52,7 @@ button{
 
 button:hover{
   color: #35212A;
-  background: linear-gradient(to bottom right, #f6abb6 , #faf0e6);
+  background: linear-gradient(to bottom right, #ef4a4e , #faf0e6);
   transition: all 0.4s ease 0s;
   -webkit-box-shadow: 0 6px 6px -6px black;
   -moz-box-shadow: 0 6px 6px -6px black;

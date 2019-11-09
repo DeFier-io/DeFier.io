@@ -24,7 +24,7 @@ function App() {
       <MuiThemeProvider theme={ButtonTheme}>
         <div className="container">
           <h1>DeFi the Odds</h1>
-          <h5>Decentralized ETFs</h5>
+          <h5>Tokenized Decentralized ETFs</h5>
           <div>
             <Button size="large" variant="outlined" color="primary">
               WhitePaper
