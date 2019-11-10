@@ -8,6 +8,7 @@ import About from './pages/About';
 import {
   BrowserRouter as Router,
   Route,
+  Redirect,
   Switch
 } from "react-router-dom";
 
@@ -20,8 +21,9 @@ function App() {
         <AppBar/>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/DETF" component={DETF} />
-          <Route exact path="/About" component={About} />
+          <Route  path="/DETF" component={DETF} />
+          <Route  path="/About" component={About} />
+          <Redirect from="/*" to="/" />
         </Switch>
       </Router>
     </div>
