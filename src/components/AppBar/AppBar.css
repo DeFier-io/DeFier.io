@@ -7,18 +7,20 @@
 .appText {
     text-decoration: none;
     color:#faf0e6;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif !important;
     margin-right: 1vw !important; 
     display: inline;
     cursor: pointer;
     color: #faf0e6 !important;
+    font-size: 1.1vw !important;
 }
 
-.appLogo{
-  font-family: 'Lato', sans-serif;
-  color: #faf0e6;
-  display: inline ;
-  margin-left: 1vw !important; 
+.appText:hover{
+  color: #576E9A !important;
+}
+
+.linkText:hover{
+  color: #576E9A !important;
 }
 
 a{
@@ -27,7 +29,7 @@ a{
   font-family: 'Lato', sans-serif;
 }
 
-.appText:hover{
+.hurray{
   color: #576E9A !important;
 }
 

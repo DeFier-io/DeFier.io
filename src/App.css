@@ -51,7 +51,7 @@ button{
 }
 
 button:hover{
-  color: #35212A;
+  color: #576E9A;
   background: linear-gradient(to bottom right, #ef4a4e , #faf0e6);
   transition: all 0.4s ease 0s;
   -webkit-box-shadow: 0 6px 6px -6px black;

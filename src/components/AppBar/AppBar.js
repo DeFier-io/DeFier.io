@@ -7,6 +7,11 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { FaFilePdf, FaEthereum } from 'react-icons/fa';
 
+import {
+    BrowserRouter as Router,
+    NavLink
+} from "react-router-dom";
+
 import './AppBar.css';
 
 const useStyles = makeStyles(theme => ({
@@ -20,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ButtonAppBar() {
     const classes = useStyles();
-    
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -36,47 +41,49 @@ export default function ButtonAppBar() {
             <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
                 <Toolbar className="appBarContainer">
                     <section>
-                        <Typography variant="h6" className="appLogo">
+                        <NavLink to="/" className="appLogo">
                             <b>DeFi</b>er
-                        </Typography>
+                        </NavLink>
                     </section>
 
                     <section className={classes.rightToolbar}>
-                        <Typography variant="h6" className="appText">
+
+                        <NavLink to="/DETF" className="appText" activeClassName="hurray">
                             DETFs
-                        </Typography>
-                        <Typography variant="h6" className="appText">
-                            Company
-                        </Typography>
+                        </NavLink>
+
                         <Typography
-                            onClick={handleMenu}  
+                            onClick={handleMenu}
                             aria-haspopup="true"
-                            variant="h6"
                             className="appText">
                             Documents
                         </Typography>
-                            <Menu
-                                anchorEl={anchorEl}
-                                getContentAnchorEl={null}
-                                anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-                                  transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'center',
-                                  }}
-                                open={open}
-                                onClose={handleClose}
-                                MenuListProps={{ onMouseLeave: handleClose }}
-                            >
-                                <MenuItem className="list" onClick={handleClose}><FaFilePdf className="iconList"/> WhitePaper</MenuItem>
-                                <MenuItem className="list" onClick={handleClose}><FaEthereum className="iconList"/> Smart Contracts</MenuItem>
-                            </Menu>
-                        <Typography variant="h6" className="appText">
+                        <Menu
+                            anchorEl={anchorEl}
+                            getContentAnchorEl={null}
+                            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'center',
+                            }}
+                            open={open}
+                            onClose={handleClose}
+                            MenuListProps={{ onMouseLeave: handleClose }}
+                        >
+                            <MenuItem className="list" onClick={handleClose}><FaFilePdf className="iconList" /> WhitePaper</MenuItem>
+                            <MenuItem className="list" onClick={handleClose}><FaEthereum className="iconList" /> Smart Contracts</MenuItem>
+                        </Menu>
+
+                        <NavLink to="/About" className="appText" activeClassName="hurray">
+                            About Us
+                        </NavLink>
+
+                        <Typography className="appText">
                             Dapp
                         </Typography>
                     </section>
-
                 </Toolbar>
             </AppBar>
-        </div>
+        </div >
     );
 }

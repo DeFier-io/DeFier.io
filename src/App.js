@@ -1,46 +1,29 @@
 import React from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { FaGithub, FaDiscord, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import AppBar from './components/AppBar/AppBar';
-import Button from '@material-ui/core/Button';
+
+import DETF from './pages/DETF';
+import Home from './pages/Home';
+import About from './pages/About';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 
 import './App.css';
-
-const ButtonTheme = createMuiTheme({
-  palette: { primary: { main: '#faf0e6' } },
-  overrides: {
-    MuiButton: {
-      root: {
-        margin: "1vw",
-      }
-    },
-  }
-})
 
 function App() {
   return (
     <div className="app">
-      <AppBar />
-      <MuiThemeProvider theme={ButtonTheme}>
-        <div className="container">
-          <h1>DeFi the Odds</h1>
-          <h5>Tokenized Decentralized ETFs</h5>
-          <div>
-            <Button size="large" variant="outlined" color="primary">
-              WhitePaper
-            </Button>
-            <Button size="large" variant="outlined" color="primary">
-              Trade Now
-            </Button>
-          </div>
-        </div>
-        <div className="footer">
-          <a href="https://twitter.com/defier" target="_blank" rel="noopener noreferrer"><FaTwitter className="icon" color="primary" /></a>
-          <a href="https://discordapp.com/" rel="noopener noreferrer"><FaDiscord className="icon" color="primary" /></a>
-          <a href="https://linkedin.com/company/defier" target="_blank" rel="noopener noreferrer" ><FaLinkedin className="icon" color="primary" /></a>
-          <a href="https://github.com/" rel="noopener noreferrer"><FaGithub className="icon" color="primary" /></a>
-        </div>
-      </MuiThemeProvider>
+      <Router>
+        <Route component={AppBar} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/DETF" component={DETF} />
+          <Route exact path="/About" component={About} />
+        </Switch>
+      </Router>
     </div>
   );
 }
