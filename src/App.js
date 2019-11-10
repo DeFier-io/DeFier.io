@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Route component={AppBar} />
+        <AppBar/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/DETF" component={DETF} />

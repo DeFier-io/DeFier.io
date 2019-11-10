@@ -19,8 +19,9 @@
   color: #576E9A !important;
 }
 
-.linkText:hover{
-  color: #576E9A !important;
+.appLogo{
+  color: #faf0e6 !important;
+  font-size: 1.1vw !important;
 }
 
 a{
