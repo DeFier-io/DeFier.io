@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
 .app{
   background-image: linear-gradient(180deg, #ef4a4e , #576E9A 40%) !important;
   min-height: 100vh;
-  font-family: 'Lato', sans-serif;
 }
 
 .container{
@@ -19,23 +16,7 @@
   color: #faf0e6;
   padding: 0px;
   margin: 0px;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-}
-
-.icon{
-  margin: 0.7vw !important;
-  font-size: 2vw !important;
-  height: 5vh;
-}
-
-.icon:hover{
-  color: #ef4a4e;
+  font-family: 'Gilroy', 'sans-sherif' !important;
 }
 
 h1{
@@ -62,11 +43,6 @@ button:hover{
 
 @media (min-width: 320px) and (max-width: 1024px) {
   .container {
-    font-size: 5vw !important;
-  }
-
-  .icon {
-    margin: 2vw !important;
     font-size: 5vw !important;
   }
 

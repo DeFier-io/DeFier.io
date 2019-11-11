@@ -1,5 +1,7 @@
 import React from 'react';
+
 import AppBar from './components/AppBar/AppBar';
+import Footer from './components/Footer/Footer';
 
 import DETF from './pages/DETF';
 import Home from './pages/Home';
@@ -25,6 +27,7 @@ function App() {
           <Route  path="/About" component={About} />
           <Redirect from="/*" to="/" />
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );

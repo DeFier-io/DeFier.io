@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.icon{
+    margin: 0.7vw !important;
+    font-size: 2vw !important;
+    height: 5vh;
+  }
+  
+.icon:hover{
+    color: #ef4a4e;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .icon {
+      margin: 2vw !important;
+      font-size: 5vw !important;
+    }
+  
+}

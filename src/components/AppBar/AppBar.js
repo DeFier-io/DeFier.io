@@ -5,12 +5,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import { NavLink } from "react-router-dom";
 import { FaFilePdf, FaEthereum } from 'react-icons/fa';
 
-import {
-    BrowserRouter as Router,
-    NavLink
-} from "react-router-dom";
+import SVGAnimation from '../SVGAnimation/SVGAnimation'
 
 import './AppBar.css';
 
@@ -41,8 +39,8 @@ export default function ButtonAppBar() {
             <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
                 <Toolbar className="appBarContainer">
                     <section>
-                        <NavLink to="/" className="appLogo">
-                            <b>DeFi</b>er
+                        <NavLink to="/">
+                            <SVGAnimation className="appLogo"/>
                         </NavLink>
                     </section>
 
@@ -79,7 +77,7 @@ export default function ButtonAppBar() {
                         </NavLink>
 
                         <Typography className="appText">
-                            Dapp
+                            <a href="https://defier.exchange" rel="noopener noreferrer" target="_blank">Dapp</a>
                         </Typography>
                     </section>
                 </Toolbar>
