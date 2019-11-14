@@ -1,17 +1,69 @@
 import React from 'react';
-
 import { FaGithub, FaDiscord, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import styled from 'styled-components';
 
-import './Footer.css';
+const FooterWrapper = styled.section`
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+`;
+
+const FooterMiddle = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center
+`;
+
+const Icon = styled.a`
+    font-size: 2vw;
+    color:#faf0e6;
+    display: inline;
+    margin-left: 1vw;
+
+    &:hover {color: #FF5A09};
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+        font-size: 4vw !important;
+        margin: 0.6vw !important; 
+    }
+`;
+
+const Copyrigth = styled.div`
+    color: #faf0e6;
+    padding-bottom: 0.7vw;
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+        font-size: 2vw !important;
+    }
+`;
 
 export default function Footer() {
     return (
-        <div className="footer">
-                <a href="https://twitter.com/defier" target="_blank" rel="noopener noreferrer"><FaTwitter className="icon" color="primary" /></a>
-                <a href="https://discordapp.com/" rel="noopener noreferrer" target="_blank" ><FaDiscord className="icon" color="primary" /></a>
-                <a href="https://linkedin.com/company/defier" target="_blank" rel="noopener noreferrer" ><FaLinkedin className="icon" color="primary" /></a>
-                <a href="https://github.com/" rel="noopener noreferrer" target="_blank" ><FaGithub className="icon" color="primary" /></a>
-        </div>
+        <FooterWrapper>
+            <FooterMiddle>
+                <div>
+                    <Icon href="https://twitter.com/defier" target="_blank" rel="noopener noreferrer">
+                        <FaTwitter color="primary" />
+                    </Icon>
+                    <Icon href="https://discordapp.com/" rel="noopener noreferrer" target="_blank" >
+                        <FaDiscord color="primary" />
+                    </Icon>
+                    <Icon href="https://linkedin.com/company/defier" target="_blank" rel="noopener noreferrer" >
+                        <FaLinkedin color="primary" />
+                    </Icon>
+                    <Icon href="https://github.com/" rel="noopener noreferrer" target="_blank" >
+                        <FaGithub color="primary" />
+                    </Icon>
+                </div>
+                <Copyrigth>
+                    © 2019 by DeFier
+                </Copyrigth>
+            </FooterMiddle>
+        </FooterWrapper>
     )
 }
 

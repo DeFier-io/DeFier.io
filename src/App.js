@@ -14,11 +14,16 @@ import {
   Switch
 } from "react-router-dom";
 
-import './App.css';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  background-image: linear-gradient(180deg, #FF5A09 , #576E9A 40%) !important;
+  min-height: 100vh;
+`
 
 function App() {
   return (
-    <div className="app">
+    <Wrapper>
       <Router>
         <AppBar/>
         <Switch>
@@ -29,8 +34,9 @@ function App() {
         </Switch>
         <Footer/>
       </Router>
-    </div>
+    </Wrapper>
   );
 }
 
 export default App;
+//ef4a4e

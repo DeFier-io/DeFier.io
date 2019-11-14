@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactVivus from 'react-vivus';
-import svg from './img.svg';
+import svg from '../../assets/img/logo.svg';
 
 const  SVGAnimation = () => (
   <ReactVivus
@@ -13,7 +13,6 @@ const  SVGAnimation = () => (
       onReady: console.log
     }}
     style={{ height: 'auto', width: '10vw', marginTop: '1vh' }}
-    callback={console.log}
   />
 );
 export default SVGAnimation;
