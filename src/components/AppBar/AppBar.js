@@ -8,18 +8,18 @@ import Menu from '@material-ui/core/Menu';
 import { NavLink } from 'react-router-dom';
 import { FaFilePdf, FaEthereum } from 'react-icons/fa';
 
-import SVGAnimation from '../SVGAnimation/SVGAnimation'
+import logoWhite from '../../assets/img/logo_white.svg'
+import logo from '../../assets/img/logo.svg'
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1
     },
     rightToolbar: {
-        marginLeft: 'auto',
+        marginLeft: 'auto'
     },
     appText: {
         textDecoration: 'none',
-        color: '#faf0e6',
         fontFamily: "'Gilroy', 'sans-sherif'",
         marginRight: '1vw',
         display: 'inline',
@@ -29,15 +29,16 @@ const useStyles = makeStyles(theme => ({
 
         '&:hover': { color: '#576E9A' },
 
-        ['@media (min-width: 320px) and (max-width: 1024px)']: {
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             fontSize: '2.7vw !important',
             marginRight: '2vw !important'
         }
     },
-    appLog: {
-        ['@media (min-width: 320px) and (max-width: 1024px)']: {
-            fontSize: '2.7vw !important',
-            marginRight: '2vw !important'
+    appLogo:{
+        width: '6vw !important',
+
+        '@media (min-width: 320px) and (max-width: 1024px)': {
+            width: '12vw !important',
         }
     },
     appBar: {
@@ -49,7 +50,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '2vh'
     },
     list: {
-        '&:hover': { color: '#ef4a4e' }
+        '&:hover': { color: '#FF5A09' }
     }
 }));
 
@@ -69,6 +70,8 @@ export default function ButtonAppBar() {
     const classes = useStyles();
 
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [img, setImg] = React.useState(logoWhite);
+
     const open = Boolean(anchorEl);
 
     const handleMenu = event => {
@@ -78,13 +81,28 @@ export default function ButtonAppBar() {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    const handelHover = () => {
+        setImg(logo);
+    };
+
+    const handelLeave = () => {
+        setImg(logoWhite);
+    };
+
     return (
         <div className={classes.root}>
             <AppBar position='static' className={classes.appBar}>
                 <Toolbar>
                     <section>
                         <NavLink to='/'>
-                            <SVGAnimation className={classes.appLogo}/>
+                            <img 
+                                src={img} 
+                                className={classes.appLogo} 
+                                alt="logo"
+                                onMouseEnter={handelHover}
+                                onMouseLeave={handelLeave}
+                                />
                         </NavLink>
                     </section>
 
@@ -100,9 +118,8 @@ export default function ButtonAppBar() {
                                 aria-haspopup='true'
                                 className={classes.appText}>
                                 Documents
-                        </Typography>
+                            </Typography>
                             <Menu
-
                                 anchorEl={anchorEl}
                                 getContentAnchorEl={null}
                                 anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}

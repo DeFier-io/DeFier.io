@@ -21,6 +21,7 @@ const Title = styled.h1`
   color: #FF5A09;
   padding: 0px;
   margin: 0px;
+  font-family: 'Gilroy_Bold', 'sans-sherif';
 `
 const SubTitle = styled.h5`
   color: #faf0e6;
@@ -62,11 +63,11 @@ StyledButton.defaultProps = {
   size: 'large',
   component: 'a',
   rel: 'noopener noreferrer',
-  target: '_blank',
+  target: '_blank'
 };
 
 const ButtonColor = createMuiTheme({
-  palette: { primary: { main: '#faf0e6' } },
+  palette: { primary: { main: '#faf0e6' } }
 })
 
 export default function Home() {
