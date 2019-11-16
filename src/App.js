@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Redirect,
   Switch
@@ -27,10 +27,10 @@ function App() {
       <Router>
         <AppBar/>
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
-          <Route  path={process.env.PUBLIC_URL + '/DETF'} component={DETF} />
-          <Route  path={process.env.PUBLIC_URL + '/About'} component={About} />
-          <Redirect from={process.env.PUBLIC_URL + '/*'}  to={process.env.PUBLIC_URL + '/'}  />
+          <Route exact path='/' component={Home} />
+          <Route  path='/DETF' component={DETF} />
+          <Route  path='/About' component={About} />
+          <Redirect from='/*'  to='/'  />
         </Switch>
         <Footer/>
       </Router>

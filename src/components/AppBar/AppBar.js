@@ -100,7 +100,7 @@ export default function ButtonAppBar() {
             <AppBar position='static' className={classes.appBar}>
                 <Toolbar>
                     <section>
-                        <NavLink draggable="false" to={process.env.PUBLIC_URL + '/'} >
+                        <NavLink draggable="false" to='/'>
                             <img 
                                 src={img} 
                                 className={classes.appLogo} 
@@ -114,7 +114,7 @@ export default function ButtonAppBar() {
 
                     <section className={classes.rightToolbar}>
 
-                        <NavLink to={process.env.PUBLIC_URL + '/DETF'}  className={classes.appText} activeStyle={{ color: '#576E9A' }}>
+                        <NavLink to='/DETF' className={classes.appText} activeStyle={{ color: '#576E9A' }}>
                             DETFs
                         </NavLink>
 
@@ -143,7 +143,7 @@ export default function ButtonAppBar() {
                             </Menu>
                         </MuiThemeProvider>
 
-                        <NavLink to={process.env.PUBLIC_URL + '/About'}  className={classes.appText} activeStyle={{ color: '#576E9A' }}>
+                        <NavLink to='/About' className={classes.appText} activeStyle={{ color: '#576E9A' }}>
                             About Us
                         </NavLink>
 
