@@ -17,7 +17,7 @@ import {
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background-image: linear-gradient(180deg, #FF5A09 , #576E9A 40%) !important;
+  background-image: linear-gradient(180deg, #FF5A09 , #576E9A 14%) !important;
   min-height: 100vh;
 `
 
@@ -27,10 +27,10 @@ function App() {
       <Router>
         <AppBar/>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route  path="/DETF" component={DETF} />
-          <Route  path="/About" component={About} />
-          <Redirect from="/*" to="/" />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+          <Route  path={process.env.PUBLIC_URL + '/DETF'} component={DETF} />
+          <Route  path={process.env.PUBLIC_URL + '/About'} component={About} />
+          <Redirect from={process.env.PUBLIC_URL + '/*'}  to={process.env.PUBLIC_URL + '/'}  />
         </Switch>
         <Footer/>
       </Router>

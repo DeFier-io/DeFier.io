@@ -34,7 +34,8 @@ const Icon = styled.a`
 
 const Copyrigth = styled.div`
     color: #faf0e6;
-    padding-bottom: 0.7vw;
+    margin-bottom: 0.7vw;
+    font-family: Gilroy, sans-sherif;
 
     @media (min-width: 320px) and (max-width: 1024px) {
         font-size: 2vw !important;

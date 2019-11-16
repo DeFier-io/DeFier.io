@@ -17,6 +17,7 @@ const Container = styled.div`
     font-size: 5vw;
   }
 `
+
 const Title = styled.h1`
   color: #FF5A09;
   padding: 0px;

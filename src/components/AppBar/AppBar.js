@@ -10,6 +10,7 @@ import { FaFilePdf, FaEthereum } from 'react-icons/fa';
 
 import logoWhite from '../../assets/img/logo_white.svg'
 import logo from '../../assets/img/logo.svg'
+import whiteLogo from '../../assets/img/whiteLogo.svg'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -47,7 +48,11 @@ const useStyles = makeStyles(theme => ({
     },
     iconList: {
         marginRight: '5%',
-        fontSize: '2vh'
+        fontSize: '2.5vh'
+    },
+    whiteLogo:{
+        marginRight: '5%',
+        width: '2.5vh',
     },
     list: {
         '&:hover': { color: '#FF5A09' }
@@ -95,20 +100,21 @@ export default function ButtonAppBar() {
             <AppBar position='static' className={classes.appBar}>
                 <Toolbar>
                     <section>
-                        <NavLink to='/'>
+                        <NavLink draggable="false" to={process.env.PUBLIC_URL + '/'} >
                             <img 
                                 src={img} 
                                 className={classes.appLogo} 
                                 alt="logo"
                                 onMouseEnter={handelHover}
                                 onMouseLeave={handelLeave}
+                                draggable="false"
                                 />
                         </NavLink>
                     </section>
 
                     <section className={classes.rightToolbar}>
 
-                        <NavLink to='/DETF' className={classes.appText} activeStyle={{ color: '#576E9A' }}>
+                        <NavLink to={process.env.PUBLIC_URL + '/DETF'}  className={classes.appText} activeStyle={{ color: '#576E9A' }}>
                             DETFs
                         </NavLink>
 
@@ -131,12 +137,13 @@ export default function ButtonAppBar() {
                                 onClose={handleClose}
                                 MenuListProps={{ onMouseLeave: handleClose }}
                             >
-                                <MenuItem className={classes.list} onClick={handleClose}><FaFilePdf className={classes.iconList} /> WhitePaper</MenuItem>
-                                <MenuItem className={classes.list} onClick={handleClose}><FaEthereum className={classes.iconList} /> Smart Contracts</MenuItem>
+                                <MenuItem onClick={handleClose}><FaFilePdf className={classes.iconList} /><span className={classes.list}>WhitePaper</span></MenuItem>
+                                <MenuItem onClick={handleClose}><FaEthereum className={classes.iconList} /><span className={classes.list}>Smart Contracts</span></MenuItem>
+                                <MenuItem onClick={handleClose}><img draggable="false" src={whiteLogo} className={classes.whiteLogo} /><span className={classes.list}>DETFs</span></MenuItem>
                             </Menu>
                         </MuiThemeProvider>
 
-                        <NavLink to='/About' className={classes.appText} activeClassName='hurray'>
+                        <NavLink to={process.env.PUBLIC_URL + '/About'}  className={classes.appText} activeStyle={{ color: '#576E9A' }}>
                             About Us
                         </NavLink>
 
