@@ -5,13 +5,23 @@ import Button from '@material-ui/core/Button';
 
 import styled from 'styled-components';
 
+import img from '../assets/img/Background.png'
+
+const Image = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1
+`
+
 const Container = styled.div`
   min-height: 85vh;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   flex-direction: column;
   font-size: 3vw;
+  margin-left: 2vw;
 
   @media (min-width: 320px) and (max-width: 1024px) {
     font-size: 5vw;
@@ -19,20 +29,20 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-  color: #FF5A09;
+  color: #272343;
   padding: 0px;
   margin: 0px;
   font-family: 'Gilroy_Bold', 'sans-sherif';
 `
 const SubTitle = styled.h5`
-  color: #faf0e6;
+  color: #4dd599;
   padding: 0px;
   margin: 0px;
   font-family: 'Gilroy', 'sans-sherif';
 `
 
 const Text = styled.h6`
-  color: #faf0e6;
+  color: #4dd599;
   padding: 0px;
   margin: 0px;
   font-family: 'Gilroy', 'sans-sherif';
@@ -40,17 +50,12 @@ const Text = styled.h6`
 
 const StyledButton = styled(Button)`
   margin: 1vw !important;
-  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  
+  font-size: 1vw !important;
+  color: #4dd599;
+  font-weight: bold !important;
+
   &:hover {
-    color: #576E9A;
-    background: linear-gradient(to bottom right, #FF5A09 , #faf0e6);
-    transition: all 0.4s ease 0s;
-    -webkit-box-shadow: 0 6px 6px -6px black;
-    -moz-box-shadow: 0 6px 6px -6px black;
-    box-shadow: 0 6px 6px -6px black;
+    color: #272343 !important;
   }
 
   @media (min-width: 320px) and (max-width: 1024px) {
@@ -59,34 +64,40 @@ const StyledButton = styled(Button)`
   }
 `
 StyledButton.defaultProps = {
-  variant: 'outlined',
   color: 'primary',
+  variant: "outlined",
   size: 'large',
-  component: 'a',
+  component: 'button',
   rel: 'noopener noreferrer',
   target: '_blank'
 };
 
 const ButtonColor = createMuiTheme({
-  palette: { primary: { main: '#faf0e6' } }
+  palette: { primary: { main: '#4dd599' } }
 })
 
 export default function Home() {
   return (
-    <Container>
-      <Title>DeFi the Odds</Title>
-      <SubTitle>Tokenized Decentralized ETFs</SubTitle>
-      <Text>coming soon</Text>
-      <div>
-        <MuiThemeProvider theme={ButtonColor}>
-          <StyledButton href='https://www.gitbook.com'>
-            WhitePaper
+    <React.Fragment>
+      <Image
+       src={img}
+       alt='illustration'
+      />
+      <Container>
+        <Title>DeFi the Odds</Title>
+        <SubTitle>Tokenized Decentralized ETFs</SubTitle>
+        <div>
+          <MuiThemeProvider theme={ButtonColor}>
+            <StyledButton href='https://hackmd.io/'>
+              WhitePaper
           </StyledButton>
-          <StyledButton href='https://defier.exchange'>
-            Trade Now
+            <StyledButton style={{ color: "#faf0e6" }} variant="contained" href='https://defier.exchange'>
+              Trade Now
           </StyledButton>
-        </MuiThemeProvider>
-      </div>
-    </Container>
+          </MuiThemeProvider>
+        </div>
+      </Container>
+      
+    </React.Fragment>
   )
 }

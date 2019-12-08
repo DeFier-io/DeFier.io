@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Redirect,
   Switch
@@ -17,7 +17,6 @@ import {
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background-image: linear-gradient(180deg, #FF5A09 , #576E9A 14%) !important;
   min-height: 100vh;
 `
 

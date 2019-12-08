@@ -19,12 +19,12 @@ const FooterMiddle = styled.section`
 `;
 
 const Icon = styled.a`
-    font-size: 2vw;
-    color:#faf0e6;
+    font-size: 2.5vw;
+    color:#4dd599;
     display: inline;
     margin-left: 1vw;
 
-    &:hover {color: #FF5A09};
+    &:hover {color: #272343};
 
     @media (min-width: 320px) and (max-width: 1024px) {
         font-size: 4vw !important;
@@ -33,7 +33,7 @@ const Icon = styled.a`
 `;
 
 const Copyrigth = styled.div`
-    color: #faf0e6;
+    color: #272343;
     margin-bottom: 0.7vw;
     font-family: Gilroy, sans-sherif;
 
