@@ -5,11 +5,20 @@
 
 @font-face {
   font-family: 'Gilroy_Bold';
-  src: url('./assets/Fonts/Gilroy/Gilroy-Bold.otf') format("opentype");
+  src: url('./assets/Fonts/Gilroy/Gilroy-Heavy.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('./assets/Fonts/Muli.ttf');
 }
 
 body {
   margin: 0;
-  background-color: "#faf0e6"
+  background-color: #f5f5f5;
+  background-image: url('./assets/img/backgroundAboutUs.png');
+  background-position: top right;
+  background-repeat: no-repeat;    
+  background-size: 50vw auto;
 }
 

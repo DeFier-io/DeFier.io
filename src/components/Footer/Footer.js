@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaDiscord, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaDiscord, FaLinkedin, FaTwitter, FaMedium } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.section`
@@ -8,18 +8,20 @@ const FooterWrapper = styled.section`
     position: fixed;
     align-items: center;
     justify-content: center;
-    bottom: 0;
+    bottom: 1vh;
     width: 100%;
 `;
 
 const FooterMiddle = styled.section`
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
 `;
 
 const Icon = styled.a`
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     color:#4dd599;
     display: inline;
     margin-left: 1vw;
@@ -47,6 +49,9 @@ export default function Footer() {
         <FooterWrapper>
             <FooterMiddle>
                 <div>
+                    <Icon href="https://github.com/" rel="noopener noreferrer" target="_blank" >
+                        <FaMedium color="primary" />
+                    </Icon>
                     <Icon href="https://twitter.com/defier" target="_blank" rel="noopener noreferrer">
                         <FaTwitter color="primary" />
                     </Icon>
@@ -60,9 +65,6 @@ export default function Footer() {
                         <FaGithub color="primary" />
                     </Icon>
                 </div>
-                <Copyrigth>
-                    © 2019 by DeFier
-                </Copyrigth>
             </FooterMiddle>
         </FooterWrapper>
     )

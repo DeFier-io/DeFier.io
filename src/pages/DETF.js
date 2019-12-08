@@ -23,7 +23,7 @@ const useStyles = makeStyles({
         minWidth: '20vw',
         minHeight: '30vh',
         backgroundColor: 'transparent',
-        color: "#faf0e6",
+        color: "#f5f5f5",
         textAlign: "center",
 
         "@media (min-width: 320px) and (max-width: 1024px)": {

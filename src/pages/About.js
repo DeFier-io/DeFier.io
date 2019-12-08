@@ -1,33 +1,28 @@
 import React from 'react';
 
-import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import { makeStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import CardActions from '@material-ui/core/CardActions';
+import Card from '@material-ui/core/Card';
 
-import { FaUndo } from 'react-icons/fa';
+import defi from '../assets/img/DeFi.png'
+import ethereum from '../assets/img/Ethereum.png'
 
-import styled from 'styled-components';
-
-import simpleLogo from '../assets/img/simpleLogo.svg'
-import defi from '../assets/img/defi.svg'
-import ethereum from '../assets/img/ethereum.svg'
+import styled from 'styled-components'
 
 const Container = styled.div`
   min-height: 85vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin-top: 3vh;
+  justify-content: space-around;
+  flex-direction: row;
   font-size: 3vw;
 
   @media (min-width: 320px) and (max-width: 1024px) {
     font-size: 5vw;
   }
 `
+
 const useStyles = makeStyles({
     card: {
         width: '30vw',
@@ -41,34 +36,36 @@ const useStyles = makeStyles({
         height: '4vw'
     },
     text: {
-        color: '#faf0e6',
+        color: '#f5f5f5',
         textAlign: 'justify',
-        fontSize: '1vw',
-        fontFamily: "'Gilroy_bold', 'sans-sherif'",
+        fontSize: '1.5vw',
+        fontFamily: "Muli, sans-sherif",
     },
     text2: {
-        color: '#faf0e6',
+        color: '#272343',
         textAlign: 'justify',
-        fontSize: '1vw',
-        fontFamily: "'Gilroy', 'sans-sherif'",
+        fontSize: '1.5vw',
+        fontFamily: "Muli, sans-sherif'",
     },
-    title: {
-        fontSize: "2vw",
-        color: '#FF5A09',
-        fontFamily: "'Gilroy', 'sans-sherif'"
+    rightTitle: {
+        fontSize: "3vw",
+        color: '#f5f5f5',
+        fontFamily: "Gilroy_Bold, sans-sherif"
     },
-    cardAction: {
-        display: "flex",
-        justifyContent: "center",
+    leftTitle: {
+        fontSize: "3vw",
+        color: '#272343',
+        fontFamily: "Gilroy_Bold, sans-sherif"
     },
-    fa: {
-        color: "#fff",
-        "&:hover": { color: "#FF5A09" }
+    leftCard: {
+        padding: "0.5vw",
+        backgroundColor: "transparent"
     },
-    side: {
-        padding: "0.5vw"
+    rightCard: {
+        padding: "0.5vw",
+        backgroundColor: "transparent"
     },
-    icons: {
+    logo: {
         display: "flex",
         justifyContent: "space-around",
         marginTop: "5%",
@@ -84,64 +81,50 @@ export default function About() {
 
     return (
         <Container >
-            <Flippy
-                flipOnClick={true}
-            >
-                <BackSide className={classes.side}>
-                    <div className={classes.card}>
-                        <CardMedia
-                            className={classes.media}
-                            image={simpleLogo}
-                        />
-                        <CardContent>
-                            <Typography className={classes.title}>
-                                DeFi<span style={{color:"#faf0e6"}}>er</span>
+            <Card elevation={0} className={classes.rightCard}>
+                <div className={classes.card}>
+                    <CardContent>
+                        <Typography className={classes.leftTitle}>
+                            DeFi
                             </Typography>
-                            <Typography className={classes.text}>
-                                Our mission is to <span style={{ color: "#FF5A09" }}>promote</span> the
-                                <spa> <u style={{ cursor: "pointer" }}>DeFi</u></spa> movement to
-                                the general public by facilitating the <span style={{ color: "#FF5A09" }}>production</span>,
-                                <span style={{ color: "#FF5A09" }}> issuance</span>, and <span style={{ color: "#FF5A09" }}>
-                                    redemption </span> of tokenized Decentralized Exchange Traded Funds also known
-                                as <span style={{ color: "#FF5A09" }}>DETFs</span> on the Ethereum network.
+                        <Typography className={classes.text2}>
+                            Decentralized Finance also known as <span style={{ color: "#4dd599" }}>DeFi</span> is a
+                            movement promoting the idea that anyone can redesign traditional financial instruments and
+                                services in a decentralized architecture leveraging <span style={{ color: "#4dd599" }}>decentralized networks</span>, <span style={{ color: "#4dd599" }}>open source libraries</span> and <span style={{ color: "#4dd599" }}>smart contracts </span> to
+                            offer users a permissionless, trustless and transparent financial industry.
                             </Typography>
-                        </CardContent>
-                        <div className={classes.icons}>
-                            <a href="https://defi.network/" rel="noopener noreferrer" draggable="false"target="_blank" >
-                                <img style={{ width: "8vw" }} src={defi} draggable="false"/>
-                            </a>
-                            <a href="https://ethereum.org/" rel="noopener noreferrer" draggable="false" target="_blank" >
-                                <img style={{ width: "12vw" }} src={ethereum} draggable="false"/>
-                            </a>
-                        </div>
+                    </CardContent>
+                    <div className={classes.logo}>
+                        <a href="https://defi.network/" rel="noopener noreferrer" draggable="false" target="_blank" >
+                            <img style={{ width: "8vw" }} src={defi} draggable="false" />
+                        </a>
                     </div>
-                </BackSide>
+                </div>
+            </Card>
 
-                <FrontSide className={classes.side}>
-                    <div className={classes.card}>
-                        <CardMedia
-                            className={classes.media}
-                            image={simpleLogo}
-                        />
-                        <CardContent>
-                            <Typography className={classes.title}>
-                                DeFi
+            <Card elevation={0} className={classes.leftCard}>
+                <div className={classes.card}>
+                    <CardContent>
+                        <Typography className={classes.rightTitle}>
+                            DeFier
                             </Typography>
-                            <Typography className={classes.text2}>
-                                Decentralized Finance also known as <span style={{ color: "#FF5A09" }}>DeFi</span> is a
-                                movement promoting the idea that anyone can redesign traditional financial instruments and
-                                services in a decentralized architecture leveraging <span style={{ color: "#FF5A09" }}>decentralized networks</span>, <span style={{ color: "#FF5A09" }}>open source libraries</span> and <span style={{ color: "#FF5A09" }}>smart contracts </span> to
-                                offer users a permissionless, trustless and transparent financial industry.
+                        <Typography className={classes.text}>
+                            Our mission is to <span style={{ color: "#4dd599" }}>promote</span> the
+                                <spa> DeFi </spa> movement to
+                                the general public by facilitating the <span style={{ color: "#4dd599" }}>production</span>,
+                                <span style={{ color: "#4dd599" }}> issuance</span>, and <span style={{ color: "#4dd599" }}>
+                                redemption </span> of tokenized Decentralized Exchange Traded Funds also known
+                                as <span style={{ color: "#4dd599" }}>DETFs</span> on the Ethereum network.
                             </Typography>
-                        </CardContent>
-                        <CardActions className={classes.cardAction}>
-                            <IconButton style={{ fontSize: "1.5vw" }}>
-                                <FaUndo className={classes.fa} />
-                            </IconButton>
-                        </CardActions>
+                    </CardContent>
+                    <div className={classes.logo}>
+                        <a href="https://ethereum.org/" rel="noopener noreferrer" draggable="false" target="_blank" >
+                            <img style={{ width: "12vw" }} src={ethereum} draggable="false" />
+                        </a>
                     </div>
-                </FrontSide>
-            </Flippy>
+                </div>
+            </Card>
+
 
         </Container>
     );

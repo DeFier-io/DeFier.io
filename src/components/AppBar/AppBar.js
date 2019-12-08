@@ -26,14 +26,14 @@ const useStyles = makeStyles(theme => ({
         marginRight: '2vw',
         display: 'inline',
         cursor: 'pointer',
-        color: '#faf0e6',
+        color: '#f5f5f5',
         fontSize: '1.3vw',
 
         '&:hover': { color: '#4dd599' },
 
         '@media (min-width: 320px) and (max-width: 1024px)': {
-            fontSize: '2.7vw !important',
-            marginRight: '2vw !important'
+            fontSize: '2vw !important',
+            marginRight: '1vw !important'
         }
     },
     appLogo: {
@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
         width: '2.5vh',
     },
     list: {
-        color: '#faf0e6',
+        color: '#f5f5f5',
         textDecoration: 'none',
         '&:hover': { color: '#4dd599' }
     }
@@ -67,7 +67,7 @@ const muiPaper = createMuiTheme({
         MuiMenu: {
             paper: {
                 backgroundColor: '#272343',
-                color: '#faf0e6',
+                color: '#f5f5f5',
                 marginTop: '1vh'
             }
         }
@@ -219,13 +219,13 @@ export default function ButtonAppBar() {
                                 MenuListProps={{ onMouseLeave: handleClose }}
                             >
                                 <MenuItem onClick={handleClose}>
-                                    <FaEthereum className={classes.iconList} />
+                                <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
                                     <a className={classes.list} href='https://defier.exchange' rel='noopener noreferrer' target='_blank'>
                                         Exchange
                                     </a>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
-                                    <FaEthereum className={classes.iconList} />
+                                <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
                                     <a className={classes.list} href='https://defier.vote' rel='noopener noreferrer' target='_blank'>
                                         Governance
                                     </a>
