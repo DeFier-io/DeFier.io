@@ -17,10 +17,10 @@ const GlobalStyle = createGlobalStyle`
   `
 
 const Container = styled.div`
-  min-height: 85vh;
   display: flex;
   align-items: left;
-  justify-content: center;
+  margin-top: 15vh !important;
+  height: auto;
   flex-direction: column;
   font-size: 3vw;
   margin-left: 2vw;
@@ -51,7 +51,6 @@ const StyledButton = styled(Button)`
   margin-left: 0 !important;
   margin-right: 2vw !important;
   font-size: 1vw !important;
-  color: #4dd599;
   font-weight: bold !important;
   border-radius: 30px !important;
 
@@ -82,7 +81,7 @@ export default function Home() {
         <SubTitle>Tokenized Decentralized ETFs</SubTitle>
         <div>
           <MuiThemeProvider theme={ButtonColor}>
-            <StyledButton href='https://hackmd.io/'>
+            <StyledButton style={{ color: "#272343" }}  href='https://hackmd.io/'>
               WhitePaper
           </StyledButton>
             <StyledButton style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>

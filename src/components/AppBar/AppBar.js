@@ -7,6 +7,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { NavLink } from 'react-router-dom';
 import { FaFilePdf, FaEthereum } from 'react-icons/fa';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import ArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
@@ -16,6 +18,19 @@ import whiteLogo from '../../assets/img/whiteLogo.svg'
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1
+    },
+    hamburger:{
+        display: 'none',
+
+        '@media (min-width: 320px) and (max-width: 767px)': {
+            display: 'block',
+            width: '5vw'
+        }
+    },
+    menu: {
+        '@media (min-width: 320px) and (max-width: 767px)': {
+            display: 'none',
+        }
     },
     rightToolbar: {
         marginLeft: 'auto'
@@ -40,7 +55,7 @@ const useStyles = makeStyles(theme => ({
         width: '9vw !important',
 
         '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '12vw !important',
+            width: '20vw !important',
         }
     },
     appBar: {
@@ -48,15 +63,16 @@ const useStyles = makeStyles(theme => ({
         boxShadow: 'none'
     },
     iconList: {
-        fontSize: '2.5vh',
+        fontSize: '1.3vw',
         marginRight: "0.2vw",
     },
     whiteLogo: {
         marginRight: '0.2vw',
-        width: '2.5vh',
+        width: '1.3vw',
     },
     list: {
         color: '#f5f5f5',
+        fontSize: '1.1vw',
         textDecoration: 'none',
         '&:hover': { color: '#4dd599' }
     }
@@ -123,7 +139,7 @@ export default function ButtonAppBar() {
                     </section>
 
                     <section className={classes.rightToolbar}>
-
+                        <div className={classes.menu}>
                         <NavLink to='/DETF' className={classes.appText} activeStyle={{ color: '#4dd599' }}>
                             DETFs
                         </NavLink>
@@ -149,14 +165,14 @@ export default function ButtonAppBar() {
                             >
                                 <MenuItem onClick={handleClose}>
                                     <FaFilePdf className={classes.iconList} />
-                                        <a className={classes.list} href='https://hackmd.io/' rel='noopener noreferrer' target='_blank'>
-                                            WhitePaper
+                                    <a className={classes.list} href='https://hackmd.io/' rel='noopener noreferrer' target='_blank'>
+                                        WhitePaper
                                         </a>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
                                     <FaEthereum className={classes.iconList} />
-                                        <a className={classes.list} href='https://www.gitbook.com/' rel='noopener noreferrer' target='_blank'>
-                                            Smart Contracts
+                                    <a className={classes.list} href='https://www.gitbook.com/' rel='noopener noreferrer' target='_blank'>
+                                        Smart Contracts
                                         </a>
                                 </MenuItem>
                                 <MenuItem onClick={handleDETF}>
@@ -219,19 +235,23 @@ export default function ButtonAppBar() {
                                 MenuListProps={{ onMouseLeave: handleClose }}
                             >
                                 <MenuItem onClick={handleClose}>
-                                <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                    <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
                                     <a className={classes.list} href='https://defier.exchange' rel='noopener noreferrer' target='_blank'>
                                         Exchange
                                     </a>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
-                                <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                    <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
                                     <a className={classes.list} href='https://defier.vote' rel='noopener noreferrer' target='_blank'>
                                         Governance
                                     </a>
                                 </MenuItem>
                             </Menu>
                         </MuiThemeProvider>
+                        </div>
+                        <IconButton className={classes.hamburger} size="small" color="inherit" aria-label="menu">
+                            <MenuIcon />
+                        </IconButton>
                     </section>
                 </Toolbar>
             </AppBar>
