@@ -110,7 +110,7 @@ export default function About() {
                             </Typography>
                         <Typography className={classes.text}>
                             Our mission is to <span style={{ color: "#4dd599" }}>promote</span> the
-                                <spa> DeFi </spa> movement to
+                                <span> DeFi </span> movement to
                                 the general public by facilitating the <span style={{ color: "#4dd599" }}>production</span>,
                                 <span style={{ color: "#4dd599" }}> issuance</span>, and <span style={{ color: "#4dd599" }}>
                                 redemption </span> of tokenized Decentralized Exchange Traded Funds also known

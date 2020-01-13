@@ -7,8 +7,9 @@ const FooterWrapper = styled.section`
     flex-direction: row;
     position: fixed;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     bottom: 1vh;
+    margin-left: 1vw;
     width: 100%;
 `;
 
@@ -31,16 +32,6 @@ const Icon = styled.a`
     @media (min-width: 320px) and (max-width: 1024px) {
         font-size: 4vw !important;
         margin: 0.6vw !important; 
-    }
-`;
-
-const Copyrigth = styled.div`
-    color: #272343;
-    margin-bottom: 0.7vw;
-    font-family: Gilroy, sans-sherif;
-
-    @media (min-width: 320px) and (max-width: 1024px) {
-        font-size: 2vw !important;
     }
 `;
 

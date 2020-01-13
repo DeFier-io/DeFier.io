@@ -37,7 +37,7 @@ const Title = styled.h1`
   margin: 0;
   font-family: 'Gilroy_Bold', 'sans-sherif';
 `
-const SubTitle = styled.text`
+const SubTitle = styled.h2`
   color: #4dd599;
   font-size: 2vw;
   padding: 0;
