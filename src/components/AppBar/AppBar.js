@@ -7,8 +7,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { NavLink } from 'react-router-dom';
 import { FaFilePdf, FaEthereum } from 'react-icons/fa';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 
 import ArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
@@ -19,18 +17,7 @@ const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1
     },
-    hamburger:{
-        display: 'none',
-
-        '@media (min-width: 320px) and (max-width: 767px)': {
-            display: 'block',
-            width: '5vw'
-        }
-    },
     menu: {
-        '@media (min-width: 320px) and (max-width: 767px)': {
-            display: 'none',
-        }
     },
     rightToolbar: {
         marginLeft: 'auto'
@@ -249,9 +236,6 @@ export default function ButtonAppBar() {
                             </Menu>
                         </MuiThemeProvider>
                         </div>
-                        <IconButton className={classes.hamburger} size="small" color="inherit" aria-label="menu">
-                            <MenuIcon />
-                        </IconButton>
                     </section>
                 </Toolbar>
             </AppBar>

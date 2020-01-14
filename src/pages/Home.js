@@ -19,11 +19,10 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.div`
   display: flex;
   align-items: left;
-  margin-top: 15vh !important;
-  height: auto;
   flex-direction: column;
   font-size: 3vw;
   margin-left: 2vw;
+  margin-top: 20vh;
 
   @media (min-width: 320px) and (max-width: 1024px) {
     font-size: 5vw;
@@ -32,14 +31,14 @@ const Container = styled.div`
 
 const Title = styled.h1`
   color: #272343;
-  font-size: 5vw;
   padding: 0;
   margin: 0;
   font-family: 'Gilroy_Bold', 'sans-sherif';
+  font-weight: normal;
 `
 const SubTitle = styled.h2`
   color: #4dd599;
-  font-size: 2vw;
+  font-size: 2.5vw;
   padding: 0;
   margin: 0;
   font-family: 'Muli', 'sans-sherif';
@@ -50,7 +49,7 @@ const StyledButton = styled(Button)`
   margin-top: 3vh !important;
   margin-left: 0 !important;
   margin-right: 2vw !important;
-  font-size: 1vw !important;
+  font-size: 1.5vw !important;
   font-weight: bold !important;
   border-radius: 30px !important;
 

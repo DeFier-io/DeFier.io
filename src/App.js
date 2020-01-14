@@ -14,15 +14,9 @@ import {
   Switch
 } from "react-router-dom";
 
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  min-height: 100vh;
-`
 
 function App() {
   return (
-    <Wrapper>
       <Router>
         <AppBar/>
         <Switch>
@@ -33,7 +27,6 @@ function App() {
         </Switch>
         <Footer/>
       </Router>
-    </Wrapper>
   );
 }
 

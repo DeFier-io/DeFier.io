@@ -23,7 +23,7 @@ const tokenAddresses = {
     WBTC: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
 }
 
-module.exports = Promise.all(Object.keys(tokenAddresses).map(async el => {
+export default Promise.all(Object.keys(tokenAddresses).map(async el => {
     const arr = await CoinGeckoClient.coins.list()
     
     const {id, name} = arr.data.find(x => x.symbol === el.toLocaleLowerCase())

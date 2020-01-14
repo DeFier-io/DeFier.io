@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 
 import styled, { createGlobalStyle } from 'styled-components';
 
-let prices = require('./helpers/uniswap').then(result => prices = result)
+let prices = require('./helpers/uniswap')
 
 const Container = styled.div`
   min-height: 85vh;
