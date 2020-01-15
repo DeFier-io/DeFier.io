@@ -6,10 +6,8 @@ const FooterWrapper = styled.section`
     display: flex;
     flex-direction: row;
     position: fixed;
-    align-items: center;
-    justify-content: left;
+    justify-content: center;
     bottom: 1vh;
-    margin-left: 1vw;
     width: 100%;
 `;
 
@@ -52,7 +50,7 @@ export default function Footer() {
                     <Icon href="https://linkedin.com/company/defier" target="_blank" rel="noopener noreferrer" >
                         <FaLinkedin color="primary" />
                     </Icon>
-                    <Icon href="https://github.com/" rel="noopener noreferrer" target="_blank" >
+                    <Icon href="https://github.com/defier-io" rel="noopener noreferrer" target="_blank" >
                         <FaGithub color="primary" />
                     </Icon>
                 </div>

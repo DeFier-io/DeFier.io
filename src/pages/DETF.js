@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,16 +6,17 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import styled from 'styled-components';
 
-import styled, { createGlobalStyle } from 'styled-components';
+import { FaFilePdf } from 'react-icons/fa';
 
-let prices = require('./helpers/uniswap')
+import prices from './helpers/uniswap';
 
 const Container = styled.div`
   min-height: 85vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   font-size: 3vw;
 
@@ -24,10 +25,32 @@ const Container = styled.div`
     flex-direction: column;
   }
 `
-
+const Composition = styled.div`
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: row;
+`
+const AssetValue = styled.div`
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+`
+const Network = styled.div`
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+`
 const useStyles = makeStyles({
     card: {
-        maxWidth: '30vw',
+
+        minWidth: '60vw',
         minHeight: '30vh',
         color: "#f5f5f5",
         textAlign: "center",
@@ -69,54 +92,69 @@ const ButtonColor = createMuiTheme({
 export default function DETF() {
     const classes = useStyles();
 
-    console.log(prices)
+    const [data, setData] = useState(null);
+
+    prices.then(data => setData(data))
 
     return (
+
         <Container>
-            <Card raised={true} className={classes.card}>
-                <CardContent>
-                    <Typography color="textPrimary" gutterBottom variant="h5" component="h2">
-                        Defier Uniswap 5 A
+            {data === null ? <div></div> :
+                <Card raised={true} className={classes.card}>
+                    <CardContent>
+                        <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
+                            DeFier Uniswap 5 A
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Ticker: DU5A
+                        <Typography variant="h5" color="textSecondary" component="p">
+                            Ticker: DU5A
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Composition: BAT (31%), cDAI (6%), MKR (47%), SNX (15%), WBTC (1%)
+                        <Typography variant="h6" color="textSecondary" component="p">
+                            Next Vote: N/A
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Asset Value: N.A
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Net Asset Value: N.A
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        YTD Return (%)
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Next Vote: N.A
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        <div>MainNet: Not Launched</div>
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        <div>TestNet: Not Launched</div>
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        PDF: Fact Sheet
-                    </Typography>
-                    <div>
-                        <MuiThemeProvider theme={ButtonColor}>
-                            <StyledButton style={{ color: "#272343" }} href='https://hackmd.io/'>
-                                Vote Now
+                    
+                    <AssetValue>
+                        <Typography variant="h6" color="textSecondary" component="p">
+                                Market Capitalization: N/A
+                        </Typography>
+                            <Typography variant="h6" color="textSecondary" component="p">
+                                Net Asset Value: N/A
+                        </Typography>
+                   </AssetValue>
+                   
+                        <Composition>
+                            {data.map(el => {
+                                return <div>
+                                    <Typography variant="body2" color="textSecondary" component="p">{el.name} ({el.ticker})</Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p">${el.ticker === "BAT" ? el.USDlast.toFixed(3) : el.USDlast.toFixed(2)}</Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p">DETF Weigth: N/A</Typography>
+                                </div>
+
+                            })}
+                        </Composition>
+                    <Network>
+                        <Typography variant="h6" color="textSecondary" component="p">
+                            MainNet: Not Launched
+                        </Typography>
+                        <Typography variant="h6" color="textSecondary" component="p">
+                            TestNet: Not Launched
+                        </Typography>
+                    </Network>
+
+                    <FaFilePdf color='black' style={{cursor: "pointer"}}/>
+
+                        <div>
+                            <MuiThemeProvider theme={ButtonColor}>
+                                <StyledButton style={{ color: "#272343" }} href='https://hackmd.io/'>
+                                    Vote Now
                             </StyledButton>
-                            <StyledButton style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
-                                Trade Now
+                                <StyledButton style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
+                                    Trade Now
                             </StyledButton>
-                        </MuiThemeProvider>
-                    </div>
-                </CardContent>
-            </Card>
+                            </MuiThemeProvider>
+                        </div>
+                    </CardContent>
+                </Card>
+            }
         </Container>
     );
 }

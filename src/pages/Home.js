@@ -40,13 +40,13 @@ const SubTitle = styled.h2`
   color: #4dd599;
   font-size: 2.5vw;
   padding: 0;
-  margin: 0;
+  margin: -2vh 0 0 0;
   font-family: 'Muli', 'sans-sherif';
 `
 
 
 const StyledButton = styled(Button)`
-  margin-top: 3vh !important;
+  margin-top: 4vh !important;
   margin-left: 0 !important;
   margin-right: 2vw !important;
   font-size: 1.5vw !important;
