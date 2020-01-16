@@ -13,6 +13,10 @@
   src: url('./assets/Fonts/Muli.ttf');
 }
 
+a, a:active, a:focus{
+  outline: none; /* Works in Firefox, Chrome, IE8 and above */ 
+}
+
 body {
   background-color: #f5f5f5;
   background-image: url('./assets/img/backgroundAboutUs.png');

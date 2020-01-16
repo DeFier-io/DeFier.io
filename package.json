@@ -8,6 +8,7 @@
     "@material-ui/icons": "^4.5.1",
     "@material-ui/styles": "^4.0.0-rc.0",
     "coingecko-api": "^1.0.8",
+    "cryptocurrency-icons": "^0.16.1",
     "dotenv": "^8.2.0",
     "gh-pages": "^2.1.1",
     "react": "^16.11.0",

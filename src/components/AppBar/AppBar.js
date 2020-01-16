@@ -184,15 +184,23 @@ export default function ButtonAppBar() {
                                 >
                                     <MenuItem onClick={handleClose}>
                                         <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
-                                        <span className={classes.list}>DETF_1</span>
+                                        <span className={classes.list}>DU5A</span>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
                                         <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
-                                        <span className={classes.list}>DETF_2</span>
+                                        <span className={classes.list}>DU4A</span>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
                                         <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
-                                        <span className={classes.list}>DETF_3</span>
+                                        <span className={classes.list}>DU4B</span>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose}>
+                                        <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                        <span className={classes.list}>DU3A</span>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose}>
+                                        <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                        <span className={classes.list}>DU2A</span>
                                     </MenuItem>
                                 </Menu>
                             </Menu>

@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 import { FaFilePdf } from 'react-icons/fa';
 
-import prices from './helpers/uniswap';
+import prices from './helpers/coinGecko';
 
 const Container = styled.div`
   min-height: 85vh;
@@ -28,7 +28,7 @@ const Container = styled.div`
 const Composition = styled.div`
     margin-top: 2%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
 `
@@ -40,7 +40,6 @@ const AssetValue = styled.div`
     flex-direction: row;
 `
 const Network = styled.div`
-    margin-top: 2%;
     margin-bottom: 2%;
     display: flex;
     flex-wrap: nowrap;
@@ -50,7 +49,7 @@ const Network = styled.div`
 const useStyles = makeStyles({
     card: {
 
-        minWidth: '60vw',
+        maxWidth: '50vw',
         minHeight: '30vh',
         color: "#f5f5f5",
         textAlign: "center",
@@ -65,11 +64,12 @@ const useStyles = makeStyles({
 
 const StyledButton = styled(Button)`
   margin-top: 3vh !important;
-  margin-left: 0 !important;
-  margin-right: 2vw !important;
+  margin-left: 1vw !important;
+  margin-right: 1vw !important;
   font-size: 1vw !important;
   font-weight: bold !important;
   border-radius: 30px !important;
+  width: 10vw;
 
   @media (min-width: 320px) and (max-width: 1024px) {
     margin-top: 2vh !important;
@@ -94,7 +94,9 @@ export default function DETF() {
 
     const [data, setData] = useState(null);
 
-    prices.then(data => setData(data))
+    if(data === null){
+        prices.then(data => setData(data))
+    }
 
     return (
 
@@ -103,7 +105,7 @@ export default function DETF() {
                 <Card raised={true} className={classes.card}>
                     <CardContent>
                         <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
-                            DeFier Uniswap 5 A
+                            DeFier Uniswap 5A
                     </Typography>
                         <Typography variant="h5" color="textSecondary" component="p">
                             Ticker: DU5A
@@ -123,9 +125,18 @@ export default function DETF() {
                    
                         <Composition>
                             {data.map(el => {
-                                return <div>
-                                    <Typography variant="body2" color="textSecondary" component="p">{el.name} ({el.ticker})</Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">${el.ticker === "BAT" ? el.USDlast.toFixed(3) : el.USDlast.toFixed(2)}</Typography>
+                                if(el.ticker ===  "XCHF"){
+                                    return null; 
+                                }
+                                return <div style={{marginBottom: "2%" }}>
+                                    <Typography variant="body1" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
+                                    
+                                    <img src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" style={{width: "2.5vw", marginTop: "0.4vw" }} />
+
+                                    <Typography variant="body2" color="textSecondary" component="p">${
+                                        el.ticker === "BAT" || el.ticker === "CDAI" ? el.USDlast.toFixed(4) : el.USDlast.toFixed(2)
+                                    }</Typography>
+                                    
                                     <Typography variant="body2" color="textSecondary" component="p">DETF Weigth: N/A</Typography>
                                 </div>
 
@@ -140,16 +151,16 @@ export default function DETF() {
                         </Typography>
                     </Network>
 
-                    <FaFilePdf color='black' style={{cursor: "pointer"}}/>
+                    <FaFilePdf color='#272343' style={{cursor: "pointer"}}/>
 
                         <div>
                             <MuiThemeProvider theme={ButtonColor}>
-                                <StyledButton style={{ color: "#272343" }} href='https://hackmd.io/'>
-                                    Vote Now
-                            </StyledButton>
-                                <StyledButton style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
-                                    Trade Now
-                            </StyledButton>
+                                <StyledButton style={{ color: "#272343" }} href='https://defier.vote/'>
+                                        Vote Now
+                                </StyledButton>
+                                    <StyledButton style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
+                                        Trade Now
+                                </StyledButton>
                             </MuiThemeProvider>
                         </div>
                     </CardContent>

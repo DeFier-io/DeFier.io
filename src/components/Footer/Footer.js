@@ -15,7 +15,6 @@ const FooterMiddle = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     bottom: 0;
 `;
 
@@ -23,7 +22,7 @@ const Icon = styled.a`
     font-size: 2.3vw;
     color:#4dd599;
     display: inline;
-    margin-left: 1vw;
+    margin: 0.5vw;
 
     &:hover {color: #272343};
 
