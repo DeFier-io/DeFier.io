@@ -67,7 +67,6 @@ const useStyles = makeStyles({
         minHeight: '30vh',
         color: "#f5f5f5",
         textAlign: "center",
-        margin: "2%",
 
         "@media (min-width: 320px) and (max-width: 1024px)": {
             minWidth: '50vw',
@@ -141,7 +140,7 @@ export default function DETF() {
                                     if (el.ticker === "XCHF") {
                                         return null;
                                     }
-                                    return <div style={{ marginBottom: "2%" }}>
+                                    return <div style={{ margin: "0.5vw" }}>
                                         <Typography variant="body1" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
 
                                         <Image src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" />
