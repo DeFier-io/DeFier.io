@@ -6,7 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { FaFilePdf } from 'react-icons/fa';
 
@@ -45,6 +46,20 @@ const Network = styled.div`
     flex-wrap: nowrap;
     justify-content: space-evenly;
     flex-direction: row;
+`
+const spin = keyframes`
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+`
+const Logo = styled.img`
+    width: 5vw;
+    margin-top: 0.4vw;
+    color: black;
+    animation: ${spin} 2s ease-in-out infinite
+`
+const Image = styled.img`
+    width: 2.5vw;
+    margin-top: 0.4vw;
 `
 const useStyles = makeStyles({
     card: {
@@ -101,7 +116,7 @@ export default function DETF() {
     return (
 
         <Container>
-            {data === null ? <div></div> :
+            {data === null ? <Logo src={require(`../assets/img/Logo_fav.png`)} alt="icon" /> :
                 <Card raised={true} className={classes.card}>
                     <CardContent>
                         <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
@@ -131,7 +146,7 @@ export default function DETF() {
                                 return <div style={{marginBottom: "2%" }}>
                                     <Typography variant="body1" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
                                     
-                                    <img src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" style={{width: "2.5vw", marginTop: "0.4vw" }} />
+                                    <Image src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" />
 
                                     <Typography variant="body2" color="textSecondary" component="p">${
                                         el.ticker === "BAT" || el.ticker === "CDAI" ? el.USDlast.toFixed(4) : el.USDlast.toFixed(2)
