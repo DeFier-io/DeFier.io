@@ -34,15 +34,16 @@ const useStyles = makeStyles(theme => ({
         '&:hover': { color: '#4dd599' },
 
         '@media (min-width: 320px) and (max-width: 1024px)': {
-            fontSize: '2vw !important',
-            marginRight: '1vw !important'
+            fontSize: '3vw',
+            marginRight: '2vw',
+            color: '#272343',
         }
     },
     appLogo: {
-        width: '9vw !important',
+        width: '9vw',
 
         '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '20vw !important',
+            width: '30vw',
         }
     },
     appBar: {
@@ -52,16 +53,29 @@ const useStyles = makeStyles(theme => ({
     iconList: {
         fontSize: '1.3vw',
         marginRight: "0.2vw",
+
+        '@media (min-width: 320px) and (max-width: 1024px)': {
+            fontSize: '5vw',
+            marginRight: '1vw',
+        }
     },
     whiteLogo: {
         marginRight: '0.2vw',
         width: '1.3vw',
+        '@media (min-width: 320px) and (max-width: 1024px)': {
+            marginRight: '1vw',
+            width: '5vw',
+        }
     },
     list: {
         color: '#f5f5f5',
         fontSize: '1.1vw',
         textDecoration: 'none',
-        '&:hover': { color: '#4dd599' }
+        '&:hover': { color: '#4dd599' },
+        '@media (min-width: 320px) and (max-width: 1024px)': {
+            fontSize: '4vw',
+            marginRight: '1vw',
+        }
     }
 }));
 

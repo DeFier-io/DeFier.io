@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import styled, { createGlobalStyle }  from 'styled-components';
 
 import img from '../assets/img/Background.png';
+import imgMobile from '../assets/img/HomePageMobile.png';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -13,6 +14,15 @@ const GlobalStyle = createGlobalStyle`
     background-position: top right;
     background-repeat: no-repeat;    
     background-size: 50vw auto;
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+      background-image: url(${imgMobile});
+      background-position: bottom;
+      background-repeat: no-repeat;    
+      background-size: 100vw 60vh;
+      margin: 0;
+      height: 100vh;
+    }
   }
   `
 
@@ -25,7 +35,10 @@ const Container = styled.div`
   margin-top: 20vh;
 
   @media (min-width: 320px) and (max-width: 1024px) {
+    align-items: center;
+    margin: 0;
     font-size: 5vw;
+    margin-top: 6vh;
   }
 `
 
@@ -35,6 +48,12 @@ const Title = styled.h1`
   margin: 0;
   font-family: 'Gilroy_Bold', 'sans-sherif';
   font-weight: normal;
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    align-items: center;
+    font-size: 10vw;
+  }
+
 `
 const SubTitle = styled.h2`
   color: #4dd599;
@@ -42,6 +61,11 @@ const SubTitle = styled.h2`
   padding: 0;
   margin: -2vh 0 0 0;
   font-family: 'Muli', 'sans-sherif';
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    font-size: 5vw;
+    margin: 0 0 0 0;
+  }
 `
 
 
@@ -55,7 +79,8 @@ const StyledButton = styled(Button)`
 
   @media (min-width: 320px) and (max-width: 1024px) {
     margin-top: 2vh !important;
-    font-size: 2.3vw !important;
+    font-size: 3vw !important;
+    margin-top: 3vh !important;
   }
 `
 StyledButton.defaultProps = {
@@ -75,6 +100,7 @@ export default function Home() {
   return (
     <React.Fragment>
       <GlobalStyle />
+
       <Container>
         <Title>DeFi the Odds</Title>
         <SubTitle>Tokenized Decentralized ETFs</SubTitle>

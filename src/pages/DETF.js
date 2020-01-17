@@ -6,11 +6,23 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, createGlobalStyle } from 'styled-components';
 
 import { FaFilePdf } from 'react-icons/fa';
 
 import prices from './helpers/coinGecko';
+
+import imgDesktop from '../assets/img/backgroundAboutUs.png';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #f5f5f5;
+    background-image: url(${imgDesktop});
+    background-position: top right;
+    background-repeat: no-repeat;    
+    background-size: 50vw auto;
+  }
+`
 
 const Container = styled.div`
   min-height: 85vh;
@@ -113,6 +125,7 @@ export default function DETF() {
 
     return (
             <Container>
+                <GlobalStyle />
                 {data === null ? <Logo src={require(`../assets/img/Logo_fav.png`)} alt="icon" /> :
                     <Card raised={true} className={classes.card}>
                         <CardContent>
@@ -140,7 +153,7 @@ export default function DETF() {
                                     if (el.ticker === "XCHF") {
                                         return null;
                                     }
-                                    return <div style={{ margin: "0.5vw" }}>
+                                    return <div style={{ margin: "0.5vw", marginBottom: "0.5vw" }}>
                                         <Typography variant="body1" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
 
                                         <Image src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" />

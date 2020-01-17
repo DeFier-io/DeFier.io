@@ -7,7 +7,7 @@ const FooterWrapper = styled.section`
     flex-direction: row;
     position: fixed;
     justify-content: center;
-    bottom: 1vh;
+    bottom: 0%;
     width: 100%;
 `;
 
@@ -27,8 +27,8 @@ const Icon = styled.a`
     &:hover {color: #272343};
 
     @media (min-width: 320px) and (max-width: 1024px) {
-        font-size: 4vw !important;
-        margin: 0.6vw !important; 
+        font-size: 9vw;
+        margin: 2.5vw; 
     }
 `;
 

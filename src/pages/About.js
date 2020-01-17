@@ -8,7 +8,29 @@ import Card from '@material-ui/core/Card';
 import defi from '../assets/img/DeFi.png'
 import ethereum from '../assets/img/Ethereum.png'
 
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+
+import imgMobile from '../assets/img/AboutPageMobile.png';
+import imgDesktop from '../assets/img/backgroundAboutUs.png';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #f5f5f5;
+    background-image: url(${imgDesktop});
+    background-position: top right;
+    background-repeat: no-repeat;    
+    background-size: 50vw auto;
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+      background-image: url(${imgMobile});
+      background-position: bottom;
+      background-repeat: no-repeat;    
+      background-size: 100vw 50vh;
+      margin: 0;
+      height: 100vh;
+    }
+  }
+`
 
 const Container = styled.div`
   min-height: 85vh;
@@ -16,10 +38,11 @@ const Container = styled.div`
   margin-top: 3vh;
   justify-content: space-around;
   flex-direction: row;
-  font-size: 3vw;
 
   @media (min-width: 320px) and (max-width: 1024px) {
-    font-size: 5vw;
+    margin: 0;
+    flex-direction: column;
+    justify-content: none;
   }
 `
 
@@ -29,40 +52,51 @@ const useStyles = makeStyles({
         backgroundColor: 'transparent',
 
         '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '40vw'
+            width: '100vw'
         }
-    },
-    media: {
-        height: '4vw'
     },
     text: {
         color: '#f5f5f5',
         textAlign: 'justify',
         fontSize: '1.5vw',
         fontFamily: "Muli, sans-sherif",
+
+        "@media (min-width: 320px) and (max-width: 1024px)": {
+            fontSize: '4vw',
+        }
     },
     text2: {
         color: '#272343',
         textAlign: 'justify',
         fontSize: '1.5vw',
         fontFamily: "Muli, sans-sherif'",
+        
+        "@media (min-width: 320px) and (max-width: 1024px)": {
+            fontSize: '4vw',
+        }
     },
     rightTitle: {
         fontSize: "3vw",
         color: '#f5f5f5',
-        fontFamily: "Gilroy_Bold, sans-sherif"
+        fontFamily: "Gilroy_Bold, sans-sherif",
+
+        "@media (min-width: 320px) and (max-width: 1024px)": {
+            fontSize: '7vw',
+        }
     },
     leftTitle: {
         fontSize: "3vw",
         color: '#272343',
-        fontFamily: "Gilroy_Bold, sans-sherif"
+        fontFamily: "Gilroy_Bold, sans-sherif",
+
+        "@media (min-width: 320px) and (max-width: 1024px)": {
+            fontSize: '7vw',
+        }
     },
     leftCard: {
-        padding: "0.5vw",
         backgroundColor: "transparent"
     },
     rightCard: {
-        padding: "0.5vw",
         backgroundColor: "transparent"
     },
     logo: {
@@ -73,6 +107,20 @@ const useStyles = makeStyles({
         '@media (min-width: 320px) and (max-width: 1024px)': {
             marginTop: "0",
         }
+    },
+    img1: {
+        width: "8vw",
+
+        '@media (min-width: 320px) and (max-width: 1024px)': {
+            width: "27vw",
+        }
+    },
+    img2: {
+        width: "12vw",
+
+        '@media (min-width: 320px) and (max-width: 1024px)': {
+            width: "30vw",
+        }
     }
 });
 
@@ -81,6 +129,7 @@ export default function About() {
 
     return (
         <Container >
+            <GlobalStyle />
             <Card elevation={0} className={classes.rightCard}>
                 <div className={classes.card}>
                     <CardContent>
@@ -96,7 +145,7 @@ export default function About() {
                     </CardContent>
                     <div className={classes.logo}>
                         <a href="https://defi.network/" rel="noopener noreferrer" draggable="false" target="_blank" >
-                            <img style={{ width: "8vw" }} src={defi} draggable="false" />
+                            <img className={classes.img1} src={defi} draggable="false" />
                         </a>
                     </div>
                 </div>
@@ -119,7 +168,7 @@ export default function About() {
                     </CardContent>
                     <div className={classes.logo}>
                         <a href="https://ethereum.org/" rel="noopener noreferrer" draggable="false" target="_blank" >
-                            <img style={{ width: "12vw" }} src={ethereum} draggable="false" />
+                            <img className={classes.img2} src={ethereum} draggable="false" />
                         </a>
                     </div>
                 </div>
