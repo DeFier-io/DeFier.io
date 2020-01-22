@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;    
     background-size: 53vw auto;
 
-    @media (min-width: 320px) and (max-width: 1024px) {
+    @media (max-width: 1024px) {
         background-image: url(${imgMobile});
         background-position: bottom;
         background-repeat: no-repeat;    

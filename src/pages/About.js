@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;    
     background-size: 50vw auto;
 
-    @media (min-width: 320px) and (max-width: 1024px) {
+    @media (max-width: 1024px) {
       background-image: url(${imgMobile});
       background-position: bottom;
       background-repeat: no-repeat;    
@@ -39,7 +39,7 @@ const Container = styled.div`
   justify-content: space-around;
   flex-direction: row;
 
-  @media (min-width: 320px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     margin: 0;
     flex-direction: column;
     justify-content: none;
@@ -51,7 +51,7 @@ const useStyles = makeStyles({
         width: '30vw',
         backgroundColor: 'transparent',
 
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             width: '100vw',
             paddingBottom: '10%'
         }
@@ -62,7 +62,7 @@ const useStyles = makeStyles({
         fontSize: '1.5vw',
         fontFamily: "Muli, sans-sherif",
 
-        "@media (min-width: 320px) and (max-width: 1024px)": {
+        "@media (max-width: 1024px)": {
             fontSize: '4vw',
         }
     },
@@ -72,7 +72,7 @@ const useStyles = makeStyles({
         fontSize: '1.5vw',
         fontFamily: "Muli, sans-sherif'",
         
-        "@media (min-width: 320px) and (max-width: 1024px)": {
+        "@media (max-width: 1024px)": {
             fontSize: '4vw',
         }
     },
@@ -81,7 +81,7 @@ const useStyles = makeStyles({
         color: '#f5f5f5',
         fontFamily: "Gilroy_Bold, sans-sherif",
 
-        "@media (min-width: 320px) and (max-width: 1024px)": {
+        "@media (max-width: 1024px)": {
             fontSize: '7vw',
         }
     },
@@ -90,7 +90,7 @@ const useStyles = makeStyles({
         color: '#272343',
         fontFamily: "Gilroy_Bold, sans-sherif",
 
-        "@media (min-width: 320px) and (max-width: 1024px)": {
+        "@media (max-width: 1024px)": {
             fontSize: '7vw',
         }
     },
@@ -105,21 +105,21 @@ const useStyles = makeStyles({
         justifyContent: "space-around",
         marginTop: "5%",
 
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             marginTop: "0",
         }
     },
     img1: {
         width: "8vw",
 
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             width: "27vw",
         }
     },
     img2: {
         width: "12vw",
 
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             width: "30vw",
         }
     }

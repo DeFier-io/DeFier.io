@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;    
     background-size: 53vw auto;
     
-    @media (min-width: 320px) and (max-width: 1024px) {
+    @media (max-width: 1024px) {
       background-image: url(${imgMobile});
       background-position: bottom;
       background-repeat: no-repeat;    
@@ -31,7 +31,7 @@ const Container = styled.div`
   margin-left: 2vw;
   margin-top: 20vh;
 
-  @media (min-width: 320px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -48,7 +48,7 @@ const Title = styled.h1`
   font-family: 'Gilroy_Bold', 'sans-sherif';
   font-weight: normal;
 
-  @media (min-width: 320px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     align-items: center;
     font-size: 10vw;
   }
@@ -61,7 +61,7 @@ const SubTitle = styled.h2`
   margin: -2vh 0 0 0;
   font-family: 'Muli', 'sans-sherif';
 
-  @media (min-width: 320px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     font-size: 5vw;
     margin: 0 0 0 0;
   }
@@ -76,7 +76,7 @@ const StyledButton = styled(Button)`
   font-weight: bold !important;
   border-radius: 30px !important;
 
-  @media (min-width: 320px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     margin-top: 2vh !important;
     font-size: 3vw !important;
     margin-top: 3vh !important;

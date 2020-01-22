@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
 
         '&:hover': { color: '#4dd599' },
 
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             fontSize: '3vw',
             marginRight: '2vw',
             color: '#272343',
@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     appLogo: {
         width: '9vw',
 
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             width: '30vw',
         }
     },
@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '1.6vw',
         marginRight: "0.2vw",
 
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             fontSize: '5vw',
             marginRight: '1vw',
         }
@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
     whiteLogo: {
         marginRight: '0.2vw',
         width: '2vw',
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             marginRight: '1vw',
             width: '5vw',
         }
@@ -79,7 +79,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '1.3vw',
         textDecoration: 'none',
         '&:hover': { color: '#4dd599' },
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (max-width: 1024px)': {
             fontSize: '4vw',
             marginRight: '1vw',
         }

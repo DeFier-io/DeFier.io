@@ -18,7 +18,7 @@ const Icon = styled.a`
 
     &:hover {color: #272343};
 
-    @media (min-width: 320px) and (max-width: 1024px) {
+    @media (max-width: 1024px) {
         font-size: 9vw;
         margin: 2.5vw; 
     }
