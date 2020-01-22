@@ -6,12 +6,19 @@ import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { NavLink } from 'react-router-dom';
-import { FaFilePdf, FaEthereum } from 'react-icons/fa';
 
 import ArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
 import logo from '../../assets/img/Logo.svg'
+import twoA from '../../assets/img/2A.svg'
+import threeA from '../../assets/img/3A.svg'
+import fourA from '../../assets/img/4A.svg'
+import fiveA from '../../assets/img/5A.svg'
+import Exchange from '../../assets/img/Exchange.svg'
+import Governance from '../../assets/img/Governance.svg'
 import whiteLogo from '../../assets/img/whiteLogo.svg'
+import SmartContractLogo from '../../assets/img/SmartContract.svg'
+import whitepaper from '../../assets/img/Whitepaper.svg'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -51,7 +58,7 @@ const useStyles = makeStyles(theme => ({
         boxShadow: 'none'
     },
     iconList: {
-        fontSize: '1.3vw',
+        fontSize: '1.6vw',
         marginRight: "0.2vw",
 
         '@media (min-width: 320px) and (max-width: 1024px)': {
@@ -61,7 +68,7 @@ const useStyles = makeStyles(theme => ({
     },
     whiteLogo: {
         marginRight: '0.2vw',
-        width: '1.3vw',
+        width: '2vw',
         '@media (min-width: 320px) and (max-width: 1024px)': {
             marginRight: '1vw',
             width: '5vw',
@@ -69,7 +76,7 @@ const useStyles = makeStyles(theme => ({
     },
     list: {
         color: '#f5f5f5',
-        fontSize: '1.1vw',
+        fontSize: '1.3vw',
         textDecoration: 'none',
         '&:hover': { color: '#4dd599' },
         '@media (min-width: 320px) and (max-width: 1024px)': {
@@ -165,19 +172,20 @@ export default function ButtonAppBar() {
                                 MenuListProps={{ onMouseLeave: handleClose }}
                             >
                                 <MenuItem onClick={handleClose}>
-                                    <FaFilePdf className={classes.iconList} />
+                                <img draggable="false" src={whitepaper} alt="whitepaper_logo" className={classes.whiteLogo} />
+                                    
                                     <a className={classes.list} href='https://hackmd.io/' rel='noopener noreferrer' target='_blank'>
                                         WhitePaper
                                         </a>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
-                                    <FaEthereum className={classes.iconList} />
+                                    <img draggable="false" src={SmartContractLogo} alt="smartContract_logo" className={classes.whiteLogo} />
                                     <a className={classes.list} href='https://www.gitbook.com/' rel='noopener noreferrer' target='_blank'>
                                         Smart Contracts
                                         </a>
                                 </MenuItem>
                                 <MenuItem onClick={handleDETF}>
-                                    <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                    <img draggable="false" src={whiteLogo} alt="detf_logo" className={classes.whiteLogo} />
                                     <span className={classes.list}>
                                         DETFs
                                     </span>
@@ -197,23 +205,23 @@ export default function ButtonAppBar() {
                                     onClose={handleClose}
                                 >
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                        <img draggable="false" src={fiveA} alt="DU5A_logo" className={classes.whiteLogo} />
                                         <span className={classes.list}>DU5A</span>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                        <img draggable="false" src={fourA} alt="DU4A_logo" className={classes.whiteLogo} />
                                         <span className={classes.list}>DU4A</span>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                        <img draggable="false" src={fourA} alt="DU4B_logo" className={classes.whiteLogo} />
                                         <span className={classes.list}>DU4B</span>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                        <img draggable="false" src={threeA} alt="DU3A_logo" className={classes.whiteLogo} />
                                         <span className={classes.list}>DU3A</span>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                        <img draggable="false" src={twoA} alt="DU2A_logo" className={classes.whiteLogo} />
                                         <span className={classes.list}>DU2A</span>
                                     </MenuItem>
                                 </Menu>
@@ -244,13 +252,13 @@ export default function ButtonAppBar() {
                                 MenuListProps={{ onMouseLeave: handleClose }}
                             >
                                 <MenuItem onClick={handleClose}>
-                                    <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                    <img draggable="false" src={Exchange} alt="defierEx_logo" className={classes.whiteLogo} />
                                     <a className={classes.list} href='https://defier.exchange' rel='noopener noreferrer' target='_blank'>
                                         Exchange
                                     </a>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
-                                    <img draggable="false" src={whiteLogo} className={classes.whiteLogo} />
+                                    <img draggable="false" src={Governance} alt="defierVote_logo" className={classes.whiteLogo} />
                                     <a className={classes.list} href='https://defier.vote' rel='noopener noreferrer' target='_blank'>
                                         Governance
                                     </a>

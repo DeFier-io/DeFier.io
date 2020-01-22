@@ -3,23 +3,15 @@ import { FaGithub, FaDiscord, FaLinkedin, FaTwitter, FaMedium } from 'react-icon
 import styled from 'styled-components';
 
 const FooterWrapper = styled.section`
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    justify-content: center;
-    bottom: 0%;
+    text-align: center;
     width: 100%;
+    position: fixed;
+    bottom: 1%;
 `;
 
-const FooterMiddle = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 0;
-`;
 
 const Icon = styled.a`
-    font-size: 2.3vw;
+    font-size: 2.7vw;
     color:#4dd599;
     display: inline;
     margin: 0.5vw;
@@ -35,8 +27,6 @@ const Icon = styled.a`
 export default function Footer() {
     return (
         <FooterWrapper>
-            <FooterMiddle>
-                <div>
                     <Icon href="https://github.com/" rel="noopener noreferrer" target="_blank" >
                         <FaMedium color="primary" />
                     </Icon>
@@ -52,8 +42,6 @@ export default function Footer() {
                     <Icon href="https://github.com/defier-io" rel="noopener noreferrer" target="_blank" >
                         <FaGithub color="primary" />
                     </Icon>
-                </div>
-            </FooterMiddle>
         </FooterWrapper>
     )
 }

@@ -13,13 +13,13 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${img});
     background-position: top right;
     background-repeat: no-repeat;    
-    background-size: 50vw auto;
-
+    background-size: 53vw auto;
+    
     @media (min-width: 320px) and (max-width: 1024px) {
       background-image: url(${imgMobile});
       background-position: bottom;
       background-repeat: no-repeat;    
-      background-size: 100vw 60vh;
+      background-size: 100vw auto;
       margin: 0;
       height: 100vh;
     }
@@ -27,15 +27,14 @@ const GlobalStyle = createGlobalStyle`
   `
 
 const Container = styled.div`
-  display: flex;
-  align-items: left;
-  flex-direction: column;
   font-size: 3vw;
   margin-left: 2vw;
   margin-top: 20vh;
 
   @media (min-width: 320px) and (max-width: 1024px) {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     margin: 0;
     font-size: 5vw;
     margin-top: 6vh;

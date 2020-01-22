@@ -11,8 +11,6 @@ const prices = async () => {
 
         const { id, name } = coinList.data.find(x => x.symbol === el.toLocaleLowerCase())
 
-        const result = await CoinGeckoClient.coins.fetchMarketChart(id, { vs_currency: 'eth' });
-
         let price = await CoinGeckoClient.coins.fetchTickers(id);
 
         price = price.data.tickers.filter(el => el.target === 'EUR' || el.target === 'USD' || el.target === 'ETH')
@@ -20,8 +18,7 @@ const prices = async () => {
         return {
             name,
             ticker: el,
-            chart: result.data.prices,
-            USDlast: price[0] != undefined ? price[0].converted_last.usd : null
+            USDlast: price[0] !== undefined ? price[0].converted_last.usd : null
         }
     }))
 

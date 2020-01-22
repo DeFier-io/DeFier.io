@@ -33,9 +33,9 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Container = styled.div`
-  min-height: 85vh;
+  min-height: 100%;
   display: flex;
-  margin-top: 3vh;
+  margin-top: 5vh;
   justify-content: space-around;
   flex-direction: row;
 
@@ -52,7 +52,8 @@ const useStyles = makeStyles({
         backgroundColor: 'transparent',
 
         '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100vw'
+            width: '100vw',
+            paddingBottom: '10%'
         }
     },
     text: {
@@ -145,7 +146,7 @@ export default function About() {
                     </CardContent>
                     <div className={classes.logo}>
                         <a href="https://defi.network/" rel="noopener noreferrer" draggable="false" target="_blank" >
-                            <img className={classes.img1} src={defi} draggable="false" />
+                            <img className={classes.img1} src={defi} alt="defi_logo" draggable="false" />
                         </a>
                     </div>
                 </div>
@@ -168,7 +169,7 @@ export default function About() {
                     </CardContent>
                     <div className={classes.logo}>
                         <a href="https://ethereum.org/" rel="noopener noreferrer" draggable="false" target="_blank" >
-                            <img className={classes.img2} src={ethereum} draggable="false" />
+                            <img className={classes.img2} src={ethereum} alt="ethereum_logo" draggable="false" />
                         </a>
                     </div>
                 </div>

@@ -20,17 +20,15 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${imgDesktop});
     background-position: top right;
     background-repeat: no-repeat;    
-    background-size: 50vw auto;
+    background-size: 53vw auto;
   }
 `
 
 const Container = styled.div`
   min-height: 85vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  font-size: 3vw;
+  align-items: center;
 
   @media (min-width: 320px) and (max-width: 1024px) {
     font-size: 5vw;
@@ -38,7 +36,7 @@ const Container = styled.div`
   }
 `
 const Composition = styled.div`
-    margin-top: 2%;
+    margin: 2%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -52,7 +50,7 @@ const AssetValue = styled.div`
     flex-direction: row;
 `
 const Network = styled.div`
-    margin-bottom: 2%;
+    margin-top: 1%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -74,31 +72,26 @@ const Image = styled.img`
 `
 const useStyles = makeStyles({
     card: {
-
-        maxWidth: '50vw',
-        minHeight: '30vh',
         color: "#f5f5f5",
         textAlign: "center",
 
         "@media (min-width: 320px) and (max-width: 1024px)": {
-            minWidth: '50vw',
-            minHeight: '15vh',
+            
         }
     }
 });
 
 const StyledButton = styled(Button)`
-  margin-top: 3vh !important;
-  margin-left: 1vw !important;
-  margin-right: 1vw !important;
-  font-size: 1vw !important;
-  font-weight: bold !important;
-  border-radius: 30px !important;
-  width: 10vw;
+  margin-top: 2%;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 1vw;
+  font-weight: bold;
+  border-radius: 30px;
 
   @media (min-width: 320px) and (max-width: 1024px) {
-    margin-top: 2vh !important;
-    font-size: 2.3vw !important;
+    margin-top: 2vh;
+    font-size: 2.3vw;
   }
 `
 StyledButton.defaultProps = {
@@ -131,7 +124,8 @@ export default function DETF() {
                         <CardContent>
                             <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
                                 DeFier Uniswap 5A
-                    </Typography>
+                            </Typography>
+                            <FaFilePdf color='#272343' style={{ cursor: "pointer", fontSize: "2vw" }} />
                             <Typography variant="h5" color="textSecondary" component="p">
                                 Ticker: DU5A
                     </Typography>
@@ -158,11 +152,12 @@ export default function DETF() {
 
                                         <Image src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" />
 
-                                        <Typography variant="body2" color="textSecondary" component="p">${
+                                        <Typography variant="body2" color="textSecondary" component="p">Price: ${
                                             el.ticker === "BAT" || el.ticker === "CDAI" ? el.USDlast.toFixed(4) : el.USDlast.toFixed(2)
                                         }</Typography>
-
-                                        <Typography variant="body2" color="textSecondary" component="p">DETF Weigth: N/A</Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p">Net Asset: N/A</Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p">Current Weigth: N/A</Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p">Target Weigth: N/A</Typography>
                                     </div>
 
                                 })}
@@ -175,8 +170,6 @@ export default function DETF() {
                                     TestNet: Not Launched
                         </Typography>
                             </Network>
-
-                            <FaFilePdf color='#272343' style={{ cursor: "pointer" }} />
 
                             <div>
                                 <MuiThemeProvider theme={ButtonColor}>
