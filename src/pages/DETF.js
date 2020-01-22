@@ -8,7 +8,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
 
-import { FaFilePdf } from 'react-icons/fa';
+import { FaFilePdf, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 import prices from './helpers/coinGecko';
 
@@ -39,6 +39,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+const ArrowContain = styled.div`
+    display: flex;
+    align-items: center;
 `
 const Composition = styled.div`
     margin: 2%;
@@ -92,17 +96,37 @@ const useStyles = makeStyles({
         color: "#f5f5f5",
         textAlign: "center",
     },
-    pdfImage: { 
-        cursor: "pointer", 
+    pdfImage: {
+        cursor: "pointer",
         fontSize: "2vw",
 
         "@media (max-width: 1024px)": {
-            fontSize: "4vh" 
+            fontSize: "4vh"
         }
     },
     animatedLogoImage: {
         "@media (max-width: 1024px)": {
-            width: "10% !important" 
+            width: "10% !important"
+        }
+    },
+    faChevronLeft: {
+        marginRight: "1%",
+        fontSize: "2vw",
+        cursor: "pointer",
+        color: "#4dd599",
+
+        "&:hover": {
+            color: "red",
+        }
+    },
+    faChevronRight: {
+        marginLeft: "1%",
+        fontSize: "2vw",
+        cursor: "pointer",
+        color: "#4dd599",
+
+        "&:hover": {
+            color: "red",
         }
     }
 });
@@ -143,9 +167,12 @@ export default function DETF() {
     }
 
     return (
-            <Container>
-                <GlobalStyle />
-                {data === null ? <Logo src={require(`../assets/img/Logo_fav.png`)} className={classes.animatedLogoImage} alt="icon" /> :
+        <Container>
+
+            <GlobalStyle />
+            {data === null ? <Logo src={require(`../assets/img/Logo_fav.png`)} className={classes.animatedLogoImage} alt="icon" /> :
+                <ArrowContain>
+                    <FaChevronLeft className={classes.faChevronLeft} />
                     <Card raised={true} className={classes.card}>
                         <CardContent>
                             <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
@@ -212,7 +239,9 @@ export default function DETF() {
                             </div>
                         </CardContent>
                     </Card>
+                    <FaChevronRight className={classes.faChevronRight} />
+                </ArrowContain>
             }
-            </Container>
+        </Container>
     );
 }

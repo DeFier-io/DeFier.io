@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.div`
   min-height: 100%;
   display: flex;
-  margin-top: 5vh;
+  margin-top: 10vh;
   justify-content: space-around;
   flex-direction: row;
 
