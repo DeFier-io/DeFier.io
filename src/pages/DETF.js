@@ -29,11 +29,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media (min-width: 320px) and (max-width: 1024px) {
-    font-size: 5vw;
-    flex-direction: column;
-  }
 `
 const Composition = styled.div`
     margin: 2%;
@@ -41,6 +36,10 @@ const Composition = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
+
+    @media (max-width: 760px) {
+        display: none;
+    }
 `
 const AssetValue = styled.div`
     margin-top: 1%;
@@ -48,6 +47,10 @@ const AssetValue = styled.div`
     flex-wrap: nowrap;
     justify-content: space-evenly;
     flex-direction: row;
+
+    @media (max-width: 760px) {
+        flex-direction: column;
+    }
 `
 const Network = styled.div`
     margin-top: 1%;
@@ -55,6 +58,10 @@ const Network = styled.div`
     flex-wrap: nowrap;
     justify-content: space-evenly;
     flex-direction: row;
+
+    @media (max-width: 760px) {
+        flex-direction: column;
+    }
 `
 const spin = keyframes`
     from { transform: rotate(0deg) }
@@ -74,9 +81,13 @@ const useStyles = makeStyles({
     card: {
         color: "#f5f5f5",
         textAlign: "center",
+    },
+    pdfImage: { 
+        cursor: "pointer", 
+        fontSize: "2vw",
 
-        "@media (min-width: 320px) and (max-width: 1024px)": {
-            
+        "@media (max-width: 1024px)": {
+            fontSize: "4vh" 
         }
     }
 });
@@ -125,21 +136,24 @@ export default function DETF() {
                             <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
                                 DeFier Uniswap 5A
                             </Typography>
-                            <FaFilePdf color='#272343' style={{ cursor: "pointer", fontSize: "2vw" }} />
+
+                            <FaFilePdf color='#272343' className={classes.pdfImage} />
+
                             <Typography variant="h5" color="textSecondary" component="p">
                                 Ticker: DU5A
-                    </Typography>
+                             </Typography>
+
                             <Typography variant="h6" color="textSecondary" component="p">
                                 Next Vote: N/A
-                    </Typography>
+                            </Typography>
 
                             <AssetValue>
                                 <Typography variant="h6" color="textSecondary" component="p">
                                     Market Capitalization: N/A
-                        </Typography>
+                                </Typography>
                                 <Typography variant="h6" color="textSecondary" component="p">
                                     Net Asset Value: N/A
-                        </Typography>
+                                </Typography>
                             </AssetValue>
 
                             <Composition>
