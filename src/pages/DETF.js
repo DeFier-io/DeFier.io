@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${imgDesktop});
     background-position: top right;
     background-repeat: no-repeat;    
-    background-size: 53vw auto;
+    background-size: 50vw auto;
 
     @media (max-width: 1024px) {
         background-image: url(${imgMobile});
