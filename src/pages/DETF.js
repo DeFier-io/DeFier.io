@@ -13,6 +13,7 @@ import { FaFilePdf } from 'react-icons/fa';
 import prices from './helpers/coinGecko';
 
 import imgDesktop from '../assets/img/backgroundAboutUs.png';
+import imgMobile from '../assets/img/AboutPageMobile.png';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -21,6 +22,15 @@ const GlobalStyle = createGlobalStyle`
     background-position: top right;
     background-repeat: no-repeat;    
     background-size: 53vw auto;
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+        background-image: url(${imgMobile});
+        background-position: bottom;
+        background-repeat: no-repeat;    
+        background-size: 100vw 50vh;
+        margin: 0;
+        height: 100vh;
+    }
   }
 `
 
@@ -89,6 +99,11 @@ const useStyles = makeStyles({
         "@media (max-width: 1024px)": {
             fontSize: "4vh" 
         }
+    },
+    animatedLogoImage: {
+        "@media (max-width: 1024px)": {
+            width: "10% !important" 
+        }
     }
 });
 
@@ -100,9 +115,9 @@ const StyledButton = styled(Button)`
   font-weight: bold;
   border-radius: 30px;
 
-  @media (min-width: 320px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     margin-top: 2vh;
-    font-size: 2.3vw;
+    font-size: 3vw;
   }
 `
 StyledButton.defaultProps = {
@@ -130,7 +145,7 @@ export default function DETF() {
     return (
             <Container>
                 <GlobalStyle />
-                {data === null ? <Logo src={require(`../assets/img/Logo_fav.png`)} alt="icon" /> :
+                {data === null ? <Logo src={require(`../assets/img/Logo_fav.png`)} className={classes.animatedLogoImage} alt="icon" /> :
                     <Card raised={true} className={classes.card}>
                         <CardContent>
                             <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
