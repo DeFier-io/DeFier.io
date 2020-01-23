@@ -1,7 +1,7 @@
 const CoinGecko = require('coingecko-api');
 const CoinGeckoClient = new CoinGecko();
 
-const token = [ 'BAT', 'MKR', 'XCHF', 'SNX', 'WBTC', 'CDAI' ]
+const token = [ 'BAT', 'MKR', 'XCHF', 'SNX', 'WBTC', 'CDAI', 'DAI' ]
 
 const prices = async () => {
 

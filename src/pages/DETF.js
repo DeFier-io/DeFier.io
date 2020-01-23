@@ -110,7 +110,7 @@ const useStyles = makeStyles({
         textAlign: "center",
         width: "65vw"
     },
-    pdfImage: {
+    FaIcon: {
         cursor: "pointer",
         fontSize: "2vw",
 
@@ -223,7 +223,7 @@ export default function DETF() {
         DU2A: {
             name: "DeFier Uniswap 2A",
             ticker: "DU2A",
-            coins: ["BAT", "XCHF"],
+            coins: ["DAI", "XCHF"],
             mainnet: false,
             testnet: false
         }
@@ -257,13 +257,13 @@ export default function DETF() {
                     >
                         <CardContent>
                             <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
-                                {DETFs[selectedDETF].name}
+                                {DETFs[selectedDETF].name} 
                             </Typography>
 
-                            <FaFilePdf color='#272343' className={classes.pdfImage} />
+                            <FaFilePdf color='#272343' className={classes.FaIcon} />
 
                             <Typography variant="h5" color="textSecondary" component="p">
-                                {DETFs[selectedDETF].ticker}
+                                Ticker: {DETFs[selectedDETF].ticker}
                             </Typography>
 
                             <Typography variant="h6" color="textSecondary" component="p">
@@ -272,7 +272,7 @@ export default function DETF() {
 
                             <AssetValue>
                                 <Typography variant="h6" color="textSecondary" component="p">
-                                    Market Capitalization: N/A
+                                    Market Cap: N/A
                                 </Typography>
                                 <Typography variant="h6" color="textSecondary" component="p">
                                     Net Asset Value: N/A
@@ -305,8 +305,8 @@ export default function DETF() {
                                     MainNet
                                 </Typography>
                                     { !DETFs[selectedDETF].mainnet ? 
-                                        <FaTimesCircle color='red' className={classes.pdfImage} /> : 
-                                        <FaCheckCircle color='green' className={classes.pdfImage} /> 
+                                        <FaTimesCircle color='red' className={classes.FaIcon} /> : 
+                                        <FaCheckCircle color='green' className={classes.FaIcon} /> 
                                     }
                                 </div>
                                 <div>
@@ -314,8 +314,8 @@ export default function DETF() {
                                     TestNet
                                 </Typography>
                                     { !DETFs[selectedDETF].testnet ? 
-                                        <FaTimesCircle color='red' className={classes.pdfImage} /> : 
-                                        <FaCheckCircle color='green' className={classes.pdfImage} /> 
+                                        <FaTimesCircle color='red' className={classes.FaIcon} /> : 
+                                        <FaCheckCircle color='green' className={classes.FaIcon} /> 
                                     }
                                 </div>
                             </Network>
