@@ -232,12 +232,15 @@ export default function DETF() {
     const nextDETF = (name, num) => {
         const keys = Object.keys(DETFs);
         const loc = keys.indexOf(name);
+        let position = loc + num;
 
-        if (loc + num < 0 || loc + num > 4) {
-            return;
+        if (loc + num < 0) {
+            position = 4;
+        } else if (loc + num > 4) {
+            position = 0;
         }
 
-        const nextDETF = DETFs[keys[loc + num]];
+        const nextDETF = DETFs[keys[position]];
         setSelectedDETF(nextDETF.ticker)
         setFade(true);
     }

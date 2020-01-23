@@ -18,7 +18,7 @@ const prices = async () => {
         return {
             name,
             ticker: el,
-            USDlast: price[0] !== undefined ? price[0].converted_last.usd : null
+            USDlast: price[0] !== undefined ? price[0].converted_last.usd : 0
         }
     }))
 
