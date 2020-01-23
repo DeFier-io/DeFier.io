@@ -234,9 +234,9 @@ export default function DETF() {
         const loc = keys.indexOf(name);
         let position = loc + num;
 
-        if (loc + num < 0) {
+        if (position < 0) {
             position = 4;
-        } else if (loc + num > 4) {
+        } else if (position > 4) {
             position = 0;
         }
 
