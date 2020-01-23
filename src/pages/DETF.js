@@ -8,7 +8,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
 
-import { FaFilePdf, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
+import { FaFilePdf, FaChevronRight, FaChevronLeft, FaTimesCircle, FaCheckCircle } from 'react-icons/fa';
 
 import prices from './helpers/coinGecko';
 
@@ -102,7 +102,7 @@ const useStyles = makeStyles({
         textAlign: "center",
         width: "65vw",
         animationName: '$fade',
-        animationDuration: '1s',
+        animationDuration: '1.5s',
         animationTimingFunction: 'fadein', 
     },
     card: {
@@ -195,27 +195,37 @@ export default function DETF() {
         DU5A: {
             name: "DeFier Uniswap 5A",
             ticker: "DU5A",
-            coins: ["BAT", "MKR", "SNX", "WBTC", "CDAI"]
+            coins: ["BAT", "MKR", "SNX", "WBTC", "CDAI"],
+            mainnet: false,
+            testnet: false
         },
         DU4A: {
             name: "DeFier Uniswap 4A",
             ticker: "DU4A",
-            coins: ["BAT", "MKR", "WBTC", "CDAI"]
+            coins: ["BAT", "MKR", "WBTC", "CDAI"],
+            mainnet: false,
+            testnet: false
         },
         DU4B: {
             name: "DeFier Uniswap 4B",
             ticker: "DU4B",
-            coins: ["BAT", "MKR", "WBTC", "SNX"]
+            coins: ["BAT", "MKR", "WBTC", "SNX"],
+            mainnet: false,
+            testnet: false
         },
         DU3A: {
             name: "DeFier Uniswap 3A",
             ticker: "DU3A",
-            coins: ["BAT", "MKR", "SNX"]
+            coins: ["BAT", "MKR", "SNX"],
+            mainnet: false,
+            testnet: false
         },
         DU2A: {
             name: "DeFier Uniswap 2A",
             ticker: "DU2A",
-            coins: ["BAT", "XCHF"]
+            coins: ["BAT", "XCHF"],
+            mainnet: false,
+            testnet: false
         }
     }
 
@@ -290,12 +300,24 @@ export default function DETF() {
                                 })}
                             </Composition>
                             <Network>
+                                <div>
                                 <Typography variant="h6" color="textSecondary" component="p">
-                                    MainNet: Not Launched
-                        </Typography>
+                                    MainNet
+                                </Typography>
+                                    { !DETFs[selectedDETF].mainnet ? 
+                                        <FaTimesCircle color='red' className={classes.pdfImage} /> : 
+                                        <FaCheckCircle color='green' className={classes.pdfImage} /> 
+                                    }
+                                </div>
+                                <div>
                                 <Typography variant="h6" color="textSecondary" component="p">
-                                    TestNet: Not Launched
-                        </Typography>
+                                    TestNet
+                                </Typography>
+                                    { !DETFs[selectedDETF].testnet ? 
+                                        <FaTimesCircle color='red' className={classes.pdfImage} /> : 
+                                        <FaCheckCircle color='green' className={classes.pdfImage} /> 
+                                    }
+                                </div>
                             </Network>
 
                             <div>
