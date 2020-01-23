@@ -81,6 +81,7 @@ const spin = keyframes`
     from { transform: rotate(0deg) }
     to { transform: rotate(360deg) }
 `
+
 const Logo = styled.img`
     width: 5vw;
     margin-top: 0.4vw;
@@ -92,9 +93,22 @@ const Image = styled.img`
     margin-top: 0.4vw;
 `
 const useStyles = makeStyles({
+    "@keyframes fade": {
+        from: {opacity: 0},
+        to: {opacity: 1}
+    },
+    fade: {
+        color: "#f5f5f5",
+        textAlign: "center",
+        width: "65vw",
+        animationName: '$fade',
+        animationDuration: '2s',
+        animationTimingFunction: 'fadein', 
+    },
     card: {
         color: "#f5f5f5",
         textAlign: "center",
+        width: "65vw"
     },
     pdfImage: {
         cursor: "pointer",
@@ -161,10 +175,54 @@ export default function DETF() {
     const classes = useStyles();
 
     const [data, setData] = useState(null);
+    const [fade, setFade] = useState(false);
+    const [selectedDETF, setSelectedDETF] = useState("DU5A");
 
     if (data === null) {
         prices.then(data => setData(data))
     }
+
+    const DETFs = {
+        DU5A: {
+            name: "DeFier Uniswap 5A",
+            ticker: "DU5A",
+            coins: ["BAT", "MKR", "SNX", "WBTC", "CDAI"]
+        },
+        DU4A: {
+            name: "DeFier Uniswap 4A",
+            ticker: "DU4A",
+            coins: ["BAT", "MKR", "WBTC", "CDAI"]
+        },
+        DU4B: {
+            name: "DeFier Uniswap 4B",
+            ticker: "DU4B",
+            coins: ["BAT", "MKR", "WBTC", "SNX"]
+        },
+        DU3A: {
+            name: "DeFier Uniswap 3A",
+            ticker: "DU3A",
+            coins: ["BAT", "MKR", "SNX"]
+        },
+        DU2A: {
+            name: "DeFier Uniswap 2A",
+            ticker: "DU2A",
+            coins: ["BAT", "XCHF"]
+        }
+    }
+
+    const nextDETF = (name, num) => {
+        const keys = Object.keys(DETFs);
+        const loc = keys.indexOf(name);
+
+        if (loc + num < 0 || loc + num > 4) {
+            return;
+        }
+
+        const nextDETF = DETFs[keys[loc + num]];
+        setSelectedDETF(nextDETF.ticker)
+        setFade(true);
+    }
+
 
     return (
         <Container>
@@ -172,18 +230,22 @@ export default function DETF() {
             <GlobalStyle />
             {data === null ? <Logo src={require(`../assets/img/Logo_fav.png`)} className={classes.animatedLogoImage} alt="icon" /> :
                 <ArrowContain>
-                    <FaChevronLeft className={classes.faChevronLeft} />
-                    <Card raised={true} className={classes.card}>
+                    <FaChevronLeft className={classes.faChevronLeft} onClick={() => nextDETF(DETFs[selectedDETF].ticker, -1)} />
+                    <Card
+                        onAnimationEnd={() => setFade(false)}
+                        raised={true}
+                        className={fade ? classes.fade : classes.card}
+                    >
                         <CardContent>
                             <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
-                                DeFier Uniswap 5A
+                                {DETFs[selectedDETF].name}
                             </Typography>
 
                             <FaFilePdf color='#272343' className={classes.pdfImage} />
 
                             <Typography variant="h5" color="textSecondary" component="p">
-                                Ticker: DU5A
-                             </Typography>
+                                {DETFs[selectedDETF].ticker}
+                            </Typography>
 
                             <Typography variant="h6" color="textSecondary" component="p">
                                 Next Vote: N/A
@@ -200,7 +262,7 @@ export default function DETF() {
 
                             <Composition>
                                 {data.map(el => {
-                                    if (el.ticker === "XCHF") {
+                                    if (!DETFs[selectedDETF].coins.includes(el.ticker)) {
                                         return null;
                                     }
                                     return <div style={{ margin: "0.5vw", marginBottom: "0.5vw" }}>
@@ -239,7 +301,7 @@ export default function DETF() {
                             </div>
                         </CardContent>
                     </Card>
-                    <FaChevronRight className={classes.faChevronRight} />
+                    <FaChevronRight className={classes.faChevronRight} onClick={() => nextDETF(DETFs[selectedDETF].ticker, +1)} />
                 </ArrowContain>
             }
         </Container>
