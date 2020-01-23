@@ -102,7 +102,7 @@ const useStyles = makeStyles({
         textAlign: "center",
         width: "65vw",
         animationName: '$fade',
-        animationDuration: '2s',
+        animationDuration: '1s',
         animationTimingFunction: 'fadein', 
     },
     card: {
@@ -131,7 +131,12 @@ const useStyles = makeStyles({
 
         "&:hover": {
             color: "red",
+        },
+
+        "@media (max-width: 1024px)": {
+            fontSize: "7vw !important"
         }
+        
     },
     faChevronRight: {
         marginLeft: "1%",
@@ -141,6 +146,10 @@ const useStyles = makeStyles({
 
         "&:hover": {
             color: "red",
+        },
+
+        "@media (max-width: 1024px)": {
+            fontSize: "7vw !important"
         }
     }
 });
