@@ -5,7 +5,7 @@ This is the main website of DeFier - a protocol for decentralized ETFs on the Et
 - Website: [DeFier.io](https://DeFier.io/)
 - Exchange: [DeFier.exchange](https://DeFier.exchange/)
 - Governance: [DeFier.vote](https://DeFier.vote/)
-- Email: [contact@uniswap.io](mailto:contact@defier.io)
+- Email: [contact@DeFier.io](mailto:contact@defier.io)
 
 ## Getting Started
 
