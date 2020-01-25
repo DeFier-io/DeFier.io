@@ -3,7 +3,7 @@ import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-import styled, { createGlobalStyle }  from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import img from '../assets/img/Background.png';
 import imgMobile from '../assets/img/HomePageMobile.png';
@@ -97,24 +97,20 @@ const ButtonColor = createMuiTheme({
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <Container>
       <GlobalStyle />
-
-      <Container>
-        <Title>DeFi the Odds</Title>
-        <SubTitle>Tokenized Decentralized ETFs</SubTitle>
-        <div>
-          <MuiThemeProvider theme={ButtonColor}>
-            <StyledButton style={{ color: "#272343" }}  href='https://hackmd.io/'>
-              WhitePaper
+      <Title>DeFi the Odds</Title>
+      <SubTitle>Tokenized Decentralized ETFs</SubTitle>
+      <div>
+        <MuiThemeProvider theme={ButtonColor}>
+          <StyledButton style={{ color: "#272343" }} href='https://hackmd.io/'>
+            WhitePaper
           </StyledButton>
-            <StyledButton style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
-              Trade Now
+          <StyledButton style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
+            Trade Now
           </StyledButton>
-          </MuiThemeProvider>
-        </div>
-      </Container>
-
-    </React.Fragment>
+        </MuiThemeProvider>
+      </div>
+    </Container>
   )
 }

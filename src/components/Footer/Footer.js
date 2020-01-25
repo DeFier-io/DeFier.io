@@ -8,6 +8,10 @@ const FooterWrapper = styled.footer`
     justify-content: center;
     position: fixed;
     bottom: 1%;
+
+    @media (max-width: 764px) {
+        visibility: hidden;   
+    }
 `;
 
 
@@ -20,7 +24,7 @@ const Icon = styled.a`
     &:hover {color: #272343};
 
     @media (max-width: 1024px) {
-        font-size: 9vw;
+        font-size: 6vw;
         margin: 2.5vw; 
     }
 `;
