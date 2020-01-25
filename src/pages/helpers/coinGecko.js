@@ -5,7 +5,7 @@ const token = [ 'BAT', 'MKR', 'XCHF', 'SNX', 'WBTC', 'CDAI', 'DAI' ]
 
 const prices = async () => {
 
-    let coinList = await CoinGeckoClient.coins.list();
+    const coinList = await CoinGeckoClient.coins.list();
 
     return Promise.all(token.map(async el => {
 

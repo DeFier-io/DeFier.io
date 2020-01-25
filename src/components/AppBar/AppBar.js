@@ -13,6 +13,7 @@ import logo from '../../assets/img/Logo.svg'
 import twoA from '../../assets/img/2A.svg'
 import threeA from '../../assets/img/3A.svg'
 import fourA from '../../assets/img/4A.svg'
+import fourB from '../../assets/img/4B.svg'
 import fiveA from '../../assets/img/5A.svg'
 import Exchange from '../../assets/img/Exchange.svg'
 import Governance from '../../assets/img/Governance.svg'
@@ -205,24 +206,34 @@ export default function ButtonAppBar() {
                                     onClose={handleClose}
                                 >
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={fiveA} alt="DU5A_logo" className={classes.whiteLogo} />
-                                        <span className={classes.list}>DU5A</span>
+                                        <a style={{textDecoration : "none"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1vvZBEaO7FG-6BlbJeEBoHV5klB5ShjWj">
+                                            <img draggable="false" src={fiveA} alt="DU5A_logo" className={classes.whiteLogo} />
+                                            <span className={classes.list}>DU5A</span>
+                                        </a>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={fourA} alt="DU4A_logo" className={classes.whiteLogo} />
-                                        <span className={classes.list}>DU4A</span>
+                                        <a style={{textDecoration : "none"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1iRCkgsKj9WWIjsalI9_nFInzEHK05Plh">
+                                            <img draggable="false" src={fourA} alt="DU4A_logo" className={classes.whiteLogo} />
+                                            <span className={classes.list}>DU4A</span>
+                                        </a>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={fourA} alt="DU4B_logo" className={classes.whiteLogo} />
-                                        <span className={classes.list}>DU4B</span>
+                                        <a style={{textDecoration : "none"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1DNet5xIUSVNaevtObVXUbXmOT2vtojLH">
+                                            <img draggable="false" src={fourB} alt="DU4B_logo" className={classes.whiteLogo} />
+                                            <span className={classes.list}>DU4B</span>
+                                        </a>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={threeA} alt="DU3A_logo" className={classes.whiteLogo} />
-                                        <span className={classes.list}>DU3A</span>
+                                        <a style={{textDecoration : "none"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/11E7vmCm36wj_eL3GjArGK_6hoCouI5nq">
+                                            <img draggable="false" src={threeA} alt="DU3A_logo" className={classes.whiteLogo} />
+                                            <span className={classes.list}>DU3A</span>
+                                        </a>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <img draggable="false" src={twoA} alt="DU2A_logo" className={classes.whiteLogo} />
-                                        <span className={classes.list}>DU2A</span>
+                                        <a style={{textDecoration : "none"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/10HbRgQzeRKy9f8zdFsjG2R-v6bQjHzjE">
+                                            <img draggable="false" src={twoA} alt="DU2A_logo" className={classes.whiteLogo} />
+                                            <span className={classes.list}>DU2A</span>
+                                        </a>
                                     </MenuItem>
                                 </Menu>
                             </Menu>

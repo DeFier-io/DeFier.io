@@ -30,7 +30,7 @@ const Container = styled.div`
   font-size: 3vw;
   margin-left: 2vw;
   margin-top: 20vh;
-
+  
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;

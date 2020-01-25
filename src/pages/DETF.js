@@ -130,7 +130,7 @@ const useStyles = makeStyles({
         color: "#4dd599",
 
         "&:hover": {
-            color: "red",
+            opacity: "0.5"
         },
 
         "@media (max-width: 1024px)": {
@@ -145,7 +145,7 @@ const useStyles = makeStyles({
         color: "#4dd599",
 
         "&:hover": {
-            color: "red",
+            opacity: "0.5"
         },
 
         "@media (max-width: 1024px)": {
@@ -196,6 +196,7 @@ export default function DETF() {
             name: "DeFier Uniswap 5A",
             ticker: "DU5A",
             coins: ["BAT", "MKR", "SNX", "WBTC", "CDAI"],
+            href: "https://drive.google.com/file/d/1vvZBEaO7FG-6BlbJeEBoHV5klB5ShjWj",
             mainnet: false,
             testnet: false
         },
@@ -203,6 +204,7 @@ export default function DETF() {
             name: "DeFier Uniswap 4A",
             ticker: "DU4A",
             coins: ["BAT", "MKR", "WBTC", "CDAI"],
+            href: "https://drive.google.com/file/d/1iRCkgsKj9WWIjsalI9_nFInzEHK05Plh",
             mainnet: false,
             testnet: false
         },
@@ -210,6 +212,7 @@ export default function DETF() {
             name: "DeFier Uniswap 4B",
             ticker: "DU4B",
             coins: ["BAT", "MKR", "WBTC", "SNX"],
+            href: "https://drive.google.com/file/d/1DNet5xIUSVNaevtObVXUbXmOT2vtojLH",
             mainnet: false,
             testnet: false
         },
@@ -217,6 +220,7 @@ export default function DETF() {
             name: "DeFier Uniswap 3A",
             ticker: "DU3A",
             coins: ["BAT", "MKR", "SNX"],
+            href: "https://drive.google.com/file/d/11E7vmCm36wj_eL3GjArGK_6hoCouI5nq",
             mainnet: false,
             testnet: false
         },
@@ -224,6 +228,7 @@ export default function DETF() {
             name: "DeFier Uniswap 2A",
             ticker: "DU2A",
             coins: ["DAI", "XCHF"],
+            href: "https://drive.google.com/file/d/10HbRgQzeRKy9f8zdFsjG2R-v6bQjHzjE",
             mainnet: false,
             testnet: false
         }
@@ -231,8 +236,8 @@ export default function DETF() {
 
     const nextDETF = (name, num) => {
         const keys = Object.keys(DETFs);
-        const loc = keys.indexOf(name);
-        let position = loc + num;
+        const location = keys.indexOf(name);
+        let position = location + num;
 
         if (position < 0) {
             position = 4;
@@ -262,8 +267,10 @@ export default function DETF() {
                             <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
                                 {DETFs[selectedDETF].name} 
                             </Typography>
-
-                            <FaFilePdf color='#272343' className={classes.FaIcon} />
+                            
+                            <a target="_blank" rel="noopener noreferrer" href={DETFs[selectedDETF].href}>
+                                <Image src={require(`../assets/img/PDF_${DETFs[selectedDETF].ticker}.svg`)} alt="icon" className={classes.FaIcon} />
+                            </a>
 
                             <Typography variant="h5" color="textSecondary" component="p">
                                 Ticker: {DETFs[selectedDETF].ticker}

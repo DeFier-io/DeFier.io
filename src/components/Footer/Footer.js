@@ -2,9 +2,10 @@ import React from 'react';
 import { FaGithub, FaDiscord, FaLinkedin, FaTwitter, FaMedium } from 'react-icons/fa';
 import styled from 'styled-components';
 
-const FooterWrapper = styled.section`
-    text-align: center;
+const FooterWrapper = styled.footer`
+    display: flex;
     width: 100%;
+    justify-content: center;
     position: fixed;
     bottom: 1%;
 `;
@@ -15,7 +16,7 @@ const Icon = styled.a`
     color:#4dd599;
     display: inline;
     margin: 0.5vw;
-
+    
     &:hover {color: #272343};
 
     @media (max-width: 1024px) {
