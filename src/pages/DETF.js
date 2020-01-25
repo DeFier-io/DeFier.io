@@ -197,6 +197,7 @@ export default function DETF() {
             name: "DeFier Uniswap 5A",
             ticker: "DU5A",
             coins: ["BAT", "MKR", "SNX", "WBTC", "CDAI"],
+            href: "https://drive.google.com/file/d/1vvZBEaO7FG-6BlbJeEBoHV5klB5ShjWj",
             mainnet: false,
             testnet: false
         },
@@ -204,6 +205,7 @@ export default function DETF() {
             name: "DeFier Uniswap 4A",
             ticker: "DU4A",
             coins: ["BAT", "MKR", "WBTC", "CDAI"],
+            href: "https://drive.google.com/file/d/1iRCkgsKj9WWIjsalI9_nFInzEHK05Plh",
             mainnet: false,
             testnet: false
         },
@@ -211,6 +213,7 @@ export default function DETF() {
             name: "DeFier Uniswap 4B",
             ticker: "DU4B",
             coins: ["BAT", "MKR", "WBTC", "SNX"],
+            href: "https://drive.google.com/file/d/1DNet5xIUSVNaevtObVXUbXmOT2vtojLH",
             mainnet: false,
             testnet: false
         },
@@ -218,6 +221,7 @@ export default function DETF() {
             name: "DeFier Uniswap 3A",
             ticker: "DU3A",
             coins: ["BAT", "MKR", "SNX"],
+            href: "https://drive.google.com/file/d/11E7vmCm36wj_eL3GjArGK_6hoCouI5nq",
             mainnet: false,
             testnet: false
         },
@@ -266,7 +270,7 @@ export default function DETF() {
                             </Typography>
                             
                             <Tooltip title="Term Sheet" aria-label="termSheet" placement="right">
-                                <a target="_blank" rel="noopener noreferrer" href={require(`../assets/PDF/${DETFs[selectedDETF].ticker}.pdf`)}>
+                                <a target="_blank" rel="noopener noreferrer" href={DETFs[selectedDETF].href}>
                                     <Image src={require(`../assets/img/PDF_${DETFs[selectedDETF].ticker}.svg`)} alt="icon" className={classes.FaIcon} />
                                 </a>
                             </Tooltip>
