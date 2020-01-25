@@ -208,7 +208,7 @@ export default function ButtonAppBar() {
                                     <MenuItem onClick={handleClose}>
                                         <a style={{textDecoration : "none"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1vvZBEaO7FG-6BlbJeEBoHV5klB5ShjWj">
                                             <img draggable="false" src={fiveA} alt="DU5A_logo" className={classes.whiteLogo} />
-                                            <span className={classes.list}>DU5A</span>
+                                            <span className={classes.ca}>DU5A</span>
                                         </a>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
