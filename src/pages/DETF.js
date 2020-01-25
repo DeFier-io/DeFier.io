@@ -221,7 +221,7 @@ export default function DETF() {
             name: "DeFier Uniswap 3A",
             ticker: "DU3A",
             coins: ["BAT", "MKR", "SNX"],
-            href: "https://drive.google.com/file/d/11E7vmCm36wj_eL3GjArGK_6hoCouI5nq",
+            href: "https://drive.google.com/file/d/10zImGbZAr2a1ivDYQwTQHeMifICmYkNP",
             mainnet: false,
             testnet: false
         },
