@@ -265,7 +265,7 @@ export default function DETF() {
                         className={fade ? classes.fade : classes.card}
                     >
                         <CardContent>
-                            <Typography color="textPrimary" gutterBottom variant="h4" component="h2">
+                            <Typography style={{fontFamily: "'Gilroy', 'sans-sherif'"}} color="textPrimary" gutterBottom variant="h4" component="h2">
                                 {DETFs[selectedDETF].name} 
                             </Typography>
                             
@@ -275,19 +275,19 @@ export default function DETF() {
                                 </a>
                             </Tooltip>
 
-                            <Typography variant="h5" color="textSecondary" component="p">
+                            <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h5" color="textSecondary" component="p">
                                 Ticker: {DETFs[selectedDETF].ticker}
                             </Typography>
 
-                            <Typography variant="h6" color="textSecondary" component="p">
+                            <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
                                 Next Vote: N/A
                             </Typography>
 
                             <AssetValue>
-                                <Typography variant="h6" color="textSecondary" component="p">
+                                <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
                                     Market Cap: N/A
                                 </Typography>
-                                <Typography variant="h6" color="textSecondary" component="p">
+                                <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
                                     Net Asset Value: N/A
                                 </Typography>
                             </AssetValue>
@@ -298,23 +298,23 @@ export default function DETF() {
                                         return null;
                                     }
                                     return <div style={{ margin: "0.5vw", marginBottom: "0.5vw" }}>
-                                        <Typography variant="body1" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
+                                        <Typography style={{fontFamily: "'Gilroy', 'sans-sherif'"}} variant="body2" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
 
                                         <Image src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" />
 
-                                        <Typography variant="body2" color="textSecondary" component="p">Price: ${
+                                        <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="body2" color="textSecondary" component="p">Price: ${
                                             el.ticker === "BAT" || el.ticker === "CDAI" ? el.USDlast.toFixed(4) : el.USDlast.toFixed(2)
                                         }</Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">Net Asset: N/A</Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">Current Weigth: N/A</Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">Target Weigth: N/A</Typography>
+                                        <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="body2" color="textSecondary" component="p">Net Asset: N/A</Typography>
+                                        <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="body2" color="textSecondary" component="p">Current Weigth: N/A</Typography>
+                                        <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="body2" color="textSecondary" component="p">Target Weigth: N/A</Typography>
                                     </div>
 
                                 })}
                             </Composition>
                             <Network>
                                 <div>
-                                <Typography variant="h6" color="textSecondary" component="p">
+                                <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
                                     MainNet
                                 </Typography>
                                     { !DETFs[selectedDETF].mainnet ? 
@@ -323,7 +323,7 @@ export default function DETF() {
                                     }
                                 </div>
                                 <div>
-                                <Typography variant="h6" color="textSecondary" component="p">
+                                <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
                                     TestNet
                                 </Typography>
                                     { !DETFs[selectedDETF].testnet ? 
@@ -335,10 +335,10 @@ export default function DETF() {
 
                             <div>
                                 <MuiThemeProvider theme={ButtonColor}>
-                                    <StyledButton style={{ color: "#272343" }} href='https://defier.vote/'>
+                                    <StyledButton style={{fontFamily: "'Muli', 'sans-sherif'"}} style={{ color: "#272343" }} href='https://defier.vote/'>
                                         Vote Now
                                 </StyledButton>
-                                    <StyledButton style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
+                                    <StyledButton style={{fontFamily: "'Muli', 'sans-sherif'"}} style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
                                         Trade Now
                                 </StyledButton>
                                 </MuiThemeProvider>
