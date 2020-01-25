@@ -7,8 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
+import Tooltip from '@material-ui/core/Tooltip';
 
-import { FaFilePdf, FaChevronRight, FaChevronLeft, FaTimesCircle, FaCheckCircle } from 'react-icons/fa';
+import { FaChevronRight, FaChevronLeft, FaTimesCircle, FaCheckCircle } from 'react-icons/fa';
 
 import prices from './helpers/coinGecko';
 
@@ -268,9 +269,11 @@ export default function DETF() {
                                 {DETFs[selectedDETF].name} 
                             </Typography>
                             
-                            <a target="_blank" rel="noopener noreferrer" href={DETFs[selectedDETF].href}>
-                                <Image src={require(`../assets/img/PDF_${DETFs[selectedDETF].ticker}.svg`)} alt="icon" className={classes.FaIcon} />
-                            </a>
+                            <Tooltip title="Term Sheet" aria-label="termSheet" placement="right">
+                                <a target="_blank" rel="noopener noreferrer" href={DETFs[selectedDETF].href}>
+                                    <Image src={require(`../assets/img/PDF_${DETFs[selectedDETF].ticker}.svg`)} alt="icon" className={classes.FaIcon} />
+                                </a>
+                            </Tooltip>
 
                             <Typography variant="h5" color="textSecondary" component="p">
                                 Ticker: {DETFs[selectedDETF].ticker}
