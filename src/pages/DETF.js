@@ -298,7 +298,7 @@ export default function DETF() {
                                         return null;
                                     }
                                     return <div style={{ margin: "0.5vw", marginBottom: "0.5vw" }}>
-                                        <Typography style={{fontFamily: "'Gilroy', 'sans-sherif'"}} variant="body2" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
+                                        <Typography variant="body1" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
 
                                         <Image src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" />
 
