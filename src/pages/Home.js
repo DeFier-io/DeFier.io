@@ -21,7 +21,6 @@ const GlobalStyle = createGlobalStyle`
       background-repeat: no-repeat;    
       background-size: 100vw auto;
       margin: 0;
-      height: 100vh;
     }
   }
   `

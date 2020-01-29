@@ -27,7 +27,6 @@ const GlobalStyle = createGlobalStyle`
       background-repeat: no-repeat;    
       background-size: 100vw 50vh;
       margin: 0;
-      height: 100vh;
     }
   }
 `
@@ -39,10 +38,14 @@ const Container = styled.div`
   justify-content: space-around;
   flex-direction: row;
 
+  @media (max-width: 480px) {
+    justify-content: space-between;
+  }
+
   @media (max-width: 1024px) {
-    margin: 0;
+    margin-top: 0;  
     flex-direction: column;
-    justify-content: none;
+    justify-content: center;
   }
 `
 
@@ -50,10 +53,16 @@ const useStyles = makeStyles({
     card: {
         width: '30vw',
         backgroundColor: 'transparent',
+        height: '60vh',
+
+        '@media (max-width: 480px)': {
+            height: '40vh !important',
+        },
 
         '@media (max-width: 1024px)': {
-            width: '100vw',
-            paddingBottom: '10%'
+            width: 'auto',
+            margin: '5vw',
+            height: '33vh',
         }
     },
     text: {
@@ -63,7 +72,7 @@ const useStyles = makeStyles({
         fontFamily: "Muli, sans-sherif",
 
         "@media (max-width: 1024px)": {
-            fontSize: '4vw',
+            fontSize: '3vw',
         }
     },
     text2: {
@@ -71,9 +80,9 @@ const useStyles = makeStyles({
         textAlign: 'justify',
         fontSize: '1.5vw',
         fontFamily: "Muli, sans-sherif'",
-        
+
         "@media (max-width: 1024px)": {
-            fontSize: '4vw',
+            fontSize: '3vw',
         }
     },
     rightTitle: {
@@ -141,7 +150,7 @@ export default function About() {
                             Decentralized Finance also known as <span style={{ color: "#4dd599" }}>DeFi</span> is a
                             movement promoting the idea that anyone can redesign traditional financial instruments and
                                 services in a decentralized architecture leveraging <span style={{ color: "#4dd599" }}>decentralized networks</span>, <span style={{ color: "#4dd599" }}>open source libraries</span> and <span style={{ color: "#4dd599" }}>smart contracts </span> to
-                            offer users a permissionless, trustless and transparent financial industry.
+                        offer users a permissionless, trustless and transparent financial industry.
                             </Typography>
                     </CardContent>
                     <div className={classes.logo}>

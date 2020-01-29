@@ -30,13 +30,11 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;    
         background-size: 100vw 50vh;
         margin: 0;
-        height: 100vh;
     }
   }
 `
-
 const Container = styled.div`
-  min-height: 85vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,14 +73,13 @@ const Network = styled.div`
     flex-direction: row;
 
     @media (max-width: 760px) {
-        flex-direction: column;
+        display: none;
     }
 `
 const spin = keyframes`
     from { transform: rotate(0deg) }
     to { transform: rotate(360deg) }
 `
-
 const Logo = styled.img`
     width: 5vw;
     margin-top: 0.4vw;
@@ -101,7 +98,7 @@ const useStyles = makeStyles({
     fade: {
         color: "#f5f5f5",
         textAlign: "center",
-        width: "65vw",
+        width: "85vw",
         animationName: '$fade',
         animationDuration: '1.5s',
         animationTimingFunction: 'fadein', 
@@ -109,7 +106,7 @@ const useStyles = makeStyles({
     card: {
         color: "#f5f5f5",
         textAlign: "center",
-        width: "65vw"
+        width: "85vw"
     },
     FaIcon: {
         cursor: "pointer",
@@ -136,8 +133,7 @@ const useStyles = makeStyles({
 
         "@media (max-width: 1024px)": {
             fontSize: "7vw !important"
-        }
-        
+        }     
     },
     faChevronRight: {
         marginLeft: "1%",
@@ -335,12 +331,12 @@ export default function DETF() {
 
                             <div>
                                 <MuiThemeProvider theme={ButtonColor}>
-                                    <StyledButton style={{fontFamily: "'Muli', 'sans-sherif'"}} style={{ color: "#272343" }} href='https://defier.vote/'>
+                                    <StyledButton style={{fontFamily: "'Muli', 'sans-sherif'", color: "#272343" }} href='https://defier.vote/'>
                                         Vote Now
-                                </StyledButton>
-                                    <StyledButton style={{fontFamily: "'Muli', 'sans-sherif'"}} style={{ color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
+                                    </StyledButton>
+                                    <StyledButton style={{fontFamily: "'Muli', 'sans-sherif'", color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
                                         Trade Now
-                                </StyledButton>
+                                    </StyledButton>
                                 </MuiThemeProvider>
                             </div>
                         </CardContent>
