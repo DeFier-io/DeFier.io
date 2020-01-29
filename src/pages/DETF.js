@@ -38,6 +38,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 480px) {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
 `
 const ArrowContain = styled.div`
     display: flex;
@@ -50,7 +55,7 @@ const Composition = styled.div`
     justify-content: space-around;
     flex-direction: row;
 
-    @media (max-width: 760px) {
+    @media (max-width: 768px) {
         display: none;
     }
 `
@@ -92,8 +97,8 @@ const Image = styled.img`
 `
 const useStyles = makeStyles({
     "@keyframes fade": {
-        from: {opacity: 0},
-        to: {opacity: 1}
+        from: { opacity: 0 },
+        to: { opacity: 1 }
     },
     fade: {
         color: "#f5f5f5",
@@ -101,19 +106,42 @@ const useStyles = makeStyles({
         width: "85vw",
         animationName: '$fade',
         animationDuration: '1.5s',
-        animationTimingFunction: 'fadein', 
+        animationTimingFunction: 'fadein',
     },
     card: {
         color: "#f5f5f5",
         textAlign: "center",
         width: "85vw"
     },
+    title: {
+        fontFamily: "'Gilroy', 'sans-sherif'",
+        
+        "@media (max-width: 375px)": {
+            fontSize: "8vw"
+        }
+    },
     FaIcon: {
         cursor: "pointer",
         fontSize: "2vw",
 
         "@media (max-width: 1024px)": {
-            fontSize: "4vh"
+            fontSize: "4vw"
+        }
+    },
+    pdfIcons: {
+        "@media (max-width: 1024px)": {
+            width: "8% !important",
+            height: "auto !important"
+        },
+        "@media (max-width: 475px)": {
+            width: "10vw !important",
+            height: "auto !important"
+        }
+    },
+    coinIcons: {
+        "@media (max-width: 1024px)": {
+            width: "5vw !important",
+            height: "auto !important"
         }
     },
     animatedLogoImage: {
@@ -133,7 +161,7 @@ const useStyles = makeStyles({
 
         "@media (max-width: 1024px)": {
             fontSize: "7vw !important"
-        }     
+        }
     },
     faChevronRight: {
         marginLeft: "1%",
@@ -261,29 +289,29 @@ export default function DETF() {
                         className={fade ? classes.fade : classes.card}
                     >
                         <CardContent>
-                            <Typography style={{fontFamily: "'Gilroy', 'sans-sherif'"}} color="textPrimary" gutterBottom variant="h4" component="h2">
-                                {DETFs[selectedDETF].name} 
+                            <Typography className={classes.title} color="textPrimary" gutterBottom variant="h4" component="h2">
+                                {DETFs[selectedDETF].name}
                             </Typography>
-                            
+
                             <Tooltip title="Term Sheet" aria-label="termSheet" placement="right">
                                 <a target="_blank" rel="noopener noreferrer" href={DETFs[selectedDETF].href}>
-                                    <Image src={require(`../assets/img/PDF_${DETFs[selectedDETF].ticker}.svg`)} alt="icon" className={classes.FaIcon} />
+                                    <Image src={require(`../assets/img/PDF_${DETFs[selectedDETF].ticker}.svg`)} alt="icon" className={classes.pdfIcons} />
                                 </a>
                             </Tooltip>
 
-                            <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h5" color="textSecondary" component="p">
+                            <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="h5" color="textSecondary" component="p">
                                 Ticker: {DETFs[selectedDETF].ticker}
                             </Typography>
 
-                            <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
+                            <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="h6" color="textSecondary" component="p">
                                 Next Vote: N/A
                             </Typography>
 
                             <AssetValue>
-                                <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
+                                <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="h6" color="textSecondary" component="p">
                                     Market Cap: N/A
                                 </Typography>
-                                <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
+                                <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="h6" color="textSecondary" component="p">
                                     Net Asset Value: N/A
                                 </Typography>
                             </AssetValue>
@@ -296,45 +324,45 @@ export default function DETF() {
                                     return <div style={{ margin: "0.5vw", marginBottom: "0.5vw" }}>
                                         <Typography variant="body1" color="textPrimary" component="p">{el.name} ({el.ticker})</Typography>
 
-                                        <Image src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" />
+                                        <Image src={require(`../assets/img/${el.ticker.toLowerCase()}.png`)} alt="icon" className={classes.coinIcons} />
 
-                                        <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="body2" color="textSecondary" component="p">Price: ${
+                                        <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="body2" color="textSecondary" component="p">Price: ${
                                             el.ticker === "BAT" || el.ticker === "CDAI" ? el.USDlast.toFixed(4) : el.USDlast.toFixed(2)
                                         }</Typography>
-                                        <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="body2" color="textSecondary" component="p">Net Asset: N/A</Typography>
-                                        <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="body2" color="textSecondary" component="p">Current Weigth: N/A</Typography>
-                                        <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="body2" color="textSecondary" component="p">Target Weigth: N/A</Typography>
+                                        <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="body2" color="textSecondary" component="p">Net Asset: N/A</Typography>
+                                        <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="body2" color="textSecondary" component="p">Current Weigth: N/A</Typography>
+                                        <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="body2" color="textSecondary" component="p">Target Weigth: N/A</Typography>
                                     </div>
 
                                 })}
                             </Composition>
                             <Network>
                                 <div>
-                                <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
-                                    MainNet
+                                    <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="h6" color="textSecondary" component="p">
+                                        MainNet
                                 </Typography>
-                                    { !DETFs[selectedDETF].mainnet ? 
-                                        <FaTimesCircle color='red' className={classes.FaIcon} /> : 
-                                        <FaCheckCircle color='green' className={classes.FaIcon} /> 
+                                    {!DETFs[selectedDETF].mainnet ?
+                                        <FaTimesCircle color='red' className={classes.FaIcon} /> :
+                                        <FaCheckCircle color='green' className={classes.FaIcon} />
                                     }
                                 </div>
                                 <div>
-                                <Typography style={{fontFamily: "'Muli', 'sans-sherif'"}} variant="h6" color="textSecondary" component="p">
-                                    TestNet
+                                    <Typography style={{ fontFamily: "'Muli', 'sans-sherif'" }} variant="h6" color="textSecondary" component="p">
+                                        TestNet
                                 </Typography>
-                                    { !DETFs[selectedDETF].testnet ? 
-                                        <FaTimesCircle color='red' className={classes.FaIcon} /> : 
-                                        <FaCheckCircle color='green' className={classes.FaIcon} /> 
+                                    {!DETFs[selectedDETF].testnet ?
+                                        <FaTimesCircle color='red' className={classes.FaIcon} /> :
+                                        <FaCheckCircle color='green' className={classes.FaIcon} />
                                     }
                                 </div>
                             </Network>
 
                             <div>
                                 <MuiThemeProvider theme={ButtonColor}>
-                                    <StyledButton style={{fontFamily: "'Muli', 'sans-sherif'", color: "#272343" }} href='https://defier.vote/'>
+                                    <StyledButton style={{ fontFamily: "'Muli', 'sans-sherif'", color: "#272343" }} href='https://defier.vote/'>
                                         Vote Now
                                     </StyledButton>
-                                    <StyledButton style={{fontFamily: "'Muli', 'sans-sherif'", color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
+                                    <StyledButton style={{ fontFamily: "'Muli', 'sans-sherif'", color: "#f5f5f5" }} variant="contained" href='https://defier.exchange'>
                                         Trade Now
                                     </StyledButton>
                                 </MuiThemeProvider>
