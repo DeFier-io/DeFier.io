@@ -1,31 +1,31 @@
-const CoinGecko = require('coingecko-api');
+import CoinGecko from "coingecko-api";
+
 const CoinGeckoClient = new CoinGecko();
 
-const token = [ 'BAT', 'MKR', 'XCHF', 'SNX', 'WBTC', 'CDAI', 'DAI' ]
+const token = ["BAT", "MKR", "XCHF", "SNX", "WBTC", "CDAI", "DAI"];
 
 const prices = async () => {
+  const coinList = await CoinGeckoClient.coins.list();
 
-    const coinList = await CoinGeckoClient.coins.list();
+  return Promise.all(
+    token.map(async ticker => {
+      const { id, name } = coinList.data.find(
+        x => x.symbol === ticker.toLocaleLowerCase()
+      );
 
-    return Promise.all(token.map(async ticker => {
+      let price = await CoinGeckoClient.coins.fetchTickers(id);
 
-        const { id, name } = coinList.data.find(x => x.symbol === ticker.toLocaleLowerCase())
+      price = price.data.tickers.filter(
+        el => el.target === "USD" || el.target === "ETH"
+      );
 
-        let price = await CoinGeckoClient.coins.fetchTickers(id);
-
-        price = price.data.tickers.filter(el => el.target === 'USD' || el.target === 'ETH')
-
-        return {
-            name,
-            ticker,
-            USDlast: price !== undefined ? price[0].converted_last.usd : 0
-        }
-    }))
-
-}
+      return {
+        name,
+        ticker,
+        USDlast: price !== undefined ? price[0].converted_last.usd : 0
+      };
+    })
+  );
+};
 
 export default prices();
-
-
-
-
