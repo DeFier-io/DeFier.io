@@ -22,15 +22,19 @@ const Icon = styled.a`
   font-size: 2.7vw;
   color: #4dd599;
   display: inline;
-  margin: 0.5vw;
+  margin: 0.8vw;
 
   &:hover {
     color: #272343;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 440px) {
     font-size: 7vw;
-    margin: 2.5vw;
+    margin: 1.5vw;
+  }
+  c @media (max-width: 1024px) {
+    font-size: 6vw;
+    margin: 1.5vw;
   }
 `;
 
@@ -38,21 +42,21 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <Icon
-        href="https://github.com/"
+        href="https://medium.com/@DeFier"
         rel="noopener noreferrer"
         target="_blank"
       >
         <FaMedium color="primary" />
       </Icon>
       <Icon
-        href="https://twitter.com/defier"
+        href="https://twitter.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaTwitter color="primary" />
       </Icon>
       <Icon
-        href="https://discordapp.com/"
+        href="https://discord.gg/qXBWaNX"
         rel="noopener noreferrer"
         target="_blank"
       >

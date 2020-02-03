@@ -74,7 +74,7 @@ const useStyles = makeStyles({
     "@media (max-width: 1024px)": {
       width: "auto",
       margin: "5vw",
-      height: "33vh"
+      height: "35vh"
     }
   },
   text: {
