@@ -32,7 +32,8 @@ const Icon = styled.a`
     font-size: 7vw;
     margin: 1.5vw;
   }
-  c @media (max-width: 1024px) {
+
+  @media (max-width: 1024px) {
     font-size: 6vw;
     margin: 1.5vw;
   }
