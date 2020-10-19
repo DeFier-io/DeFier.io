@@ -1,9 +1,9 @@
 # Defier.io Company Website
 
-This is the main website of DeFier - a protocol for decentralized ETFs on the Ethereum Blockchain.
+This is the main website of DeFier
 
 - Website: [DeFier.io](https://DeFier.io/)
-- Exchange: [DeFier.exchange](https://DeFier.exchange/)
+- ClaimWar: [ClaimWar.io](https://ClaimWar.io/)
 - Governance: [DeFier.vote](https://DeFier.vote/)
 - Email: [contact@DeFier.io](mailto:contact@defier.io)
 
