@@ -3,7 +3,6 @@ import React from "react";
 import AppBar from "./components/AppBar/AppBar";
 import Footer from "./components/Footer/Footer";
 
-import DETF from "./pages/DETF";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
@@ -20,7 +19,6 @@ function App() {
       <AppBar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/DETF" component={DETF} />
         <Route path="/About" component={About} />
         <Redirect from="/*" to="/" />
       </Switch>

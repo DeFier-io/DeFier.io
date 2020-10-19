@@ -10,36 +10,9 @@ import ethereum from "../assets/img/Ethereum.png";
 
 import styled, { createGlobalStyle } from "styled-components";
 
-import imgMobile from "../assets/img/AboutPageMobile.png";
-import imgDesktop from "../assets/img/backgroundAboutUs.png";
-import imgTablet from "../assets/img/AboutPageTablet.png";
-
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: #f5f5f5;
-    background: url(${imgDesktop}) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    @media (max-width: 1024px) {
-      background: url(${imgTablet}) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      margin: 0;
-    }
-
-    @media (max-width: 440px) {
-      background: url(${imgMobile}) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      margin: 0;
-    }
+    background-color: #000A25;
   }
 `;
 
@@ -51,13 +24,12 @@ const Container = styled.div`
   flex-direction: row;
 
   @media (max-width: 480px) {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   @media (max-width: 1024px) {
-    margin-top: 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
   }
 `;
 
@@ -73,8 +45,7 @@ const useStyles = makeStyles({
 
     "@media (max-width: 1024px)": {
       width: "auto",
-      margin: "5vw",
-      height: "35vh"
+      height: "40vh !important"
     }
   },
   text: {
@@ -88,7 +59,7 @@ const useStyles = makeStyles({
     }
   },
   text2: {
-    color: "#272343",
+    color: "#f5f5f5",
     textAlign: "justify",
     fontSize: "1.5vw",
     fontFamily: "Muli, sans-sherif'",
@@ -99,7 +70,7 @@ const useStyles = makeStyles({
   },
   rightTitle: {
     fontSize: "3vw",
-    color: "#f5f5f5",
+    color: "#00cc99",
     fontFamily: "Gilroy_Bold, sans-sherif",
 
     "@media (max-width: 1024px)": {
@@ -108,7 +79,7 @@ const useStyles = makeStyles({
   },
   leftTitle: {
     fontSize: "3vw",
-    color: "#272343",
+    color: "#00cc99",
     fontFamily: "Gilroy_Bold, sans-sherif",
 
     "@media (max-width: 1024px)": {
@@ -158,13 +129,13 @@ export default function About() {
             <Typography className={classes.leftTitle}>DeFi</Typography>
             <Typography className={classes.text2}>
               Decentralized Finance also known as{" "}
-              <span style={{ color: "#4dd599" }}>DeFi</span> is a movement
+              <span style={{ color: "#00cc99" }}>DeFi</span> is a movement
               promoting the idea that anyone can redesign traditional financial
               instruments and services in a decentralized architecture
               leveraging{" "}
-              <span style={{ color: "#4dd599" }}>decentralized networks</span>,{" "}
-              <span style={{ color: "#4dd599" }}>open source libraries</span>{" "}
-              and <span style={{ color: "#4dd599" }}>smart contracts </span> to
+              <span style={{ color: "#00cc99" }}>decentralized networks</span>,{" "}
+              <span style={{ color: "#00cc99" }}>open source libraries</span>{" "}
+              and <span style={{ color: "#00cc99" }}>smart contracts </span> to
               offer users a permissionless, trustless and transparent financial
               industry.
             </Typography>
@@ -193,13 +164,13 @@ export default function About() {
             <Typography className={classes.rightTitle}>DeFier</Typography>
             <Typography className={classes.text}>
               Our mission is to{" "}
-              <span style={{ color: "#4dd599" }}>promote</span> the
+              <span style={{ color: "#00cc99" }}>promote</span> the
               <span> DeFi </span> movement to the general public by facilitating
-              the <span style={{ color: "#4dd599" }}> issuance</span>,{" "}
-              <span style={{ color: "#4dd599" }}> trading, </span>and{" "}
-              <span style={{ color: "#4dd599" }}>redemption </span> of
+              the <span style={{ color: "#00cc99" }}> issuance</span>,{" "}
+              <span style={{ color: "#00cc99" }}> trading, </span>and{" "}
+              <span style={{ color: "#00cc99" }}>redemption </span> of
               Decentralized Exchange Traded Funds also known as{" "}
-              <span style={{ color: "#4dd599" }}>DETFs</span> on the Ethereum
+              <span style={{ color: "#00cc99" }}>DETFs</span> on the Ethereum
               network.
             </Typography>
           </CardContent>

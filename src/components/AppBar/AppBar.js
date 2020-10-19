@@ -11,17 +11,9 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { NavLink } from "react-router-dom";
 
-import ArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
-
-import logo from "../../assets/img/Logo.svg";
-import twoA from "../../assets/img/2A.svg";
-import threeA from "../../assets/img/3A.svg";
-import fourA from "../../assets/img/4A.svg";
-import fourB from "../../assets/img/4B.svg";
-import fiveA from "../../assets/img/5A.svg";
-import Exchange from "../../assets/img/Exchange.svg";
+import logo from "../../assets/img/logo_white.svg";
+import Claimwar from "../../assets/img/Claimwar.svg";
 import Governance from "../../assets/img/Governance.svg";
-import whiteLogo from "../../assets/img/whiteLogo.svg";
 import SmartContractLogo from "../../assets/img/SmartContract.svg";
 import whitepaper from "../../assets/img/Whitepaper.svg";
 
@@ -42,12 +34,12 @@ const useStyles = makeStyles(theme => ({
     color: "#f5f5f5",
     fontSize: "1.3vw",
 
-    "&:hover": { color: "#4dd599" },
+    "&:hover": { color: "#00cc99" },
 
     "@media (max-width: 1024px)": {
       fontSize: "3vw",
       marginRight: "2vw",
-      color: "#272343"
+      color: "#f5f5f5"
     }
   },
   appLogo: {
@@ -94,7 +86,7 @@ const muiPaper = createMuiTheme({
   overrides: {
     MuiMenu: {
       paper: {
-        backgroundColor: "#272343",
+        backgroundColor: "#000A25",
         color: "#f5f5f5",
         marginTop: "1vh"
       }
@@ -107,12 +99,9 @@ export default function ButtonAppBar() {
 
   const [anchorDoc, setAnchorDoc] = React.useState(null);
   const [anchorDapp, setAnchorDapp] = React.useState(null);
-  const [anchorDETF, setAnchorDETF] = React.useState(null);
-  const [menuDETF, setMenuDETF] = React.useState(false);
 
   const open = Boolean(anchorDoc);
   const openDapp = Boolean(anchorDapp);
-  const openDETF = Boolean(anchorDETF);
 
   const handleMenu = event => {
     setAnchorDoc(event.currentTarget);
@@ -122,17 +111,9 @@ export default function ButtonAppBar() {
     setAnchorDapp(event.currentTarget);
   };
 
-  const handleDETF = event => {
-    if (!anchorDETF) {
-      setAnchorDETF(event.currentTarget);
-    }
-    setMenuDETF(!menuDETF);
-  };
-
   const handleClose = () => {
     setAnchorDoc(null);
     setAnchorDapp(null);
-    setAnchorDETF(null);
   };
 
   return (
@@ -152,13 +133,6 @@ export default function ButtonAppBar() {
 
           <section className={classes.rightToolbar}>
             <div className={classes.menu}>
-              <NavLink
-                to="/DETF"
-                className={classes.appText}
-                activeStyle={{ color: "#4dd599" }}
-              >
-                DETFs
-              </NavLink>
 
               <MuiThemeProvider theme={muiPaper}>
                 <Typography
@@ -213,110 +187,6 @@ export default function ButtonAppBar() {
                       Smart Contracts
                     </a>
                   </MenuItem>
-                  <MenuItem onClick={handleDETF}>
-                    <img
-                      draggable="false"
-                      src={whiteLogo}
-                      alt="detf_logo"
-                      className={classes.whiteLogo}
-                    />
-                    <span className={classes.list}>DETFs</span>
-                    <ArrowRightIcon />
-                  </MenuItem>
-                  <Menu
-                    anchorOrigin={{
-                      vertical: "top",
-                      horizontal: "right"
-                    }}
-                    transformOrigin={{
-                      vertical: "top",
-                      horizontal: "left"
-                    }}
-                    open={openDETF}
-                    anchorEl={anchorDETF}
-                    onClose={handleClose}
-                  >
-                    <MenuItem onClick={handleClose}>
-                      <a
-                        style={{ textDecoration: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://drive.google.com/file/d/1vvZBEaO7FG-6BlbJeEBoHV5klB5ShjWj"
-                      >
-                        <img
-                          draggable="false"
-                          src={fiveA}
-                          alt="DU5A_logo"
-                          className={classes.whiteLogo}
-                        />
-                        <span className={classes.list}>DU5A</span>
-                      </a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <a
-                        style={{ textDecoration: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://drive.google.com/file/d/1iRCkgsKj9WWIjsalI9_nFInzEHK05Plh"
-                      >
-                        <img
-                          draggable="false"
-                          src={fourA}
-                          alt="DU4A_logo"
-                          className={classes.whiteLogo}
-                        />
-                        <span className={classes.list}>DU4A</span>
-                      </a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <a
-                        style={{ textDecoration: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://drive.google.com/file/d/1DNet5xIUSVNaevtObVXUbXmOT2vtojLH"
-                      >
-                        <img
-                          draggable="false"
-                          src={fourB}
-                          alt="DU4B_logo"
-                          className={classes.whiteLogo}
-                        />
-                        <span className={classes.list}>DU4B</span>
-                      </a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <a
-                        style={{ textDecoration: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://drive.google.com/file/d/10zImGbZAr2a1ivDYQwTQHeMifICmYkNP"
-                      >
-                        <img
-                          draggable="false"
-                          src={threeA}
-                          alt="DU3A_logo"
-                          className={classes.whiteLogo}
-                        />
-                        <span className={classes.list}>DU3A</span>
-                      </a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <a
-                        style={{ textDecoration: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://drive.google.com/file/d/10HbRgQzeRKy9f8zdFsjG2R-v6bQjHzjE"
-                      >
-                        <img
-                          draggable="false"
-                          src={twoA}
-                          alt="DU2A_logo"
-                          className={classes.whiteLogo}
-                        />
-                        <span className={classes.list}>DU2A</span>
-                      </a>
-                    </MenuItem>
-                  </Menu>
                 </Menu>
               </MuiThemeProvider>
 
@@ -351,17 +221,17 @@ export default function ButtonAppBar() {
                   <MenuItem onClick={handleClose}>
                     <img
                       draggable="false"
-                      src={Exchange}
+                      src={Claimwar}
                       alt="defierEx_logo"
                       className={classes.whiteLogo}
                     />
                     <a
                       className={classes.list}
-                      href="https://defier.exchange"
+                      href="https://claimwar.io"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Exchange
+                      ClaimWar
                     </a>
                   </MenuItem>
                   <MenuItem onClick={handleClose}>

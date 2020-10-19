@@ -20,12 +20,12 @@ const FooterWrapper = styled.footer`
 
 const Icon = styled.a`
   font-size: 2.7vw;
-  color: #4dd599;
+  color: #00cc99;
   display: inline;
   margin: 0.8vw;
 
   &:hover {
-    color: #272343;
+    color: #f5f5f5;
   }
 
   @media (max-width: 440px) {

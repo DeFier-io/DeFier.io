@@ -6,8 +6,6 @@ import Button from "@material-ui/core/Button";
 import styled, { createGlobalStyle } from "styled-components";
 
 import img from "../assets/img/homePage.png";
-import imgMobile from "../assets/img/HomePageMobile.png";
-import imgTablet from "../assets/img/HomePageTablet.png";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,24 +14,6 @@ const GlobalStyle = createGlobalStyle`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
-    @media (max-width: 1024px) {
-      background: url(${imgTablet}) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      margin: 0;
-    }
-
-    @media (max-width: 440px) {
-      background: url(${imgMobile}) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      margin: 0;
-    }
   }
   `;
 
@@ -46,16 +26,14 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0;
     font-size: 5vw;
-    margin-top: 6vh;
   }
 `;
 
 const Title = styled.h1`
-  color: #272343;
-  padding: 0;
-  margin: 0;
+  color: #00cc99;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
   font-family: "Gilroy_Bold", "sans-sherif";
   font-weight: normal;
 
@@ -65,10 +43,10 @@ const Title = styled.h1`
   }
 `;
 const SubTitle = styled.h2`
-  color: #4dd599;
+  color: #f5f5f5;
   font-size: 2.5vw;
-  padding: 0;
-  margin: -2vh 0 0 0;
+  padding: 0 0 0 0;
+  margin: -1vh 0 0 0;
   font-family: "Muli", "sans-sherif";
 
   @media (max-width: 1024px) {
@@ -78,17 +56,17 @@ const SubTitle = styled.h2`
 `;
 
 const StyledButton = styled(Button)`
-  margin-top: 4vh !important;
-  margin-left: 0 !important;
-  margin-right: 2vw !important;
-  font-size: 1.5vw !important;
-  font-weight: bold !important;
-  border-radius: 30px !important;
+  margin-top: 4vh;
+  margin-left: 0;
+  margin-right: 2vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border-radius: 30px;
 
   @media (max-width: 1024px) {
-    margin-top: 2vh !important;
-    font-size: 3vw !important;
-    margin-top: 3vh !important;
+    margin-top: 2vh;
+    font-size: 3vw;
+    margin-top: 3vh;
   }
 `;
 StyledButton.defaultProps = {
@@ -97,11 +75,11 @@ StyledButton.defaultProps = {
   size: "large",
   component: "button",
   rel: "noopener noreferrer",
-  target: "_blank"
+  target: "_blank",
 };
 
 const ButtonColor = createMuiTheme({
-  palette: { primary: { main: "#4dd599" } }
+  palette: { primary: { main: "#00cc99" } }
 });
 
 export default function Home() {
@@ -109,18 +87,18 @@ export default function Home() {
     <Container>
       <GlobalStyle />
       <Title>DeFi the Odds</Title>
-      <SubTitle>Tokenized Decentralized ETFs</SubTitle>
+      <SubTitle>Next-gen DeFi Applications</SubTitle>
       <div>
         <MuiThemeProvider theme={ButtonColor}>
-          <StyledButton style={{ color: "#272343" }} href="https://hackmd.io/">
-            WhitePaper
+          <StyledButton style={{ color: "#f5f5f5" }} href="https://uniswap.info">
+            Buy On Uniswap
           </StyledButton>
           <StyledButton
             style={{ color: "#f5f5f5" }}
             variant="contained"
-            href="https://defier.exchange"
+            href="https://claimWar.io/"
           >
-            Trade Now
+            CLaimWar
           </StyledButton>
         </MuiThemeProvider>
       </div>
