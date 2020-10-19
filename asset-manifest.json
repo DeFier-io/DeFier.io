@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2aa787c6.chunk.css",
+    "main.js": "/static/js/main.d2294ec9.chunk.js",
+    "main.js.map": "/static/js/main.d2294ec9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d517cf63.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d517cf63.js.map",
+    "static/js/2.85909e22.chunk.js": "/static/js/2.85909e22.chunk.js",
+    "static/js/2.85909e22.chunk.js.map": "/static/js/2.85909e22.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4a2cdcfd19729065d6c2cdbb7a5ecc8b.js": "/precache-manifest.4a2cdcfd19729065d6c2cdbb7a5ecc8b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2aa787c6.chunk.css.map": "/static/css/main.2aa787c6.chunk.css.map",
+    "static/media/Claimwar.svg": "/static/media/Claimwar.396ad45a.svg",
+    "static/media/index.css": "/static/media/Muli.e8efee92.ttf",
+    "static/media/Governance.svg": "/static/media/Governance.063a345e.svg",
+    "static/media/SmartContract.svg": "/static/media/SmartContract.38760057.svg",
+    "static/media/Whitepaper.svg": "/static/media/Whitepaper.906c52b5.svg",
+    "static/media/homePage.png": "/static/media/homePage.a2d73fdc.png",
+    "static/media/logo_white.svg": "/static/media/logo_white.a93fbeb7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d517cf63.js",
+    "static/js/2.85909e22.chunk.js",
+    "static/css/main.2aa787c6.chunk.css",
+    "static/js/main.d2294ec9.chunk.js"
+  ]
+}
