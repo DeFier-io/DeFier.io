@@ -180,7 +180,7 @@ export default function ButtonAppBar() {
                     />
                     <a
                       className={classes.list}
-                      href="https://www.gitbook.com/"
+                      href="https://github.com/defier-io"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
