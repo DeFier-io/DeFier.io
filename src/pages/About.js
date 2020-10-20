@@ -12,7 +12,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: #000A25 !important;
+    background: #000A25;
   }
 `;
 
