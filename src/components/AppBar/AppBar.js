@@ -191,6 +191,14 @@ export default function ButtonAppBar() {
               </MuiThemeProvider>
 
               <NavLink
+                to="/DFR"
+                className={classes.appText}
+                activeStyle={{ color: "#4dd599" }}
+              >
+                Our Token
+              </NavLink>
+
+              <NavLink
                 to="/About"
                 className={classes.appText}
                 activeStyle={{ color: "#4dd599" }}
