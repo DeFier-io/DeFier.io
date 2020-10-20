@@ -204,7 +204,7 @@ export default function ButtonAppBar() {
                   aria-haspopup="true"
                   className={classes.appText}
                 >
-                  Dapp
+                  Dapps
                 </Typography>
                 <Menu
                   anchorEl={anchorDapp}
