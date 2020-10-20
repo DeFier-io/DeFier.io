@@ -74,7 +74,7 @@ const useStyles = makeStyles(theme => ({
     color: "#f5f5f5",
     fontSize: "1.3vw",
     textDecoration: "none",
-    "&:hover": { color: "#4dd599" },
+    "&:hover": { color: "#00cc99" },
     "@media (max-width: 1024px)": {
       fontSize: "4vw",
       marginRight: "1vw"
