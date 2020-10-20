@@ -6,7 +6,8 @@ import {
   FaDiscord,
   FaLinkedin,
   FaTwitter,
-  FaMedium
+  FaMedium,
+  FaTelegram
 } from "react-icons/fa";
 
 const FooterWrapper = styled.footer`
@@ -19,10 +20,10 @@ const FooterWrapper = styled.footer`
 `;
 
 const Icon = styled.a`
-  font-size: 2.7vw;
+  font-size: 2.6vw;
   color: #00cc99;
   display: inline;
-  margin: 0.8vw;
+  margin: 0.6vw;
 
   &:hover {
     color: #f5f5f5;
@@ -55,6 +56,13 @@ export default function Footer() {
         rel="noopener noreferrer"
       >
         <FaTwitter color="primary" />
+      </Icon>
+      <Icon
+        href="https://telegram.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <FaTelegram color="primary" />
       </Icon>
       <Icon
         href="https://discord.gg/qXBWaNX"
