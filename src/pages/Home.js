@@ -3,19 +3,7 @@ import React from "react";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
-import styled, { createGlobalStyle } from "styled-components";
-
-import img from "../assets/img/homePage.png";
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: url(${img}) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  `;
+import styled from "styled-components";
 
 const Container = styled.div`
   font-size: 3vw;
@@ -85,7 +73,6 @@ const ButtonColor = createMuiTheme({
 export default function Home() {
   return (
     <Container>
-      <GlobalStyle />
       <Title>DeFi the Odds</Title>
       <SubTitle>Next-gen DeFi Applications</SubTitle>
       <div>
