@@ -230,7 +230,7 @@ export default function ButtonAppBar() {
                     <img
                       draggable="false"
                       src={Claimwar}
-                      alt="defierEx_logo"
+                      alt=""
                       className={classes.whiteLogo}
                     />
                     <a
@@ -246,7 +246,7 @@ export default function ButtonAppBar() {
                     <img
                       draggable="false"
                       src={Governance}
-                      alt="defierVote_logo"
+                      alt=""
                       className={classes.whiteLogo}
                     />
                     <a

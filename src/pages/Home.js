@@ -3,6 +3,9 @@ import React from "react";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
+import whiteLogo from "../assets/img/whiteLogo.svg";
+import UniswapLogo from "../assets/img/UniswapLogo.svg";
+
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -50,6 +53,7 @@ const StyledButton = styled(Button)`
   font-size: 1.5vw;
   font-weight: bold;
   border-radius: 30px;
+  text-transform: capitalize;
 
   @media (max-width: 1024px) {
     margin-top: 2vh;
@@ -78,14 +82,25 @@ export default function Home() {
       <div>
         <MuiThemeProvider theme={ButtonColor}>
           <StyledButton style={{ color: "#f5f5f5" }} href="https://uniswap.info">
-            Buy On Uniswap
+            <img
+              draggable="false"
+              src={UniswapLogo}
+              alt=""
+              style={{ width: "1.8vw", marginRight: "0.5vw" }}
+            />
+            Buy on Uniswap
           </StyledButton>
           <StyledButton
-            style={{ color: "#f5f5f5" }}
             variant="contained"
+            style={{ color: "#f5f5f5" }}
             href="https://claimWar.io/"
-          >
-            CLaimWar
+          ><img
+              draggable="false"
+              src={whiteLogo}
+              alt=""
+              style={{ width: "2vw", marginRight: "0.5vw" }}
+            />
+            ClaimWar
           </StyledButton>
         </MuiThemeProvider>
       </div>
