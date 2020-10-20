@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc02740a.chunk.css",
+    "main.css": "/static/css/main.74e4594e.chunk.css",
     "main.js": "/static/js/main.eab36661.chunk.js",
     "main.js.map": "/static/js/main.eab36661.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d517cf63.js",
@@ -8,11 +8,11 @@
     "static/js/2.1b7343eb.chunk.js": "/static/js/2.1b7343eb.chunk.js",
     "static/js/2.1b7343eb.chunk.js.map": "/static/js/2.1b7343eb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.16e17b1707e81a27d7beba1f112dae24.js": "/precache-manifest.16e17b1707e81a27d7beba1f112dae24.js",
+    "precache-manifest.2355cc71b79691c35dac6417a59ed3af.js": "/precache-manifest.2355cc71b79691c35dac6417a59ed3af.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.dc02740a.chunk.css.map": "/static/css/main.dc02740a.chunk.css.map",
+    "static/css/main.74e4594e.chunk.css.map": "/static/css/main.74e4594e.chunk.css.map",
     "static/media/Claimwar.svg": "/static/media/Claimwar.396ad45a.svg",
-    "static/media/index.css": "/static/media/homePage.6a9938b9.png",
+    "static/media/index.css": "/static/media/homePage.f543fcf1.png",
     "static/media/Governance.svg": "/static/media/Governance.063a345e.svg",
     "static/media/SmartContract.svg": "/static/media/SmartContract.38760057.svg",
     "static/media/Whitepaper.svg": "/static/media/Whitepaper.906c52b5.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.d517cf63.js",
     "static/js/2.1b7343eb.chunk.js",
-    "static/css/main.dc02740a.chunk.css",
+    "static/css/main.74e4594e.chunk.css",
     "static/js/main.eab36661.chunk.js"
   ]
 }
