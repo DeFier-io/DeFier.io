@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     "&:hover": { color: "#00cc99" },
 
     "@media (max-width: 1024px)": {
-      fontSize: "3vw",
+      fontSize: "2.8vw",
       marginRight: "2vw",
       color: "#f5f5f5"
     }
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     width: "9vw",
 
     "@media (max-width: 1024px)": {
-      width: "30vw"
+      width: "25vw"
     }
   },
   appBar: {

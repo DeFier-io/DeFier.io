@@ -1,12 +1,23 @@
 import React from "react";
 
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { MuiThemeProvider, createMuiTheme, makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
 import whiteLogo from "../assets/img/whiteLogo.svg";
 import UniswapLogo from "../assets/img/UniswapLogo.svg";
 
 import styled from "styled-components";
+
+const useStyles = makeStyles(theme => ({
+  logo: {
+    marginRight: "0.2vw",
+    width: "2vw",
+    "@media (max-width: 1024px)": {
+      marginRight: "1vw",
+      width: "5vw"
+    }
+  }
+}));
 
 const Container = styled.div`
   font-size: 3vw;
@@ -75,6 +86,8 @@ const ButtonColor = createMuiTheme({
 });
 
 export default function Home() {
+  const classes = useStyles();
+
   return (
     <Container>
       <Title>DeFi the Odds</Title>
@@ -86,7 +99,7 @@ export default function Home() {
               draggable="false"
               src={UniswapLogo}
               alt=""
-              style={{ width: "2vw", marginRight: "0.5vw" }}
+              className={classes.logo}
             />
             Uniswap Pool
           </StyledButton>
@@ -98,7 +111,7 @@ export default function Home() {
               draggable="false"
               src={whiteLogo}
               alt=""
-              style={{ width: "2vw", marginRight: "0.5vw" }}
+              className={classes.logo}
             />
             ClaimWar
           </StyledButton>
