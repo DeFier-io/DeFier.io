@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "093d7b4b515725ba2c6af17efce23e4e",
+    "revision": "ccbd4735f2996476a9722e975242ee45",
     "url": "/index.html"
   },
   {
-    "revision": "2bca0101d7e05d169ad9",
+    "revision": "201d13b98343fa632fb2",
     "url": "/static/css/main.74e4594e.chunk.css"
   },
   {
@@ -12,16 +12,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.fde45569.chunk.js"
   },
   {
-    "revision": "2bca0101d7e05d169ad9",
-    "url": "/static/js/main.150be041.chunk.js"
+    "revision": "201d13b98343fa632fb2",
+    "url": "/static/js/main.ac3faa1c.chunk.js"
   },
   {
     "revision": "89dbd287cbf1894c21ef",
     "url": "/static/js/runtime-main.d517cf63.js"
   },
   {
-    "revision": "253e06ce4050644370b7d6f2f27e1088",
-    "url": "/static/media/Claimwar.253e06ce.svg"
+    "revision": "e66df1ee4de4c973eafd5bc783a9ba00",
+    "url": "/static/media/Claimwar.e66df1ee.svg"
   },
   {
     "revision": "a992bf6450828d54bad8c7cb486a37e5",
