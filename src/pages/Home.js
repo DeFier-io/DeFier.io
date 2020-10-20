@@ -11,7 +11,7 @@ import styled from "styled-components";
 const useStyles = makeStyles(theme => ({
   logo: {
     marginRight: "0.2vw",
-    width: "2vw",
+    width: "2.3vw",
     "@media (max-width: 1024px)": {
       marginRight: "1vw",
       width: "5vw"
