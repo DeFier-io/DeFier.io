@@ -86,9 +86,9 @@ export default function Home() {
               draggable="false"
               src={UniswapLogo}
               alt=""
-              style={{ width: "1.8vw", marginRight: "0.5vw" }}
+              style={{ width: "2vw", marginRight: "0.5vw" }}
             />
-            Buy on Uniswap
+            Uniswap Pool
           </StyledButton>
           <StyledButton
             variant="contained"
