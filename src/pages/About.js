@@ -163,15 +163,13 @@ export default function About() {
           <CardContent>
             <Typography className={classes.rightTitle}>DeFier</Typography>
             <Typography className={classes.text}>
-              Our mission is to{" "}
-              <span style={{ color: "#00cc99" }}>promote</span> the
+              Our mission is to
+              <span style={{ color: "#00cc99" }}> promote</span> the
               <span> DeFi </span> movement to the general public by facilitating
-              the <span style={{ color: "#00cc99" }}> issuance</span>,{" "}
-              <span style={{ color: "#00cc99" }}> trading, </span>and{" "}
-              <span style={{ color: "#00cc99" }}>redemption </span> of
-              Decentralized Exchange Traded Funds also known as{" "}
-              <span style={{ color: "#00cc99" }}>DETFs</span> on the Ethereum
-              network.
+              the <span style={{ color: "#00cc99" }}>creation </span> of innovative
+              <span style={{ color: "#00cc99" }}> Decentralized Financial Applications </span>
+              on the Ethereum network leveraging the <span style={{ color: "#00cc99" }}>DeFier Token (DFR) </span>
+              to vote on critical governance issues.
             </Typography>
           </CardContent>
           <div className={classes.logo}>
