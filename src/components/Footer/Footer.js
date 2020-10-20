@@ -58,7 +58,7 @@ export default function Footer() {
         <FaTwitter color="primary" />
       </Icon>
       <Icon
-        href="https://telegram.com/"
+        href="https://telegram.org/"
         rel="noopener noreferrer"
         target="_blank"
       >
