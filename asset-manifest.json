@@ -1,27 +1,29 @@
 {
   "files": {
     "main.css": "/static/css/main.74e4594e.chunk.css",
-    "main.js": "/static/js/main.9dacff88.chunk.js",
-    "main.js.map": "/static/js/main.9dacff88.chunk.js.map",
+    "main.js": "/static/js/main.313ac434.chunk.js",
+    "main.js.map": "/static/js/main.313ac434.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d517cf63.js",
     "runtime-main.js.map": "/static/js/runtime-main.d517cf63.js.map",
-    "static/js/2.720ce90f.chunk.js": "/static/js/2.720ce90f.chunk.js",
-    "static/js/2.720ce90f.chunk.js.map": "/static/js/2.720ce90f.chunk.js.map",
+    "static/js/2.5830b347.chunk.js": "/static/js/2.5830b347.chunk.js",
+    "static/js/2.5830b347.chunk.js.map": "/static/js/2.5830b347.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.9e903a01d43053b02b4b94f21ff89d96.js": "/precache-manifest.9e903a01d43053b02b4b94f21ff89d96.js",
+    "precache-manifest.5c98804beebfa2b8084399ef8d24e610.js": "/precache-manifest.5c98804beebfa2b8084399ef8d24e610.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.74e4594e.chunk.css.map": "/static/css/main.74e4594e.chunk.css.map",
     "static/media/Claimwar.svg": "/static/media/Claimwar.e66df1ee.svg",
     "static/media/index.css": "/static/media/homePage.f543fcf1.png",
     "static/media/Governance.svg": "/static/media/Governance.063a345e.svg",
     "static/media/SmartContract.svg": "/static/media/SmartContract.38760057.svg",
+    "static/media/UniswapLogo.svg": "/static/media/UniswapLogo.61ee5aca.svg",
     "static/media/Whitepaper.svg": "/static/media/Whitepaper.906c52b5.svg",
-    "static/media/logo_white.svg": "/static/media/logo_white.a93fbeb7.svg"
+    "static/media/logo_white.svg": "/static/media/logo_white.a93fbeb7.svg",
+    "static/media/whiteLogo.svg": "/static/media/whiteLogo.6abaa04a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d517cf63.js",
-    "static/js/2.720ce90f.chunk.js",
+    "static/js/2.5830b347.chunk.js",
     "static/css/main.74e4594e.chunk.css",
-    "static/js/main.9dacff88.chunk.js"
+    "static/js/main.313ac434.chunk.js"
   ]
 }

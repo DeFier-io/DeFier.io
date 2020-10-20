@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f8095ea4b17f67e705421db0fd61c6e",
+    "revision": "936a66ca5224d44ebd067baf253d6e1e",
     "url": "/index.html"
   },
   {
-    "revision": "f359787907f09a7a5001",
+    "revision": "b81f9a5353f8655f98da",
     "url": "/static/css/main.74e4594e.chunk.css"
   },
   {
-    "revision": "76a569bf76c848cf265a",
-    "url": "/static/js/2.720ce90f.chunk.js"
+    "revision": "be9e675e0c71ad8131c6",
+    "url": "/static/js/2.5830b347.chunk.js"
   },
   {
-    "revision": "f359787907f09a7a5001",
-    "url": "/static/js/main.9dacff88.chunk.js"
+    "revision": "b81f9a5353f8655f98da",
+    "url": "/static/js/main.313ac434.chunk.js"
   },
   {
     "revision": "89dbd287cbf1894c21ef",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/SmartContract.38760057.svg"
   },
   {
+    "revision": "61ee5aca7eb01b788e3ce75912380f71",
+    "url": "/static/media/UniswapLogo.61ee5aca.svg"
+  },
+  {
     "revision": "906c52b5355e9c73f8bc07dc83da3487",
     "url": "/static/media/Whitepaper.906c52b5.svg"
   },
@@ -54,5 +58,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a93fbeb795f87e84b0378d088850fc4d",
     "url": "/static/media/logo_white.a93fbeb7.svg"
+  },
+  {
+    "revision": "6abaa04ae59d968fb8b11eed588490ec",
+    "url": "/static/media/whiteLogo.6abaa04a.svg"
   }
 ]);
