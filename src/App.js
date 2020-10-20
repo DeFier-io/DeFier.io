@@ -9,7 +9,6 @@ import About from "./pages/About";
 import {
   BrowserRouter as Router,
   Route,
-  Redirect,
   Switch
 } from "react-router-dom";
 
@@ -20,7 +19,6 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/About" component={About} />
-        <Redirect from="/*" to="/" />
       </Switch>
       <Footer />
     </Router>
