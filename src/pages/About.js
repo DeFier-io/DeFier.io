@@ -167,10 +167,11 @@ export default function About() {
               <span style={{ color: "#00cc99" }}> promote</span> the
               <span> DeFi </span> movement to the general public by facilitating
               the <span style={{ color: "#00cc99" }}>creation </span> of innovative
-              <span style={{ color: "#00cc99" }}> Decentralized Financial Applications </span>
-              on the Ethereum network. <a href="https://www.gitbook.com/" style={{ color: "#00cc99" }}>
-                DeFier Token (DFR)</a> holders will shape the innovation process by
-                voting on critical issues.
+              <span style={{ color: "#00cc99" }}> Decentralized Financial Applications</span>.
+              Furthermore, <a href="https://www.gitbook.com/" style={{ color: "#00cc99" }}>
+                DeFier Token (DFR)</a> holders will help shape the DeFi revolution by
+                <span style={{ color: "#00cc99" }}>  voting on critical issues</span>
+                , helping us in building the architecture of the financial industry of tomorrow.
             </Typography>
           </CardContent>
           <div className={classes.logo}>
