@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.74e4594e.chunk.css",
-    "main.js": "/static/js/main.c1120eef.chunk.js",
-    "main.js.map": "/static/js/main.c1120eef.chunk.js.map",
+    "main.js": "/static/js/main.6f010564.chunk.js",
+    "main.js.map": "/static/js/main.6f010564.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d517cf63.js",
     "runtime-main.js.map": "/static/js/runtime-main.d517cf63.js.map",
     "static/js/2.1b7343eb.chunk.js": "/static/js/2.1b7343eb.chunk.js",
     "static/js/2.1b7343eb.chunk.js.map": "/static/js/2.1b7343eb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b9ea8b72ac09e013cbb00940151265ff.js": "/precache-manifest.b9ea8b72ac09e013cbb00940151265ff.js",
+    "precache-manifest.7cb9752cf1e092c5152fb9c6724c7463.js": "/precache-manifest.7cb9752cf1e092c5152fb9c6724c7463.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.74e4594e.chunk.css.map": "/static/css/main.74e4594e.chunk.css.map",
     "static/media/Claimwar.svg": "/static/media/Claimwar.396ad45a.svg",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.d517cf63.js",
     "static/js/2.1b7343eb.chunk.js",
     "static/css/main.74e4594e.chunk.css",
-    "static/js/main.c1120eef.chunk.js"
+    "static/js/main.6f010564.chunk.js"
   ]
 }
