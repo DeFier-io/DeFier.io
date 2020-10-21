@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b921366e045e5d9371d1843e230ded8e",
+    "revision": "0a4b3968a5c5505ab8bdf6cbcb9a1c10",
     "url": "/index.html"
   },
   {
-    "revision": "ee1aa531d732137644f6",
+    "revision": "618caaac0ad6eb9b83e9",
     "url": "/static/css/main.74e4594e.chunk.css"
   },
   {
@@ -12,16 +12,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.9210a089.chunk.js"
   },
   {
-    "revision": "ee1aa531d732137644f6",
-    "url": "/static/js/main.a82def83.chunk.js"
+    "revision": "618caaac0ad6eb9b83e9",
+    "url": "/static/js/main.60a74bc0.chunk.js"
   },
   {
     "revision": "89dbd287cbf1894c21ef",
     "url": "/static/js/runtime-main.d517cf63.js"
   },
   {
-    "revision": "e66df1ee4de4c973eafd5bc783a9ba00",
-    "url": "/static/media/Claimwar.e66df1ee.svg"
+    "revision": "61dfb97e95ada96221c2595965189f3f",
+    "url": "/static/media/Claimwar.61dfb97e.svg"
   },
   {
     "revision": "a992bf6450828d54bad8c7cb486a37e5",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Gilroy-Semibold.ac29a758.otf"
   },
   {
-    "revision": "063a345e910165c9aeff469d4cd11af5",
-    "url": "/static/media/Governance.063a345e.svg"
+    "revision": "054c58f3f7ca5381d11b6b2cb668171a",
+    "url": "/static/media/Governance.054c58f3.svg"
   },
   {
     "revision": "e8efee929eb2218fdc84a27389f3968b",
