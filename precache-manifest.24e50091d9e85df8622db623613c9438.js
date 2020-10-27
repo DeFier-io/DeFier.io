@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "98008ee19c7497e712d427c7cff65744",
+    "revision": "76b493c51ad974538c5e589234055e65",
     "url": "/index.html"
   },
   {
-    "revision": "ab624988295310ffc5d8",
+    "revision": "13a351f1dd2fb7dfb784",
     "url": "/static/css/main.9611677d.chunk.css"
   },
   {
-    "revision": "616655ac40dcb09023f9",
-    "url": "/static/js/2.f1bbdc90.chunk.js"
+    "revision": "702105855fa2aee0ca8f",
+    "url": "/static/js/2.cbbccaed.chunk.js"
   },
   {
-    "revision": "ab624988295310ffc5d8",
-    "url": "/static/js/main.9d0dd8f4.chunk.js"
+    "revision": "13a351f1dd2fb7dfb784",
+    "url": "/static/js/main.a86f00fe.chunk.js"
   },
   {
     "revision": "89dbd287cbf1894c21ef",
@@ -22,10 +22,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "61dfb97e95ada96221c2595965189f3f",
     "url": "/static/media/Claimwar.61dfb97e.svg"
-  },
-  {
-    "revision": "b104478b9255dbb1e1bc996eb7040f4e",
-    "url": "/static/media/CoinGecko.b104478b.png"
   },
   {
     "revision": "a992bf6450828d54bad8c7cb486a37e5",
@@ -66,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "060d80297c4a8e0efb75a322aa497978",
     "url": "/static/media/unicrypt.060d8029.svg"
+  },
+  {
+    "revision": "7304f1fc1fda17933955e96eb82d2e6a",
+    "url": "/static/media/uniswapWhite.7304f1fc.png"
   },
   {
     "revision": "6abaa04ae59d968fb8b11eed588490ec",
