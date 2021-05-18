@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.9611677d.chunk.css",
-    "main.js": "/static/js/main.fa4f0f99.chunk.js",
-    "main.js.map": "/static/js/main.fa4f0f99.chunk.js.map",
+    "main.js": "/static/js/main.27e0bbe0.chunk.js",
+    "main.js.map": "/static/js/main.27e0bbe0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d517cf63.js",
     "runtime-main.js.map": "/static/js/runtime-main.d517cf63.js.map",
-    "static/js/2.cbbccaed.chunk.js": "/static/js/2.cbbccaed.chunk.js",
-    "static/js/2.cbbccaed.chunk.js.map": "/static/js/2.cbbccaed.chunk.js.map",
+    "static/js/2.415a0c44.chunk.js": "/static/js/2.415a0c44.chunk.js",
+    "static/js/2.415a0c44.chunk.js.map": "/static/js/2.415a0c44.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e825c38896edcc82142fcf2010b69a28.js": "/precache-manifest.e825c38896edcc82142fcf2010b69a28.js",
+    "precache-manifest.2963946216066ade3f9667268827a61a.js": "/precache-manifest.2963946216066ade3f9667268827a61a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.9611677d.chunk.css.map": "/static/css/main.9611677d.chunk.css.map",
     "static/media/Claimwar.svg": "/static/media/Claimwar.61dfb97e.svg",
+    "static/media/DashBoard.svg": "/static/media/DashBoard.d4861630.svg",
     "static/media/index.css": "/static/media/Muli.e8efee92.ttf",
     "static/media/Governance.svg": "/static/media/Governance.054c58f3.svg",
     "static/media/SmartContract.svg": "/static/media/SmartContract.38760057.svg",
@@ -25,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d517cf63.js",
-    "static/js/2.cbbccaed.chunk.js",
+    "static/js/2.415a0c44.chunk.js",
     "static/css/main.9611677d.chunk.css",
-    "static/js/main.fa4f0f99.chunk.js"
+    "static/js/main.27e0bbe0.chunk.js"
   ]
 }

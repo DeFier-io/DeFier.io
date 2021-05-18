@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "597d09e73333b55c6bbb5d1aa36f11d2",
+    "revision": "6b4bb489ec5721f0851dd2d529376e90",
     "url": "/index.html"
   },
   {
-    "revision": "d1960ee54135454b0388",
+    "revision": "76abfbbeb4de01b6f220",
     "url": "/static/css/main.9611677d.chunk.css"
   },
   {
-    "revision": "702105855fa2aee0ca8f",
-    "url": "/static/js/2.cbbccaed.chunk.js"
+    "revision": "02a6bd740487e4c4653b",
+    "url": "/static/js/2.415a0c44.chunk.js"
   },
   {
-    "revision": "d1960ee54135454b0388",
-    "url": "/static/js/main.fa4f0f99.chunk.js"
+    "revision": "76abfbbeb4de01b6f220",
+    "url": "/static/js/main.27e0bbe0.chunk.js"
   },
   {
     "revision": "89dbd287cbf1894c21ef",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "61dfb97e95ada96221c2595965189f3f",
     "url": "/static/media/Claimwar.61dfb97e.svg"
+  },
+  {
+    "revision": "d48616303ad2b405987730495a0ec4cb",
+    "url": "/static/media/DashBoard.d4861630.svg"
   },
   {
     "revision": "a992bf6450828d54bad8c7cb486a37e5",
