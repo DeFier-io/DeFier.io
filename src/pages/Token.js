@@ -183,12 +183,18 @@ export default function About() {
                                 <Typography className={classes.textIcon}>
                                     Smart Contract
                                 </Typography>
+                                <a 
+                                href="https://github.com/DeFier-io/DeFier_Token_Contracts"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                >
                                 <img
                                     className={classes.img}
                                     src={github}
                                     alt=""
                                     draggable="false"
                                 />
+                                </a>
                             </Grid>
                             <Grid xs={4}>
                                 <Typography className={classes.textIcon}>

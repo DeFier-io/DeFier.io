@@ -164,7 +164,7 @@ export default function About() {
               Furthermore, <a href="https://www.gitbook.com/"  style={{ color: "#00cc99" }} rel="noopener noreferrer" target="_blank">
                 DeFier Token (DFR)</a> holders will help shape the DeFi revolution by
                 <span style={{ color: "#00cc99" }}>  voting on critical issues</span>
-                , helping us build the architecture of the financial industry of tomorrow.
+                and helping us build the architecture of the financial industry of tomorrow.
             </Typography>
           </CardContent>
           <div className={classes.logo}>

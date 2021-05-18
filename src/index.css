@@ -20,7 +20,7 @@ a, a:active, a:focus{
 body {
   background: #000A25;
   height: 100%;
-  margin: 1%;
+  padding: 0.1%;
   overflow-y:hidden;
 }
 

@@ -4,7 +4,7 @@ import { MuiThemeProvider, createMuiTheme, makeStyles } from "@material-ui/core/
 import Button from "@material-ui/core/Button";
 
 import whiteLogo from "../assets/img/whiteLogo.svg";
-import UniswapLogo from "../assets/img/UniswapLogo.svg";
+import UniswapLogo from "../assets/img/Governance.svg";
 
 import styled, { createGlobalStyle } from "styled-components";
 
@@ -114,7 +114,7 @@ export default function Home() {
               alt=""
               className={classes.logo}
             />
-            Uniswap (TBA)
+            ICO (TBA)
           </StyledButton>
           <StyledButton
             variant="contained"
