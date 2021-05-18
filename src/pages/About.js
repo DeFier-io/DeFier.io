@@ -8,13 +8,7 @@ import Card from "@material-ui/core/Card";
 import defi from "../assets/img/DeFi.png";
 import ethereum from "../assets/img/Ethereum.png";
 
-import styled, { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #000A25;
-  }
-`;
+import styled from "styled-components";
 
 const Container = styled.div`
   min-height: 100%;
@@ -122,7 +116,6 @@ export default function About() {
 
   return (
     <Container>
-      <GlobalStyle />
       <Card elevation={0} className={classes.rightCard}>
         <div className={classes.card}>
           <CardContent>
@@ -168,7 +161,7 @@ export default function About() {
               <span> DeFi </span> movement to the general public by facilitating
               the <span style={{ color: "#00cc99" }}>creation </span> of innovative
               <span style={{ color: "#00cc99" }}> Decentralized Financial Applications</span>.
-              Furthermore, <a href="https://www.gitbook.com/" style={{ color: "#00cc99" }} target="_blank">
+              Furthermore, <a href="https://www.gitbook.com/"  style={{ color: "#00cc99" }} rel="noopener noreferrer" target="_blank">
                 DeFier Token (DFR)</a> holders will help shape the DeFi revolution by
                 <span style={{ color: "#00cc99" }}>  voting on critical issues</span>
                 , helping us build the architecture of the financial industry of tomorrow.

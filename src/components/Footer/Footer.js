@@ -6,7 +6,6 @@ import {
   FaDiscord,
   FaLinkedin,
   FaTwitter,
-  FaMedium,
   FaTelegram
 } from "react-icons/fa";
 
@@ -43,13 +42,6 @@ const Icon = styled.a`
 export default function Footer() {
   return (
     <FooterWrapper>
-      <Icon
-        href="https://medium.com/@DeFier"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <FaMedium color="primary" />
-      </Icon>
       <Icon
         href="https://twitter.com/"
         target="_blank"

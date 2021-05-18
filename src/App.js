@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Token from "./pages/Token";
 
 import {
   BrowserRouter as Router,
@@ -18,6 +19,7 @@ function App() {
       <AppBar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/Token" component={Token} />
         <Route path="/About" component={About} />
       </Switch>
       <Footer />

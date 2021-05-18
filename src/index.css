@@ -18,11 +18,7 @@ a, a:active, a:focus{
 }
 
 body {
-  background: url("./assets/img/homePage.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #000A25;
   height: 100%;
   margin: 1%;
   overflow-y:hidden;
@@ -31,5 +27,9 @@ body {
 html {
   height: 100%;
   overflow: hidden;
+}
+
+.flip-countdown-title {
+  color: #f5f5f5
 }
 

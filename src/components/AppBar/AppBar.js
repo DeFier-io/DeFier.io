@@ -14,6 +14,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/logo_white.svg";
 import Claimwar from "../../assets/img/Claimwar.svg";
 import Governance from "../../assets/img/Governance.svg";
+import DashBoard from "../../assets/img/DashBoard.svg";
 import SmartContractLogo from "../../assets/img/SmartContract.svg";
 import whitepaper from "../../assets/img/Whitepaper.svg";
 
@@ -191,7 +192,7 @@ export default function ButtonAppBar() {
               </MuiThemeProvider>
 
               <NavLink
-                to="/DFR"
+                to="/Token"
                 className={classes.appText}
                 activeStyle={{ color: "#4dd599" }}
               >
@@ -229,17 +230,31 @@ export default function ButtonAppBar() {
                   <MenuItem onClick={handleClose}>
                     <img
                       draggable="false"
+                      src={DashBoard}
+                      alt=""
+                      className={classes.whiteLogo}
+                    />
+                    <a
+                      className={classes.list}
+                      href="https://defier.finance"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      DashBoard
+                    </a>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <img
+                      draggable="false"
                       src={Claimwar}
                       alt=""
                       className={classes.whiteLogo}
                     />
                     <a
                       className={classes.list}
-                      href="https://claimwar.io"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                     
                     >
-                      ClaimWar
+                      ClaimWar (TBA)
                     </a>
                   </MenuItem>
                   <MenuItem onClick={handleClose}>
@@ -251,11 +266,9 @@ export default function ButtonAppBar() {
                     />
                     <a
                       className={classes.list}
-                      href="https://defier.vote"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      
                     >
-                      Governance
+                      Governance (TBA)
                     </a>
                   </MenuItem>
                 </Menu>

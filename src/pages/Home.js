@@ -6,7 +6,19 @@ import Button from "@material-ui/core/Button";
 import whiteLogo from "../assets/img/whiteLogo.svg";
 import UniswapLogo from "../assets/img/UniswapLogo.svg";
 
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+import homePage from "../assets/img/homePage.png";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: url(${homePage}) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+`;
 
 const useStyles = makeStyles(theme => ({
   logo: {
@@ -90,30 +102,31 @@ export default function Home() {
 
   return (
     <Container>
+      <GlobalStyle />
       <Title>DeFi the Odds</Title>
       <SubTitle>Next-gen DeFi Applications</SubTitle>
       <div>
         <MuiThemeProvider theme={ButtonColor}>
-          <StyledButton style={{ color: "#f5f5f5" }} href="https://uniswap.info">
+          <StyledButton style={{ color: "#f5f5f5" }}>
             <img
               draggable="false"
               src={UniswapLogo}
               alt=""
               className={classes.logo}
             />
-            Uniswap Pool
+            Uniswap (TBA)
           </StyledButton>
           <StyledButton
             variant="contained"
             style={{ color: "#f5f5f5" }}
-            href="https://claimWar.io/"
+            href="https://defier.finance/"
           ><img
               draggable="false"
               src={whiteLogo}
               alt=""
               className={classes.logo}
             />
-            ClaimWar
+            DashBoard
           </StyledButton>
         </MuiThemeProvider>
       </div>
