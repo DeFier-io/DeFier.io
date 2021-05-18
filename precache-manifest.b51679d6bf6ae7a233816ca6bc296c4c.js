@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b4bb489ec5721f0851dd2d529376e90",
+    "revision": "11797139c2839d0e95aabb894c7a9c21",
     "url": "/index.html"
   },
   {
-    "revision": "76abfbbeb4de01b6f220",
-    "url": "/static/css/main.9611677d.chunk.css"
+    "revision": "b3fab0f9efd43802c9be",
+    "url": "/static/css/main.eacd38fb.chunk.css"
   },
   {
-    "revision": "02a6bd740487e4c4653b",
-    "url": "/static/js/2.415a0c44.chunk.js"
+    "revision": "502aa59963e2004f189a",
+    "url": "/static/js/2.0b57b835.chunk.js"
   },
   {
-    "revision": "76abfbbeb4de01b6f220",
-    "url": "/static/js/main.27e0bbe0.chunk.js"
+    "revision": "b3fab0f9efd43802c9be",
+    "url": "/static/js/main.d1e8ba86.chunk.js"
   },
   {
     "revision": "89dbd287cbf1894c21ef",
@@ -46,10 +46,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "38760057cca6f0b6ae6dcbcdfc689d2b",
     "url": "/static/media/SmartContract.38760057.svg"
-  },
-  {
-    "revision": "61ee5aca7eb01b788e3ce75912380f71",
-    "url": "/static/media/UniswapLogo.61ee5aca.svg"
   },
   {
     "revision": "906c52b5355e9c73f8bc07dc83da3487",
